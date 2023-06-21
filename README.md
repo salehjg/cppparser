@@ -1,5 +1,5 @@
 # FORK NOTES
-The fork's main branch is called `my-master`. Every change made should have its own branch, **DERIVED FROM `master` branch**.
+The fork's main branch is called `my-master` (the default branch is still `master` which could be kept in sync with the parent repo's `master`). Every change made should have its own branch, **DERIVED FROM `master` branch**.
 Doing this would allow easy and isolated integration of each one of the branches into [the original repository](https://github.com/satya-das/cppparser).
 
 ## Branches
