@@ -1,0 +1,11 @@
+<map id="makeCppToken" name="makeCppToken">
+<area shape="rect" id="node1" title="Since CppToken cannot have ctor (because it is intended to be used inside union)." alt="" coords="537,80,651,105"/>
+<area shape="rect" id="node2" href="$cpptoken_8h.html#a201635257297ef89661fbfeea3596a73" title=" " alt="" coords="374,5,487,31"/>
+<area shape="rect" id="node3" href="$cpptoken_8h.html#aca8498cd9017b4eb555914686c200f08" title=" " alt="" coords="372,55,489,80"/>
+<area shape="rect" id="node4" href="$parser_8tab_8c.html#a847a2de5c1c28c9d7055a2b89ed7dad7" title=" " alt="" coords="203,56,270,81"/>
+<area shape="rect" id="node6" href="$parser_8l.html#a92ce4f44fba35a341f14fcc2aed40439" title=" " alt="" coords="385,156,476,181"/>
+<area shape="rect" id="node5" href="$parser_8tab_8c.html#a1384d6e143991deb1f0f4d0faa4a4f9b" title=" " alt="" coords="5,56,101,81"/>
+<area shape="rect" id="node7" href="$parser_8l.html#a5d7e8b2642553a321adc3853a1a6cf45" title=" " alt="" coords="185,107,288,132"/>
+<area shape="rect" id="node8" href="$parser_8l.html#a597ce76b50874caf4a4766eca8516e90" title=" " alt="" coords="191,156,282,181"/>
+<area shape="rect" id="node9" href="$parser_8l.html#a7b528108a91c581f90f10b7fb1b024bc" title=" " alt="" coords="149,205,324,231"/>
+</map>

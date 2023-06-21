@@ -1,0 +1,4 @@
+<map id="CppWriter" name="CppWriter">
+<area shape="rect" id="node1" title="Responsible for emitting C/C++ source from CppAst data structure." alt="" coords="5,299,140,691"/>
+<area shape="rect" id="node2" href="$classCppIndent.html" title="Helper class to manage indentation while writing C++ file from AST." alt="" coords="19,5,126,236"/>
+</map>

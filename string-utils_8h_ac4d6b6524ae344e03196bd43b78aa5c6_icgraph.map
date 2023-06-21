@@ -1,0 +1,8 @@
+<map id="stripChar" name="stripChar">
+<area shape="rect" id="node1" title=" " alt="" coords="580,55,655,80"/>
+<area shape="rect" id="node2" href="$string-utils_8h.html#a5dc6e2d37d3bc97320a3a806eb41405a" title="strips new&#45;line char and collapses multiple white chars." alt="" coords="416,5,532,31"/>
+<area shape="rect" id="node3" href="$utils_8cpp.html#acfcebfe09e685029b624574ee06f698c" title=" " alt="" coords="440,55,508,80"/>
+<area shape="rect" id="node6" href="$string-utils_8h.html#a4813048e74932b8d3de27fd20e00b5db" title=" " alt="" coords="437,104,511,129"/>
+<area shape="rect" id="node4" href="$classCppParser.html#adbae1a777666573896b568a82ccfd3d7" title=" " alt="" coords="225,55,368,80"/>
+<area shape="rect" id="node5" href="$classCppProgram.html#a544741e87b302b4c135c05d220e72c30" title=" " alt="" coords="5,55,177,80"/>
+</map>

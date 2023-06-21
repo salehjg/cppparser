@@ -1,0 +1,6 @@
+<map id="setBlobToken" name="setBlobToken">
+<area shape="rect" id="node1" title=" " alt="" coords="5,31,108,56"/>
+<area shape="rect" id="node2" href="$parser_8l.html#a92ce4f44fba35a341f14fcc2aed40439" title=" " alt="" coords="156,31,247,56"/>
+<area shape="rect" id="node3" href="$cpptoken_8h.html#adcbf8944025c2a290482e1466fb07db7" title="Since CppToken cannot have ctor (because it is intended to be used inside union)." alt="" coords="338,5,451,31"/>
+<area shape="rect" id="node4" href="$parser_8l.html#aad3b6aa45354e9ee1e6119203b6c81f9" title=" " alt="" coords="295,55,495,80"/>
+</map>

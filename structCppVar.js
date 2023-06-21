@@ -1,0 +1,28 @@
+var structCppVar =
+[
+    [ "CppVar", "structCppVar.html#ad0b8d670d0bbcf58ad3f093d5d328710", null ],
+    [ "CppVar", "structCppVar.html#ae6ed05deaca380919508e9fab61cdae0", null ],
+    [ "CppVar", "structCppVar.html#a4600e41ba1e3a35af983b44970737458", null ],
+    [ "addArraySize", "structCppVar.html#af10aa419308d01cd8e1fa6a8519dd201", null ],
+    [ "addAttr", "structCppVar.html#a84f5000fb907c9a6e6019b4a53a0deaf", null ],
+    [ "apidecor", "structCppVar.html#a5126ae47f6a7b9a6b7fa9c9d74ffad97", null ],
+    [ "apidecor", "structCppVar.html#a417786e8853cf461bdf80f61f4f6b80f", null ],
+    [ "arraySizes", "structCppVar.html#aada0d29de696be0f6182cfaa129c0550", null ],
+    [ "assign", "structCppVar.html#a9481ebdfa21d73724c67b6ec046132fd", null ],
+    [ "assignType", "structCppVar.html#a5468c52b23c8acd844c925da41f75825", null ],
+    [ "assignValue", "structCppVar.html#a516e369832dcc17d92e1993cfb80c68a", null ],
+    [ "bitField", "structCppVar.html#a8ca6662fc259bc86b85e7c0a85facf54", null ],
+    [ "bitField", "structCppVar.html#a52d752d4f557942b1029095ee58cbe77", null ],
+    [ "name", "structCppVar.html#a8c215c85c5facf31e11ddf1c6147c475", null ],
+    [ "templateParamList", "structCppVar.html#ae67be3f8a0db3206ec88f39805bb7d6b", null ],
+    [ "templateParamList", "structCppVar.html#aae176dfd1c10f8e099b5df81c8fd2744", null ],
+    [ "typeAttr", "structCppVar.html#a0e6d9f8423f0e7929ce93f83524e72cd", null ],
+    [ "varDecl", "structCppVar.html#a1a6e49f8b78461d84caae9e093cb5bba", null ],
+    [ "varType", "structCppVar.html#adbd470ba25d9537fdc3683ebe3ee0e78", null ],
+    [ "varType", "structCppVar.html#a42af3dd1926e0f574083bee98a1e4c57", null ],
+    [ "apidecor_", "structCppVar.html#a34bb0274eb375dc2f888bac56eefdf08", null ],
+    [ "kObjectType", "structCppVar.html#a53993136a7f5cab6985096f3a4bf1867", null ],
+    [ "templSpec_", "structCppVar.html#aca2f7af47d3e328c7344ea4821804fd2", null ],
+    [ "varDecl_", "structCppVar.html#ae1c7e13d47caf94b07f354a0382a1e7b", null ],
+    [ "varType_", "structCppVar.html#a2e6a1139d4348e6b49820acde6b6a56b", null ]
+];
