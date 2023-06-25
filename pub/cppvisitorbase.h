@@ -4,6 +4,11 @@
 
 #pragma once
 
+/**
+ * @file An abstract base class for creating a visitor of the AST nodes.
+ * Inherit from this class and override the `visit` methods.
+ */
+
 #include "cppast.h"
 #include "cppconst.h"
 
@@ -50,6 +55,11 @@ class CppVisitorBase
 public:
   virtual ~CppVisitorBase() = default;
 
+  /**
+   * @brief The visitor pattern's `visit` methods for the given types.
+   * @param p A pointer to the matched AST node.
+   * @return Return true if you want continue traversing the tree, false otherwise.
+   */
   virtual bool visit(const CppVarType *p) = 0;
   virtual bool visit(const CppCompound *p) = 0;
   virtual bool visit(const CppUnRecogPrePro *p) = 0;

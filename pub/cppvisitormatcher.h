@@ -4,6 +4,11 @@
 
 #pragma once
 
+/**
+ * @file A visitor class to match only the given types of nodes.
+ * Inherit from this class and override `matched` method to implement your own custom AST-matcher.
+ */
+
 #include <algorithm>
 #include <vector>
 
@@ -16,11 +21,21 @@ class CppVisitorMatcher : public CppVisitorBase
   const std::vector<CppObjType> typesToMatch;
 
 public:
+  /**
+   * @brief The only ctor of the class.
+   * @param typesToMatch A vector of the AST node types that are to be matched.
+   */
   explicit CppVisitorMatcher(const std::vector<CppObjType>& typesToMatch)
     : typesToMatch(typesToMatch)
   {
   }
 
+  /**
+   * @brief The virtual method to be called when a tree node is matched.
+   * Override this method to implement your very own AST-matcher.
+   * @param p A pointer to the matched AST node.
+   * @return Return true if you want continue traversing the tree, false otherwise.
+   */
   virtual bool matched(const CppObj* p)
   {
     std::cout << CppVisitorPrinter::astToString(p) << std::endl;
@@ -30,6 +45,13 @@ public:
   ~CppVisitorMatcher() override = default;
 
 private:
+  /**
+   * @brief Checks the given pointer to the current AST node against the node types that are to be matched.
+   * Calls the `match` method when a node is matched and returns the value returned by that method to enforce user's
+   * choice for an early abortion of traversing the rest of the AST.
+   * @param p A pointer to an AST node.
+   * @return true if the node did not match, otherwise, returns the value returned by CppVisitorMatcher::match.
+   */
   inline bool check(const CppObj* p)
   {
     if (std::find(typesToMatch.begin(), typesToMatch.end(), p->objType_) != typesToMatch.end())

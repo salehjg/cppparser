@@ -4,6 +4,11 @@
 
 #pragma once
 
+/**
+ * @file An AST visitor to print the tree nodes utilizing `CppWriter` class.
+ * This class has no virtual method and could be used directly.
+ */
+
 #include <fstream>
 #include <iostream>
 #include <sstream>
@@ -26,6 +31,11 @@ class CppVisitorPrinter : public CppVisitorBase
 public:
   ~CppVisitorPrinter() override = default;
 
+  /**
+   * @brief Converts the given pointer to an AST node to its equivalent string of code using `CppWriter` class.
+   * @param p A pointer to an AST tree node.
+   * @return The string of the equivalent code of the tree node.
+   */
   static std::string astToString(const CppObj* p)
   {
     CppWriter w;
