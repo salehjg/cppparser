@@ -45,10 +45,10 @@ struct CppTryBlock;
 struct CppTypedefList;
 struct CppTypedefName;
 
-class CppAstVisitor
+class CppVisitorBase
 {
 public:
-  virtual ~CppAstVisitor() = default;
+  virtual ~CppVisitorBase() = default;
 
   virtual bool visit(const CppVarType *p) = 0;
   virtual bool visit(const CppCompound *p) = 0;

@@ -4,27 +4,29 @@
 
 #pragma once
 
-#include "cppastvisitor.h"
-#include "cppwriter.h"
 #include <fstream>
 #include <iostream>
 #include <sstream>
+
+#include "cppvisitorbase.h"
+#include "cppwriter.h"
+
 #define DBG_ENABLED
 #ifdef DBG_ENABLED
-#  define DBG(NAME, PTR)                                                                                                    \
-    std::cout << NAME << ":" << std::endl; \
-    std::cout << astToString(PTR) << std::endl; \
-    std::cout << "------------------------------------------"<< std::endl;
+  #define DBG(NAME, PTR) \
+      std::cout << NAME << ":" << std::endl; \
+      std::cout << astToString(PTR) << std::endl; \
+      std::cout << "------------------------------------------"<< std::endl;
 #else
 #  define DBG(NAME) void;
 #endif
 
-class CppTraverseVisitor : public CppAstVisitor
+class CppVisitorPrinter : public CppVisitorBase
 {
 public:
-  ~CppTraverseVisitor() override = default;
+  ~CppVisitorPrinter() override = default;
 
-  std::string astToString(const CppObj* p)
+  static std::string astToString(const CppObj* p)
   {
     CppWriter w;
     std::stringstream stm;

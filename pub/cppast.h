@@ -37,6 +37,7 @@
 x : not used anywhere.
 * : only used off AST header.
 ##: used in AST header.
+--: reviewed for nullptr handling
 
 ##CppExprPtr --
 ##AttribSpecifier --
@@ -103,9 +104,9 @@ xCppSwitchBlockEPtr
 
  */
 
-#include "cppastvisitor.h"
 #include "cppconst.h"
 #include "cppeasyptr.h"
+#include "cppvisitorbase.h"
 #include "typemodifier.h"
 
 #include "string-utils.h"
@@ -151,7 +152,7 @@ struct CppObj
     owner_ = o;
   }
 
-  virtual void accept(CppAstVisitor* v) const = 0;
+  virtual void accept(CppVisitorBase* v) const = 0;
 
   virtual ~CppObj() { }
 
@@ -173,7 +174,7 @@ struct CppBlob : public CppObj
   {
   }
 
-  void accept(CppAstVisitor* v) const override { }
+  void accept(CppVisitorBase* v) const override { }
 };
 
 struct CppDefine : public CppObj
@@ -200,7 +201,7 @@ struct CppDefine : public CppObj
   {
   }
 
-  void accept(CppAstVisitor* v) const override
+  void accept(CppVisitorBase* v) const override
   {
     VISIT_COND(v->visit(this));
   }
@@ -220,7 +221,7 @@ struct CppUndef : public CppObj
   {
   }
 
-  void accept(CppAstVisitor* v) const override
+  void accept(CppVisitorBase* v) const override
   {
     VISIT_COND(v->visit(this));
   }
@@ -240,7 +241,7 @@ struct CppInclude : public CppObj
   {
   }
 
-  void accept(CppAstVisitor* v) const override
+  void accept(CppVisitorBase* v) const override
   {
     VISIT_COND(v->visit(this));
   }
@@ -258,7 +259,7 @@ struct CppImport : public CppObj
   {
   }
 
-  void accept(CppAstVisitor* v) const override
+  void accept(CppVisitorBase* v) const override
   {
     VISIT_COND(v->visit(this));
   }
@@ -295,7 +296,7 @@ struct CppHashIf : public CppObj
   {
   }
 
-  void accept(CppAstVisitor* v) const override
+  void accept(CppVisitorBase* v) const override
   {
     VISIT_COND(v->visit(this));
   }
@@ -315,7 +316,7 @@ struct CppPragma : public CppObj
   {
   }
 
-  void accept(CppAstVisitor* v) const override
+  void accept(CppVisitorBase* v) const override
   {
     VISIT_COND(v->visit(this));
   }
@@ -335,7 +336,7 @@ struct CppHashError : public CppObj
   {
   }
 
-  void accept(CppAstVisitor* v) const override
+  void accept(CppVisitorBase* v) const override
   {
     VISIT_COND(v->visit(this));
   }
@@ -355,7 +356,7 @@ struct CppHashWarning : public CppObj
   {
   }
 
-  void accept(CppAstVisitor* v) const override
+  void accept(CppVisitorBase* v) const override
   {
     VISIT_COND(v->visit(this));
   }
@@ -380,7 +381,7 @@ struct CppUnRecogPrePro : public CppObj
   {
   }
 
-  void accept(CppAstVisitor* v) const override
+  void accept(CppVisitorBase* v) const override
   {
     VISIT_COND(v->visit(this));
   }
@@ -469,7 +470,7 @@ struct CppVarType : public CppObj, public AttribSpecified
     return typeModifier_;
   }
 
-  void accept(CppAstVisitor* v) const override
+  void accept(CppVisitorBase* v) const override
   {
     VISIT_COND(v->visit(this));
     if (compound_ != nullptr)
@@ -669,7 +670,7 @@ struct CppVar : public CppObj
     templSpec_.reset(templParamList);
   }
 
-  void accept(CppAstVisitor* v) const override
+  void accept(CppVisitorBase* v) const override
   {
     VISIT_COND(v->visit(this));
     if (varType_ != nullptr)
@@ -727,7 +728,7 @@ struct CppVarList : public CppObj
     return varDeclList_;
   }
 
-  void accept(CppAstVisitor* v) const override
+  void accept(CppVisitorBase* v) const override
   {
     VISIT_COND(v->visit(this));
     if (firstVar_ != nullptr)
@@ -751,7 +752,7 @@ struct CppTypedefName : public CppObj
   {
   }
 
-  void accept(CppAstVisitor* v) const override
+  void accept(CppVisitorBase* v) const override
   {
     VISIT_COND(v->visit(this));
     if (var_ != nullptr)
@@ -776,7 +777,7 @@ struct CppTypedefList : public CppObj
   {
   }
 
-  void accept(CppAstVisitor* v) const override
+  void accept(CppVisitorBase* v) const override
   {
     VISIT_COND(v->visit(this));
     if (varList_ != nullptr)
@@ -798,7 +799,7 @@ struct CppMacroCall : CppObj
   {
   }
 
-  void accept(CppAstVisitor* v) const override
+  void accept(CppVisitorBase* v) const override
   {
     VISIT_COND(v->visit(this));
   }
@@ -904,7 +905,7 @@ struct CppFwdClsDecl : public CppObj
     templSpec_.reset(templParamList);
   }
 
-  void accept(CppAstVisitor* v) const override
+  void accept(CppVisitorBase* v) const override
   {
     VISIT_COND(v->visit(this));
   }
@@ -1090,7 +1091,7 @@ struct CppCompound : public CppObj, public AttribSpecified
     return (members_.size() == 1) && (members_.front()->objType_ == CppBlob::kObjectType);
   }
 
-  void accept(CppAstVisitor* v) const override
+  void accept(CppVisitorBase* v) const override
   {
     VISIT_COND(v->visit(this));
     for (auto& c : ctors_)
@@ -1288,7 +1289,7 @@ struct CppFunction : public CppFuncCtorBase
   {
   }
 
-  void accept(CppAstVisitor* v) const override
+  void accept(CppVisitorBase* v) const override
   {
     VISIT_COND(v->visit(this));
     if (retType_ != nullptr)
@@ -1334,7 +1335,7 @@ struct CppLambda : public CppFuncLikeBase
   {
   }
 
-  void accept(CppAstVisitor* v) const override
+  void accept(CppVisitorBase* v) const override
   {
     VISIT_COND(v->visit(this));
     if (captures_ != nullptr)
@@ -1378,7 +1379,7 @@ struct CppFunctionPointer : public CppFunction
   {
   }
 
-  void accept(CppAstVisitor* v) const override
+  void accept(CppVisitorBase* v) const override
   {
     VISIT_COND(v->visit(this));
     if (params_ != nullptr)
@@ -1461,7 +1462,7 @@ struct CppConstructor : public CppFuncCtorBase
   bool isCopyConstructor() const;
   bool isMoveConstructor() const;
 
-  void accept(CppAstVisitor* v) const override
+  void accept(CppVisitorBase* v) const override
   {
     VISIT_COND(v->visit(this));
     if (params_ != nullptr)
@@ -1489,7 +1490,7 @@ struct CppDestructor : public CppFunctionBase
   {
   }
 
-  void accept(CppAstVisitor* v) const override
+  void accept(CppVisitorBase* v) const override
   {
     VISIT_COND(v->visit(this));
   }
@@ -1509,7 +1510,7 @@ struct CppTypeConverter : public CppFunctionBase
   {
   }
 
-  void accept(CppAstVisitor* v) const override
+  void accept(CppVisitorBase* v) const override
   {
     VISIT_COND(v->visit(this));
     if (to_ != nullptr)
@@ -1531,7 +1532,7 @@ struct CppUsingNamespaceDecl : public CppObj
   {
   }
 
-  void accept(CppAstVisitor* v) const override
+  void accept(CppVisitorBase* v) const override
   {
     VISIT_COND(v->visit(this));
   }
@@ -1582,7 +1583,7 @@ struct CppUsingDecl : public CppObj
     templSpec_.reset(templParamList);
   }
 
-  void accept(CppAstVisitor* v) const override
+  void accept(CppVisitorBase* v) const override
   {
     VISIT_COND(v->visit(this));
     if (cppObj_ != nullptr)
@@ -1611,7 +1612,7 @@ struct CppNamespaceAlias : public CppObj
   {
   }
 
-  void accept(CppAstVisitor* v) const override
+  void accept(CppVisitorBase* v) const override
   {
     VISIT_COND(v->visit(this));
   }
@@ -1631,7 +1632,7 @@ struct CppDocComment : public CppObj
   {
   }
 
-  void accept(CppAstVisitor* v) const override
+  void accept(CppVisitorBase* v) const override
   {
     VISIT_COND(v->visit(this));
   }
@@ -1801,7 +1802,7 @@ struct CppExpr : public CppObj
     expr3_.destroy();
   }
 
-  void accept(CppAstVisitor* v) const override
+  void accept(CppVisitorBase* v) const override
   {
     // std::cout<<"\naccept expr "<< this << "\n";
     VISIT_COND(v->visit(this));
@@ -1882,7 +1883,7 @@ struct CppEnum : public CppObj
   {
   }
 
-  void accept(CppAstVisitor* v) const override
+  void accept(CppVisitorBase* v) const override
   {
     VISIT_COND(v->visit(this));
     // `CppEnumItemListPtr` is a vector of base type `CppEnumItem` which is not an AST node type.
@@ -1910,7 +1911,7 @@ struct CppCommonBlock : public CppObj
   const CppObjPtr cond_;
   const CppObjPtr body_;
 
-  void accept(CppAstVisitor* v) const override
+  void accept(CppVisitorBase* v) const override
   {
     VISIT_COND(v->visit(this));
     if (cond_ != nullptr)
@@ -1936,7 +1937,7 @@ struct CppIfBlock : public CppCommonBlock<CppObjType::kIfBlock>
     else_.reset(_elsePart);
   }
 
-  void accept(CppAstVisitor* v) const override
+  void accept(CppVisitorBase* v) const override
   {
     VISIT_COND(v->visit(this));
     if (cond_ != nullptr)
@@ -1977,7 +1978,7 @@ struct CppForBlock : public CppObj
   {
   }
 
-  void accept(CppAstVisitor* v) const override
+  void accept(CppVisitorBase* v) const override
   {
     VISIT_COND(v->visit(this));
     if (start_ != nullptr)
@@ -2007,7 +2008,7 @@ struct CppRangeForBlock : public CppObj
   {
   }
 
-  void accept(CppAstVisitor* v) const override
+  void accept(CppVisitorBase* v) const override
   {
     VISIT_COND(v->visit(this));
     if (var_ != nullptr)
@@ -2050,7 +2051,7 @@ struct CppSwitchBlock : public CppObj
   {
   }
 
-  void accept(CppAstVisitor* v) const override
+  void accept(CppVisitorBase* v) const override
   {
     VISIT_COND(v->visit(this));
     if (cond_ != nullptr)
@@ -2095,7 +2096,7 @@ struct CppTryBlock : public CppObj
     catchBlocks_.emplace_back(catchBlock);
   }
 
-  void accept(CppAstVisitor* v) const override
+  void accept(CppVisitorBase* v) const override
   {
     VISIT_COND(v->visit(this));
     if (tryStmt_ != nullptr)
@@ -2129,7 +2130,7 @@ struct CppAsmBlock : public CppObj
   {
   }
 
-  void accept(CppAstVisitor* v) const override
+  void accept(CppVisitorBase* v) const override
   {
     VISIT_COND(v->visit(this));
   }
@@ -2171,7 +2172,7 @@ struct CppLabel : public CppObj
   {
   }
 
-  void accept(CppAstVisitor* v) const override
+  void accept(CppVisitorBase* v) const override
   {
     VISIT_COND(v->visit(this));
   }
