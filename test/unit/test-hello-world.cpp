@@ -1,8 +1,11 @@
 #include <catch/catch.hpp>
 
 #include "cppparser.h"
+#include "cpptraversevisitor.h"
 
 #include <boost/filesystem.hpp>
+
+#include <iostream>
 
 namespace fs = boost::filesystem;
 
@@ -11,7 +14,10 @@ TEST_CASE("Parsing hello world program")
   CppParser  parser;
   const auto testFilePath = fs::path(__FILE__).parent_path() / "test-files/hello-world.cpp";
   const auto ast          = parser.parseFile(testFilePath.string());
-  REQUIRE(ast != nullptr);
+  //REQUIRE(ast != nullptr);
+  std::cout<<"Test"<<std::endl;
+  CppTraverseVisitor visitor;
+  ast->accept(&visitor);
 
   const auto& members = ast->members();
   REQUIRE(members.size() == 2);

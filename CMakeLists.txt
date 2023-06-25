@@ -69,6 +69,8 @@ set(CPPPARSER_SOURCES
 	src/parser.lex.cpp
 	src/parser.tab.cpp
 	src/utils.cpp
+		pub/cppastvisitor.h
+		pub/cpptraversevisitor.h
 )
 
 add_library(cppparser STATIC ${CPPPARSER_SOURCES})
