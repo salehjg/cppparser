@@ -78,6 +78,10 @@ var hierarchy =
     [ "CppVarDecl", "structCppVarDecl.html", [
       [ "CppVarDeclInList", "structCppVarDeclInList.html", null ]
     ] ],
+    [ "CppVisitorBase", "classCppVisitorBase.html", [
+      [ "CppVisitorMatcher", "classCppVisitorMatcher.html", null ],
+      [ "CppVisitorPrinter", "classCppVisitorPrinter.html", null ]
+    ] ],
     [ "CppWriter", "classCppWriter.html", null ],
     [ "LexerData", "structLexerData.html", null ],
     [ "yyalloc", "unionyyalloc.html", null ],

@@ -1,6 +1,6 @@
 <map id="CppIfBlock" name="CppIfBlock">
-<area shape="rect" id="node1" title=" " alt="" coords="59,521,167,620"/>
-<area shape="rect" id="node2" href="$structCppCommonBlock.html" title=" " alt="" coords="5,359,221,472"/>
-<area shape="rect" id="node3" href="$structCppObj.html" title="An abstract class that is used as base class of all other classes." alt="" coords="53,5,163,148"/>
-<area shape="rect" id="node4" href="$structCppCommonBlock.html" title="Some blocks have common structure like if, while, and do&#45;while." alt="" coords="129,197,340,296"/>
+<area shape="rect" id="node1" title=" " alt="" coords="59,565,167,679"/>
+<area shape="rect" id="node2" href="$structCppCommonBlock.html" title=" " alt="" coords="5,388,221,516"/>
+<area shape="rect" id="node3" href="$structCppObj.html" title="An abstract class that is used as base class of all other classes." alt="" coords="53,5,163,163"/>
+<area shape="rect" id="node4" href="$structCppCommonBlock.html" title="Some blocks have common structure like if, while, and do&#45;while." alt="" coords="129,212,340,325"/>
 </map>

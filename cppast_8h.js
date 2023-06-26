@@ -52,6 +52,7 @@ var cppast_8h =
     [ "CppTryBlock", "structCppTryBlock.html", "structCppTryBlock" ],
     [ "CppAsmBlock", "structCppAsmBlock.html", "structCppAsmBlock" ],
     [ "CppLabel", "structCppLabel.html", "structCppLabel" ],
+    [ "VISIT_COND", "cppast_8h.html#a73ec71e0094a2a2fcb5c7abc2a9f142a", null ],
     [ "AttribSpecifier", "cppast_8h.html#a87daf65b6d4f5389dc5cf3c4c7a21436", null ],
     [ "AttribSpecifierArray", "cppast_8h.html#ab215a71fed1b2f591e347a11a3e3045f", null ],
     [ "AttribSpecifierSequence", "cppast_8h.html#aa0c98bdc6f5f2ecec858a380f9eef007", null ],

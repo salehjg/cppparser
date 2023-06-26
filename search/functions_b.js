@@ -5,7 +5,8 @@ var searchData=
   ['makecpptypemodifier_2',['makeCppTypeModifier',['../typemodifier_8h.html#a2169db3a1a0c97279c0b5f82a806ea08',1,'typemodifier.h']]],
   ['makeemptycppmeminitlist_3',['makeEmptyCppMemInitList',['../cppast_8h.html#ae3242ff4316455fb4038d4570b0aeb32',1,'cppast.h']]],
   ['malloc_4',['malloc',['../parser_8tab_8c.html#a8d12df60024a0ab3de3a276240433890',1,'parser.tab.c']]],
-  ['members_5',['members',['../structCppCompound.html#a5244e7a78ab36013bbc7fed834531287',1,'CppCompound']]],
-  ['mergecpptoken_6',['mergeCppToken',['../cpptoken_8h.html#aca8498cd9017b4eb555914686c200f08',1,'cpptoken.h']]],
-  ['movector_7',['moveCtor',['../structCppCompound.html#a8d75a166170d978c0f1446faf1ea2096',1,'CppCompound']]]
+  ['matched_5',['matched',['../classCppVisitorMatcher.html#a130a97c67e900ac74ddd05a5006aed4a',1,'CppVisitorMatcher']]],
+  ['members_6',['members',['../structCppCompound.html#a5244e7a78ab36013bbc7fed834531287',1,'CppCompound']]],
+  ['mergecpptoken_7',['mergeCppToken',['../cpptoken_8h.html#aca8498cd9017b4eb555914686c200f08',1,'cpptoken.h']]],
+  ['movector_8',['moveCtor',['../structCppCompound.html#a8d75a166170d978c0f1446faf1ea2096',1,'CppCompound']]]
 ];

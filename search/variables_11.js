@@ -14,5 +14,6 @@ var searchData=
   ['typedeflist_11',['typedefList',['../unionYYSTYPE.html#a011f43c937903b756ec06308e261fcec',1,'YYSTYPE']]],
   ['typedefname_12',['typedefName',['../unionYYSTYPE.html#a3ccbdce4ea19d69cde85a19d5f651c0c',1,'YYSTYPE']]],
   ['typemodifier_13',['typeModifier',['../unionYYSTYPE.html#a4604efcc78d7e9a847fc3a8afc06b247',1,'YYSTYPE']]],
-  ['typemodifier_5f_14',['typeModifier_',['../structCppVarType.html#a11d9f8268ee68eddc26ed98f9e868868',1,'CppVarType']]]
+  ['typemodifier_5f_14',['typeModifier_',['../structCppVarType.html#a11d9f8268ee68eddc26ed98f9e868868',1,'CppVarType']]],
+  ['typestomatch_15',['typesToMatch',['../classCppVisitorMatcher.html#a983a539795b11d15a0fdfda38ed65f1d',1,'CppVisitorMatcher']]]
 ];

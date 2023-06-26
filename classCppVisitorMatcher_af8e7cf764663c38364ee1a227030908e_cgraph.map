@@ -1,0 +1,7 @@
+<map id="CppVisitorMatcher::visit" name="CppVisitorMatcher::visit">
+<area shape="rect" id="node1" title=" " alt="" coords="5,22,140,62"/>
+<area shape="rect" id="node2" href="$classCppVisitorMatcher.html#ab8e734c78be8c5fa2e649c5f1718e97d" title="Checks the given pointer to the current AST node against the node types that are to be matched." alt="" coords="188,22,323,62"/>
+<area shape="rect" id="node3" href="$classCppVisitorMatcher.html#a130a97c67e900ac74ddd05a5006aed4a" title="The virtual method to be called when a tree node is matched." alt="" coords="371,22,505,62"/>
+<area shape="rect" id="node4" href="$classCppVisitorPrinter.html#a87e13527ba9eafbe08e38d646fdc38e9" title="Converts the given pointer to an AST node to its equivalent string of code using CppWriter class." alt="" coords="553,22,680,62"/>
+<area shape="rect" id="node5" href="$classCppWriter.html#afba339cf47d819d699be7d109335be1b" title=" " alt="" coords="728,29,839,55"/>
+</map>

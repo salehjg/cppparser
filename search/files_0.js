@@ -19,6 +19,9 @@ var searchData=
   ['cpputil_2eh_16',['cpputil.h',['../cpputil_8h.html',1,'']]],
   ['cppvar_2dinfo_2daccessor_2eh_17',['cppvar-info-accessor.h',['../cppvar-info-accessor_8h.html',1,'']]],
   ['cppvarinit_2eh_18',['cppvarinit.h',['../cppvarinit_8h.html',1,'']]],
-  ['cppwriter_2ecpp_19',['cppwriter.cpp',['../cppwriter_8cpp.html',1,'']]],
-  ['cppwriter_2eh_20',['cppwriter.h',['../cppwriter_8h.html',1,'']]]
+  ['cppvisitorbase_2eh_19',['cppvisitorbase.h',['../cppvisitorbase_8h.html',1,'']]],
+  ['cppvisitormatcher_2eh_20',['cppvisitormatcher.h',['../cppvisitormatcher_8h.html',1,'']]],
+  ['cppvisitorprinter_2eh_21',['cppvisitorprinter.h',['../cppvisitorprinter_8h.html',1,'']]],
+  ['cppwriter_2ecpp_22',['cppwriter.cpp',['../cppwriter_8cpp.html',1,'']]],
+  ['cppwriter_2eh_23',['cppwriter.h',['../cppwriter_8h.html',1,'']]]
 ];

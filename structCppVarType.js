@@ -7,6 +7,7 @@ var structCppVarType =
     [ "CppVarType", "structCppVarType.html#a59b6994f8933df1ef1a6e7dac16b4411", null ],
     [ "CppVarType", "structCppVarType.html#a08f47e426b1dc8b4eb1e58626202851f", null ],
     [ "CppVarType", "structCppVarType.html#a023954dd17e89cc658fde1aa1ff2c8a6", null ],
+    [ "accept", "structCppVarType.html#a03706c7fd900d18c1225b78f0872b2b8", null ],
     [ "addAttr", "structCppVarType.html#ac5e27ab268ec9f88a37e4e03b6112be2", null ],
     [ "baseType", "structCppVarType.html#a198192e2d0f4939c84ab69620ad7ace7", null ],
     [ "baseType", "structCppVarType.html#a30f91ca6d493f3cdf9f6227b44631e37", null ],

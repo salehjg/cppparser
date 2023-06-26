@@ -13,6 +13,9 @@ var dir_6adfbdedc0af998d73448f1440bea6bc =
     [ "cpptypetree.h", "cpptypetree_8h.html", "cpptypetree_8h" ],
     [ "cpputil.h", "cpputil_8h.html", "cpputil_8h" ],
     [ "cppvar-info-accessor.h", "cppvar-info-accessor_8h.html", "cppvar-info-accessor_8h" ],
+    [ "cppvisitorbase.h", "cppvisitorbase_8h.html", "cppvisitorbase_8h" ],
+    [ "cppvisitormatcher.h", "cppvisitormatcher_8h.html", "cppvisitormatcher_8h" ],
+    [ "cppvisitorprinter.h", "cppvisitorprinter_8h.html", "cppvisitorprinter_8h" ],
     [ "cppwriter.h", "cppwriter_8h.html", "cppwriter_8h" ],
     [ "string-utils.h", "string-utils_8h.html", "string-utils_8h" ],
     [ "typemodifier.h", "typemodifier_8h.html", "typemodifier_8h" ]

@@ -1,6 +1,7 @@
 var structCppLambda =
 [
     [ "CppLambda", "structCppLambda.html#a29eed5480dcdd3289dee96d8899aece8", null ],
+    [ "accept", "structCppLambda.html#a278ba9f28f67c6e17b2c5e4cb71c9f08", null ],
     [ "captures_", "structCppLambda.html#a1e0bae8946011874e57e9e83c8d3c851", null ],
     [ "defn_", "structCppLambda.html#a2c74298f031de678b9be1eddbf61f316", null ],
     [ "kObjectType", "structCppLambda.html#afd5244cc055612aaeb49fcba5996bc71", null ],

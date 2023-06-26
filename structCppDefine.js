@@ -8,6 +8,7 @@ var structCppDefine =
       [ "kComplexMacro", "structCppDefine.html#ad7e5d95782f77d48e2ef68cc220bf523a93a97f438819479243e3d01460d24669", null ]
     ] ],
     [ "CppDefine", "structCppDefine.html#a058883d7392b2cef948f7f14c5fb98f2", null ],
+    [ "accept", "structCppDefine.html#a5eff52134deb5698ae0eb62efc768fa0", null ],
     [ "defn_", "structCppDefine.html#a420cd6c3218f53527ec28ca0ab4b1e44", null ],
     [ "defType_", "structCppDefine.html#a984ca042c02647746e213093d2673f48", null ],
     [ "kObjectType", "structCppDefine.html#a3aeeabb55b9d8fea337750e8103c6b87", null ],

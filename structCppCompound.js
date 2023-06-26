@@ -4,6 +4,7 @@ var structCppCompound =
     [ "CppCompound", "structCppCompound.html#a9ac9437899d0fe900b5649bc9de86717", null ],
     [ "CppCompound", "structCppCompound.html#a2d2873202044064ef0cde58f8d0067da", null ],
     [ "CppCompound", "structCppCompound.html#acdd3827846a9a8dcc82d6de8d243fa1d", null ],
+    [ "accept", "structCppCompound.html#ac34e923210083a08ffa4a706c5428d2b", null ],
     [ "addAttr", "structCppCompound.html#aa16f8fb76a28aa118eb8276e7daf92b6", null ],
     [ "addBaseClass", "structCppCompound.html#a879e04ab37cdeeec757c00ebe7f4cb29", null ],
     [ "addMember", "structCppCompound.html#ad8dbd0f6fa23620f34c92e8a2ece7207", null ],

@@ -65,5 +65,8 @@ var searchData=
   ['cppvardeclinlist_62',['CppVarDeclInList',['../structCppVarDeclInList.html',1,'']]],
   ['cppvarlist_63',['CppVarList',['../structCppVarList.html',1,'']]],
   ['cppvartype_64',['CppVarType',['../structCppVarType.html',1,'']]],
-  ['cppwriter_65',['CppWriter',['../classCppWriter.html',1,'']]]
+  ['cppvisitorbase_65',['CppVisitorBase',['../classCppVisitorBase.html',1,'']]],
+  ['cppvisitormatcher_66',['CppVisitorMatcher',['../classCppVisitorMatcher.html',1,'']]],
+  ['cppvisitorprinter_67',['CppVisitorPrinter',['../classCppVisitorPrinter.html',1,'']]],
+  ['cppwriter_68',['CppWriter',['../classCppWriter.html',1,'']]]
 ];

@@ -3,6 +3,7 @@ var structCppVar =
     [ "CppVar", "structCppVar.html#ad0b8d670d0bbcf58ad3f093d5d328710", null ],
     [ "CppVar", "structCppVar.html#ae6ed05deaca380919508e9fab61cdae0", null ],
     [ "CppVar", "structCppVar.html#a4600e41ba1e3a35af983b44970737458", null ],
+    [ "accept", "structCppVar.html#a8eafe920d3df402785ff1be51b69168e", null ],
     [ "addArraySize", "structCppVar.html#af10aa419308d01cd8e1fa6a8519dd201", null ],
     [ "addAttr", "structCppVar.html#a84f5000fb907c9a6e6019b4a53a0deaf", null ],
     [ "apidecor", "structCppVar.html#a5126ae47f6a7b9a6b7fa9c9d74ffad97", null ],
