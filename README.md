@@ -6,7 +6,7 @@ Doing this would allow easy and isolated integration of each one of the branches
 1. `doxygen`: Adds doxygen build target and its github action for automated deployment on repo's github pages.
 2. `reform-cmake-lib`: Changes how the main cmake file adds the static library, allowing the projects that use `cppparser` to benefit from the modern CMake.
 3. `example-manual-ast`: Adds `examples/` to the source directory, including a example file demonstrating how to build AST maunally from nothing and generate the code from it using `cppwriter`.
-4. 
+4. `feature-ast-visitor`: Introduces `CppVisitorBase`, `CppVisitorPrinter`, and `CppVisitorMatcher` as simple-to-use visitors and AST-matchers.
 
 CppParser
 =========
