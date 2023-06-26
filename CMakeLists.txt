@@ -6,8 +6,6 @@ option(BuildExamples "Build examples/ directory" ON)
 
 enable_testing()
 
-include("../common/cmake/conf.cmake")
-
 set(CMAKE_CXX_STANDARD 17)
 
 if(MSVC)
@@ -16,16 +14,20 @@ if(MSVC)
 endif()
 
 add_subdirectory(third_party/btyacc_tp)
-
-add_definitions(-DBOOST_AUTO_LINK_NOMANGLE)
-
-add_subdirectory(../common/third_party/boost_tp/cmake  ${CMAKE_BINARY_DIR}/boost)
-
 if (BuildExamples)
 	add_subdirectory(examples)
 endif ()
 
-include_directories(../common/third_party)
+add_definitions(-DBOOST_AUTO_LINK_NOMANGLE)
+set(Boost_USE_STATIC_LIBS OFF)
+set(Boost_USE_MULTITHREADED ON)
+set(Boost_USE_STATIC_RUNTIME OFF)
+find_package(Boost COMPONENTS filesystem program_options REQUIRED)
+
+# TODO: has to be upgraded soon.
+if (NOT EXISTS "${CMAKE_SOURCE_DIR}/src/catch/catch.hpp")
+  file(DOWNLOAD "https://github.com/catchorg/Catch2/releases/download/v2.13.10/catch.hpp" "${CMAKE_SOURCE_DIR}/src/catch/catch.hpp")
+endif()
 
 #############################################
 ## CppParser
@@ -101,17 +103,17 @@ target_sources(cppparser
 )
 
 add_dependencies(cppparser btyacc boost_filesystem boost_program_options)
+add_dependencies(cppparser btyacc)
 target_link_libraries(cppparser
 	PUBLIC
-		boost_filesystem
-		boost_program_options
+		${Boost_FILESYSTEM_LIBRARY}
+		${Boost_PROGRAM_OPTIONS_LIBRARY}
 		boost_system
 )
 target_include_directories(
 	cppparser
 	PUBLIC
 		pub
-		../common/third_party/boost_tp
 	PRIVATE
 		hack
 )
