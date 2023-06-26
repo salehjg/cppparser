@@ -1,5 +1,6 @@
 #include <boost/filesystem.hpp>
 #include <iostream>
+#include <fstream>
 
 #include "cppobjfactory.h"
 #include "cppparser.h"

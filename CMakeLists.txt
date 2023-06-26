@@ -102,7 +102,6 @@ target_sources(cppparser
 			${CMAKE_CURRENT_LIST_DIR}/src/utils.cpp
 )
 
-add_dependencies(cppparser btyacc boost_filesystem boost_program_options)
 add_dependencies(cppparser btyacc)
 target_link_libraries(cppparser
 	PUBLIC
