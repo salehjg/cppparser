@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['global_0',['GLOBAL',['../parser_8tab_8c.html#a15c9f7bd2f0e9686df5d9df4f3314aa9afde1bb5ef04b28059e61df449501f1c0',1,'parser.tab.c']]]
+  ['resetcommenttokenization_0',['ResetCommentTokenization',['../parser_8l_8h.html#ae2d28de3d55faea688fc689484e3eba6abdb44c0feb431e49d3795e72cad0a5a0',1,'parser.l.h']]]
 ];

@@ -83,7 +83,5 @@ var hierarchy =
       [ "CppVisitorPrinter", "classCppVisitorPrinter.html", null ]
     ] ],
     [ "CppWriter", "classCppWriter.html", null ],
-    [ "LexerData", "structLexerData.html", null ],
-    [ "yyalloc", "unionyyalloc.html", null ],
-    [ "YYSTYPE", "unionYYSTYPE.html", null ]
+    [ "LexerData", "structLexerData.html", null ]
 ];

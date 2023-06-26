@@ -61,12 +61,12 @@ var NAVTREE =
       [ "File List", "files.html", "files_dup" ],
       [ "File Members", "globals.html", [
         [ "All", "globals.html", "globals_dup" ],
-        [ "Functions", "globals_func.html", "globals_func" ],
+        [ "Functions", "globals_func.html", null ],
         [ "Variables", "globals_vars.html", null ],
         [ "Typedefs", "globals_type.html", null ],
         [ "Enumerations", "globals_enum.html", null ],
-        [ "Enumerator", "globals_eval.html", "globals_eval" ],
-        [ "Macros", "globals_defs.html", "globals_defs" ]
+        [ "Enumerator", "globals_eval.html", null ],
+        [ "Macros", "globals_defs.html", null ]
       ] ]
     ] ]
   ] ]
@@ -78,10 +78,8 @@ var NAVTREEINDEX =
 "classCppWriter.html#ac64bb56fa108347c660c4100e6396740",
 "cppconst_8h.html#adf693669b8ac35831db38922081baaf1a9de3d6da0d4e3c90876152d3b46c21b5",
 "functions_func_v.html",
-"parser_8tab_8c.html#a15c9f7bd2f0e9686df5d9df4f3314aa9a1904e51dab801a1d99df34199231c050",
-"parser_8tab_8h.html#a2f1c543986547675037cb9307efed77c",
-"structCppExpr.html#a504c36e1301f8dd997b31b9ffb4ba246a257c991691ef69456c229f285f109607",
-"structCppTypedefName.html#ab63380711cf9ccbe54d3f3c0e238c6fc"
+"structCppCompound.html#ad1a1729d6f2aab399e66303c33102dc2",
+"structCppPragma.html#af15ce55c57388802ea3e117dd6ccecc4"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

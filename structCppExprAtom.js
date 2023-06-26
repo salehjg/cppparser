@@ -12,6 +12,6 @@ var structCppExprAtom =
     [ "atom", "structCppExprAtom.html#a125a6d3adec5250497856430024ffc9d", null ],
     [ "expr", "structCppExprAtom.html#afccb53af1e5d9cb866f3b7b5cbf10777", null ],
     [ "lambda", "structCppExprAtom.html#a31ed07f853db3049aaaead675d2a177d", null ],
-    [ "type", "structCppExprAtom.html#afe64c684427e1cf3e8475f4f2a613009", null ],
+    [ "type", "structCppExprAtom.html#a6eca5dbd8c2e5c97e761eec78a90d80a", null ],
     [ "varType", "structCppExprAtom.html#acbc124d3b45c225b9ae4f2556d697172", null ]
 ];

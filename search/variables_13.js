@@ -5,7 +5,6 @@ var searchData=
   ['vardecl_5f_2',['varDecl_',['../structCppVar.html#ae1c7e13d47caf94b07f354a0382a1e7b',1,'CppVar']]],
   ['vardecllist_5f_3',['varDeclList_',['../structCppVarList.html#a66cd7e679f258b68513cb3e9d5164b72',1,'CppVarList']]],
   ['varlist_5f_4',['varList_',['../structCppTypedefList.html#a600ce10a71c7cdf251a60f0dd68a9df1',1,'CppTypedefList']]],
-  ['varorfuncptr_5',['varOrFuncPtr',['../unionYYSTYPE.html#a551f5306d403ac8fc7006445856d9fa7',1,'YYSTYPE']]],
-  ['vartype_6',['varType',['../structCppExprAtom.html#acbc124d3b45c225b9ae4f2556d697172',1,'CppExprAtom']]],
-  ['vartype_5f_7',['varType_',['../structCppVar.html#a2e6a1139d4348e6b49820acde6b6a56b',1,'CppVar']]]
+  ['vartype_5',['varType',['../structCppExprAtom.html#acbc124d3b45c225b9ae4f2556d697172',1,'CppExprAtom']]],
+  ['vartype_5f_6',['varType_',['../structCppVar.html#a2e6a1139d4348e6b49820acde6b6a56b',1,'CppVar']]]
 ];

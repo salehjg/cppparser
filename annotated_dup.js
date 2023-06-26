@@ -69,7 +69,5 @@ var annotated_dup =
     [ "CppVisitorMatcher", "classCppVisitorMatcher.html", "classCppVisitorMatcher" ],
     [ "CppVisitorPrinter", "classCppVisitorPrinter.html", "classCppVisitorPrinter" ],
     [ "CppWriter", "classCppWriter.html", "classCppWriter" ],
-    [ "LexerData", "structLexerData.html", "structLexerData" ],
-    [ "yyalloc", "unionyyalloc.html", "unionyyalloc" ],
-    [ "YYSTYPE", "unionYYSTYPE.html", "unionYYSTYPE" ]
+    [ "LexerData", "structLexerData.html", "structLexerData" ]
 ];

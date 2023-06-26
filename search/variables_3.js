@@ -6,7 +6,5 @@ var searchData=
   ['defn_5f_3',['defn_',['../structCppDefine.html#a420cd6c3218f53527ec28ca0ab4b1e44',1,'CppDefine::defn_()'],['../structCppPragma.html#af15ce55c57388802ea3e117dd6ccecc4',1,'CppPragma::defn_()'],['../structCppUnRecogPrePro.html#a0154edabadc0f19601a88a60b442af9b',1,'CppUnRecogPrePro::defn_()'],['../structCppFuncLikeBase.html#a876852675a86032e585c9abb113e2029',1,'CppFuncLikeBase::defn_()'],['../structCppLambda.html#a2c74298f031de678b9be1eddbf61f316',1,'CppLambda::defn_()']]],
   ['deftype_5f_4',['defType_',['../structCppDefine.html#a984ca042c02647746e213093d2673f48',1,'CppDefine']]],
   ['doc_5f_5',['doc_',['../structCppDocComment.html#a30f05423f35735bc3aeab2914bf3b15c',1,'CppDocComment']]],
-  ['doccommentobj_6',['docCommentObj',['../unionYYSTYPE.html#add7b4c123bbda4b8f4a3a50b965301e3',1,'YYSTYPE']]],
-  ['dowhileblock_7',['doWhileBlock',['../unionYYSTYPE.html#a2a33f4850f6c6f28cbb57ea31a4895f1',1,'YYSTYPE']]],
-  ['dtor_5f_8',['dtor_',['../structCppCompound.html#a7c3ea00eebdd29fa3c43fe87dd95edc5',1,'CppCompound']]]
+  ['dtor_5f_6',['dtor_',['../structCppCompound.html#a7c3ea00eebdd29fa3c43fe87dd95edc5',1,'CppCompound']]]
 ];

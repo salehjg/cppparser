@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['addressof_0',['ADDRESSOF',['../parser_8tab_8c.html#a15c9f7bd2f0e9686df5d9df4f3314aa9aa4593852488682f2dbc30847976f629d',1,'parser.tab.c']]]
+  ['disablecommenttokenization_0',['DisableCommentTokenization',['../parser_8l_8h.html#ae2d28de3d55faea688fc689484e3eba6a5d9895c17558acd4426a5f795229e7c3',1,'parser.l.h']]]
 ];

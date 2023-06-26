@@ -13,8 +13,6 @@ var dir_68267d1309a1af8e8297ef4c3efbcdba =
     [ "parser.h", "parser_8h.html", "parser_8h" ],
     [ "parser.l", "parser_8l.html", "parser_8l" ],
     [ "parser.l.h", "parser_8l_8h.html", "parser_8l_8h" ],
-    [ "parser.tab.c", "parser_8tab_8c.html", "parser_8tab_8c" ],
-    [ "parser.tab.h", "parser_8tab_8h.html", "parser_8tab_8h" ],
     [ "utils.cpp", "utils_8cpp.html", "utils_8cpp" ],
     [ "utils.h", "utils_8h.html", "utils_8h" ]
 ];
