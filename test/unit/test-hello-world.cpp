@@ -1,8 +1,12 @@
 #include <catch/catch.hpp>
 
 #include "cppparser.h"
+#include "cppvisitorprinter.h"
+#include "cppvisitormatcher.h"
 
 #include <boost/filesystem.hpp>
+
+#include <iostream>
 
 namespace fs = boost::filesystem;
 
@@ -11,7 +15,17 @@ TEST_CASE("Parsing hello world program")
   CppParser  parser;
   const auto testFilePath = fs::path(__FILE__).parent_path() / "test-files/hello-world.cpp";
   const auto ast          = parser.parseFile(testFilePath.string());
+
   REQUIRE(ast != nullptr);
+
+  {
+    //CppVisitorPrinter visitor;
+    //ast->accept(&visitor);
+  }
+  {
+    CppVisitorMatcher matcher({CppObjType::kExpression, CppObjType::kHashInclude});
+    ast->accept(&matcher);
+  }
 
   const auto& members = ast->members();
   REQUIRE(members.size() == 2);

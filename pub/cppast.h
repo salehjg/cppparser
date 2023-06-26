@@ -33,14 +33,87 @@
  * the mutation of object needs to be controlled through use of mutating method.
  */
 
+/*
+x : not used anywhere.
+* : only used off AST header.
+##: used in AST header.
+--: reviewed for nullptr handling
+
+##CppExprPtr --
+##AttribSpecifier --
+##AttribSpecifierSequence --
+##CppCompoundPtr --
+##CppObjPtr --
+##CppVarTypePtr --
+##CppTemplateParamListPtr --
+##CppVarPtr --
+##CppVarListPtr --
+##CppInheritanceListPtr --
+##CppCompoundPtr --
+##CppFuncThrowSpecPtr --
+##CppParamVectorPtr --
+##CppVarTypePtr --
+##CppEnumItemListPtr --
+##CppSwitchBodyPtr --
+##CppCatchBlockPtr --
+##CppCatchBlocks --
+
+
+*CppIncludeEPtr
+*CppVarTypeEPtr
+*CppConstVarTypeEPtr
+*CppVarEPtr
+*CppConstVarEPtr
+*CppVarListEPtr
+*CppCompoundEPtr
+*CppConstCompoundEPtr
+*CppVarTypeEPtr
+*CppFunctionEPtr
+*CppConstFunctionEPtr
+*CppExprEPtr
+*CppConstExprEPtr
+*CppLabelEPtr
+
+
+xCppDefineEPtr
+xCppUndefEPtr
+xCppHashIfEPtr
+xCppPragmaEPtr
+xCppHashErrorEPtr
+xCppHashWarningEPtr
+xCppUnRecogPreProEPtr
+xCppTypedefNameEPtr
+xCppTypedefListEPtr
+xCppMacroCallEPtr
+xCppFwdClsDeclEPtr
+xCppFunctionPointerEPtr
+xCppConstructorEPtr
+xCppDestructorEPtr
+xCppTypeConverterEPtr
+xCppUsingNamespaceDeclEPtr
+xCppUsingDeclEPtr
+xCppConstUsingDeclEPtr
+xCppNamespaceAliasEPtr
+xCppDocCommentEPtr
+xCppEnumEPtr
+xCppIfBlockEPtr
+xCppWhileBlockEPtr
+xCppDoWhileBlockEPtr
+xCppForBlockEPtr
+xCppSwitchBlockEPtr
+
+ */
+
 #include "cppconst.h"
 #include "cppeasyptr.h"
+#include "cppvisitorbase.h"
 #include "typemodifier.h"
 
 #include "string-utils.h"
 
 #include <cassert>
 #include <cstdint>
+#include <iostream>
 #include <list>
 #include <memory>
 #include <string>
@@ -48,6 +121,9 @@
 #include <vector>
 
 //////////////////////////////////////////////////////////////////////////
+#define VISIT_COND(CALL)                                                                                               \
+  if (!CALL)                                                                                                           \
+    return;
 
 struct CppCompound;
 
@@ -76,7 +152,9 @@ struct CppObj
     owner_ = o;
   }
 
-  virtual ~CppObj() {}
+  virtual void accept(CppVisitorBase* v) const = 0;
+
+  virtual ~CppObj() { }
 
 private:
   CppCompound* owner_;
@@ -95,6 +173,8 @@ struct CppBlob : public CppObj
     , blob_(std::move(trimBlob(blob)))
   {
   }
+
+  void accept(CppVisitorBase* v) const override { }
 };
 
 struct CppDefine : public CppObj
@@ -120,6 +200,11 @@ struct CppDefine : public CppObj
     , defn_(std::move(defn))
   {
   }
+
+  void accept(CppVisitorBase* v) const override
+  {
+    VISIT_COND(v->visit(this));
+  }
 };
 
 using CppDefineEPtr = CppEasyPtr<CppDefine>;
@@ -134,6 +219,11 @@ struct CppUndef : public CppObj
     : CppObj(kObjectType, CppAccessType::kUnknown)
     , name_(std::move(name))
   {
+  }
+
+  void accept(CppVisitorBase* v) const override
+  {
+    VISIT_COND(v->visit(this));
   }
 };
 
@@ -150,6 +240,11 @@ struct CppInclude : public CppObj
     , name_(std::move(name))
   {
   }
+
+  void accept(CppVisitorBase* v) const override
+  {
+    VISIT_COND(v->visit(this));
+  }
 };
 
 struct CppImport : public CppObj
@@ -162,6 +257,11 @@ struct CppImport : public CppObj
     : CppObj(kObjectType, CppAccessType::kUnknown)
     , name_(std::move(name))
   {
+  }
+
+  void accept(CppVisitorBase* v) const override
+  {
+    VISIT_COND(v->visit(this));
   }
 };
 
@@ -195,6 +295,11 @@ struct CppHashIf : public CppObj
     , cond_(std::move(cond))
   {
   }
+
+  void accept(CppVisitorBase* v) const override
+  {
+    VISIT_COND(v->visit(this));
+  }
 };
 
 using CppHashIfEPtr = CppEasyPtr<CppHashIf>;
@@ -209,6 +314,11 @@ struct CppPragma : public CppObj
     : CppObj(kObjectType, CppAccessType::kUnknown)
     , defn_(std::move(defn))
   {
+  }
+
+  void accept(CppVisitorBase* v) const override
+  {
+    VISIT_COND(v->visit(this));
   }
 };
 
@@ -225,6 +335,11 @@ struct CppHashError : public CppObj
     , err_(std::move(err))
   {
   }
+
+  void accept(CppVisitorBase* v) const override
+  {
+    VISIT_COND(v->visit(this));
+  }
 };
 
 using CppHashErrorEPtr = CppEasyPtr<CppHashError>;
@@ -239,6 +354,11 @@ struct CppHashWarning : public CppObj
     : CppObj(kObjectType, CppAccessType::kUnknown)
     , err_(std::move(err))
   {
+  }
+
+  void accept(CppVisitorBase* v) const override
+  {
+    VISIT_COND(v->visit(this));
   }
 };
 
@@ -259,6 +379,11 @@ struct CppUnRecogPrePro : public CppObj
     , name_(std::move(name))
     , defn_(std::move(defn))
   {
+  }
+
+  void accept(CppVisitorBase* v) const override
+  {
+    VISIT_COND(v->visit(this));
   }
 };
 
@@ -343,6 +468,13 @@ struct CppVarType : public CppObj, public AttribSpecified
   CppTypeModifier& typeModifier()
   {
     return typeModifier_;
+  }
+
+  void accept(CppVisitorBase* v) const override
+  {
+    VISIT_COND(v->visit(this));
+    if (compound_ != nullptr)
+      compound_->accept(v);
   }
 
 private:
@@ -538,6 +670,14 @@ struct CppVar : public CppObj
     templSpec_.reset(templParamList);
   }
 
+  void accept(CppVisitorBase* v) const override
+  {
+    VISIT_COND(v->visit(this));
+    if (varType_ != nullptr)
+      VISIT_COND(v->visit(varType_.get()));
+    // `CppVarDecl` is not an AST node, it is a member of `CppVar`.
+  }
+
 private:
   CppVarTypePtr           varType_;
   CppVarDecl              varDecl_;
@@ -588,6 +728,14 @@ struct CppVarList : public CppObj
     return varDeclList_;
   }
 
+  void accept(CppVisitorBase* v) const override
+  {
+    VISIT_COND(v->visit(this));
+    if (firstVar_ != nullptr)
+      VISIT_COND(v->visit(firstVar_.get()));
+    // `CppVarDeclList` is not an AST node, it is a member of `CppVarList`
+  }
+
 private:
   CppVarDeclList varDeclList_;
 };
@@ -602,6 +750,13 @@ struct CppTypedefName : public CppObj
     : CppObj(kObjectType, var->accessType_)
     , var_(var)
   {
+  }
+
+  void accept(CppVisitorBase* v) const override
+  {
+    VISIT_COND(v->visit(this));
+    if (var_ != nullptr)
+      VISIT_COND(v->visit(var_.get()));
   }
 };
 
@@ -621,6 +776,13 @@ struct CppTypedefList : public CppObj
     , varList_(varList)
   {
   }
+
+  void accept(CppVisitorBase* v) const override
+  {
+    VISIT_COND(v->visit(this));
+    if (varList_ != nullptr)
+      VISIT_COND(v->visit(varList_.get()));
+  }
 };
 
 using CppTypedefListEPtr = CppEasyPtr<CppTypedefList>;
@@ -635,6 +797,11 @@ struct CppMacroCall : CppObj
     : CppObj(kObjectType, accessType)
     , macroCall_(std::move(macroCall))
   {
+  }
+
+  void accept(CppVisitorBase* v) const override
+  {
+    VISIT_COND(v->visit(this));
   }
 };
 
@@ -736,6 +903,11 @@ struct CppFwdClsDecl : public CppObj
   void templateParamList(CppTemplateParamList* templParamList)
   {
     templSpec_.reset(templParamList);
+  }
+
+  void accept(CppVisitorBase* v) const override
+  {
+    VISIT_COND(v->visit(this));
   }
 
 private:
@@ -919,6 +1091,31 @@ struct CppCompound : public CppObj, public AttribSpecified
     return (members_.size() == 1) && (members_.front()->objType_ == CppBlob::kObjectType);
   }
 
+  void accept(CppVisitorBase* v) const override
+  {
+    VISIT_COND(v->visit(this));
+    for (auto& c : ctors_)
+    {
+      VISIT_COND(v->visit(c));
+    }
+    if (copyCtor_ != nullptr)
+    {
+      VISIT_COND(v->visit(copyCtor_));
+    }
+    if (copyCtor_ != nullptr)
+    {
+      VISIT_COND(v->visit(moveCtor_));
+    }
+    if (copyCtor_ != nullptr)
+    {
+      VISIT_COND(v->visit(dtor_));
+    }
+    for (auto& m : members_)
+    {
+      m->accept(v);
+    }
+  }
+
 private:
   void assignSpecialMember(const CppObj* mem);
 
@@ -1092,6 +1289,21 @@ struct CppFunction : public CppFuncCtorBase
   {
   }
 
+  void accept(CppVisitorBase* v) const override
+  {
+    VISIT_COND(v->visit(this));
+    if (retType_ != nullptr)
+      VISIT_COND(v->visit(retType_.get()));
+    if (params_ != nullptr)
+    {
+      for (auto& p : *params_)
+      {
+        p->accept(v);
+      }
+    }
+    defn()->accept(v);
+  }
+
 protected:
   CppFunction(CppObjType      type,
               CppAccessType   accessType,
@@ -1122,6 +1334,24 @@ struct CppLambda : public CppFuncLikeBase
     , defn_(defn)
   {
   }
+
+  void accept(CppVisitorBase* v) const override
+  {
+    VISIT_COND(v->visit(this));
+    if (captures_ != nullptr)
+      VISIT_COND(v->visit(captures_.get()));
+    if (params_ != nullptr)
+    {
+      for (auto& p : *params_)
+      {
+        p->accept(v);
+      }
+    }
+    if (retType_ != nullptr)
+      VISIT_COND(v->visit(retType_.get()));
+    if (defn_ != nullptr)
+      defn_->accept(v);
+  }
 };
 
 using CppFunctionEPtr      = CppEasyPtr<CppFunction>;
@@ -1147,6 +1377,19 @@ struct CppFunctionPointer : public CppFunction
     : CppFunction(kObjectType, accessType, std::move(name), retType, params, attr)
     , ownerName_(std::move(ownerName))
   {
+  }
+
+  void accept(CppVisitorBase* v) const override
+  {
+    VISIT_COND(v->visit(this));
+    if (params_ != nullptr)
+    {
+      for (auto& p : *params_)
+      {
+        p->accept(v);
+      }
+    }
+    VISIT_COND(v->visit(retType_.get()));
   }
 };
 
@@ -1219,6 +1462,18 @@ struct CppConstructor : public CppFuncCtorBase
   bool isCopyConstructor() const;
   bool isMoveConstructor() const;
 
+  void accept(CppVisitorBase* v) const override
+  {
+    VISIT_COND(v->visit(this));
+    if (params_ != nullptr)
+    {
+      for (auto& p : *params_)
+      {
+        p->accept(v);
+      }
+    }
+  }
+
 private:
   mutable TriStateBool isCopyConstructor_ = TriStateBool::Unknown;
   mutable TriStateBool isMoveConstructor_ = TriStateBool::Unknown;
@@ -1233,6 +1488,11 @@ struct CppDestructor : public CppFunctionBase
   CppDestructor(CppAccessType accessType, std::string name, std::uint32_t attr)
     : CppFunctionBase(kObjectType, accessType, name, attr)
   {
+  }
+
+  void accept(CppVisitorBase* v) const override
+  {
+    VISIT_COND(v->visit(this));
   }
 };
 
@@ -1249,6 +1509,13 @@ struct CppTypeConverter : public CppFunctionBase
     , to_(type)
   {
   }
+
+  void accept(CppVisitorBase* v) const override
+  {
+    VISIT_COND(v->visit(this));
+    if (to_ != nullptr)
+      VISIT_COND(v->visit(to_.get()));
+  }
 };
 
 using CppTypeConverterEPtr = CppEasyPtr<CppTypeConverter>;
@@ -1263,6 +1530,11 @@ struct CppUsingNamespaceDecl : public CppObj
     : CppObj(kObjectType, CppAccessType::kUnknown)
     , name_(std::move(name))
   {
+  }
+
+  void accept(CppVisitorBase* v) const override
+  {
+    VISIT_COND(v->visit(this));
   }
 };
 
@@ -1311,6 +1583,14 @@ struct CppUsingDecl : public CppObj
     templSpec_.reset(templParamList);
   }
 
+  void accept(CppVisitorBase* v) const override
+  {
+    VISIT_COND(v->visit(this));
+    if (cppObj_ != nullptr)
+      cppObj_->accept(v);
+    // `templSpec_` is not an AST node, it is a member of `CppUsingDecl`
+  }
+
 private:
   CppTemplateParamListPtr templSpec_;
 };
@@ -1331,6 +1611,11 @@ struct CppNamespaceAlias : public CppObj
     , alias_(std::move(alias))
   {
   }
+
+  void accept(CppVisitorBase* v) const override
+  {
+    VISIT_COND(v->visit(this));
+  }
 };
 
 using CppNamespaceAliasEPtr = CppEasyPtr<CppNamespaceAlias>;
@@ -1345,6 +1630,11 @@ struct CppDocComment : public CppObj
     : CppObj(kObjectType, objAccessType)
     , doc_(std::move(doc))
   {
+  }
+
+  void accept(CppVisitorBase* v) const override
+  {
+    VISIT_COND(v->visit(this));
   }
 };
 
@@ -1511,6 +1801,39 @@ struct CppExpr : public CppObj
     expr2_.destroy();
     expr3_.destroy();
   }
+
+  void accept(CppVisitorBase* v) const override
+  {
+    // std::cout<<"\naccept expr "<< this << "\n";
+    VISIT_COND(v->visit(this));
+    for (int i = 0; i < 3; i++)
+    {
+      auto* p = i == 0 ? &expr1_ : i == 1 ? &expr2_ : i == 2 ? &expr3_ : nullptr;
+      if (p->expr == nullptr) // it's a union, p->expr == null means the whole thing is null.
+        continue;
+      switch (p->type)
+      {
+        case CppExprAtom::kExpr: {
+          // std::cout<<"\naccept expr sub expr"<< i <<" "<< this << "\n";
+          p->expr->accept(v);
+          break;
+        }
+        case CppExprAtom::kLambda: {
+          // std::cout<<"\naccept expr sub lambda"<< i <<" "<< this << "\n";
+          p->lambda->accept(v);
+          break;
+        }
+        case CppExprAtom::kVarType: {
+          // std::cout<<"\naccept expr sub varType"<< i <<" "<< this << "\n";
+          VISIT_COND(v->visit(p->varType));
+          break;
+        }
+        default: { // Atom (is not an AST node) and Invalid
+          break;
+        }
+      }
+    }
+  }
 };
 
 using CppExprEPtr      = CppEasyPtr<CppExpr>;
@@ -1559,6 +1882,14 @@ struct CppEnum : public CppObj
     , underlyingType_(std::move(underlyingType))
   {
   }
+
+  void accept(CppVisitorBase* v) const override
+  {
+    VISIT_COND(v->visit(this));
+    // `CppEnumItemListPtr` is a vector of base type `CppEnumItem` which is not an AST node type.
+    // but that type contains `CppObjPtr`, idk, maybe `itemList_` should be included here.
+    /// TODO: decide on this.
+  }
 };
 
 using CppEnumEPtr = CppEasyPtr<CppEnum>;
@@ -1579,6 +1910,15 @@ struct CppCommonBlock : public CppObj
 
   const CppObjPtr cond_;
   const CppObjPtr body_;
+
+  void accept(CppVisitorBase* v) const override
+  {
+    VISIT_COND(v->visit(this));
+    if (cond_ != nullptr)
+      cond_->accept(v);
+    if (body_ != nullptr)
+      body_->accept(v);
+  }
 };
 
 struct CppIfBlock : public CppCommonBlock<CppObjType::kIfBlock>
@@ -1595,6 +1935,17 @@ struct CppIfBlock : public CppCommonBlock<CppObjType::kIfBlock>
   void elsePart(CppObj* _elsePart)
   {
     else_.reset(_elsePart);
+  }
+
+  void accept(CppVisitorBase* v) const override
+  {
+    VISIT_COND(v->visit(this));
+    if (cond_ != nullptr)
+      cond_->accept(v); // assuming that `cond_` pointer cannot be nullptr ever.
+    if (body_ != nullptr)
+      body_->accept(v);
+    if (else_ != nullptr)
+      else_->accept(v);
   }
 
 private:
@@ -1626,6 +1977,19 @@ struct CppForBlock : public CppObj
     , body_(body)
   {
   }
+
+  void accept(CppVisitorBase* v) const override
+  {
+    VISIT_COND(v->visit(this));
+    if (start_ != nullptr)
+      start_->accept(v);
+    if (stop_ != nullptr)
+      VISIT_COND(v->visit(stop_.get()));
+    if (step_ != nullptr)
+      VISIT_COND(v->visit(step_.get()));
+    if (body_ != nullptr)
+      body_->accept(v);
+  }
 };
 
 struct CppRangeForBlock : public CppObj
@@ -1642,6 +2006,17 @@ struct CppRangeForBlock : public CppObj
     , expr_(expr)
     , body_(body)
   {
+  }
+
+  void accept(CppVisitorBase* v) const override
+  {
+    VISIT_COND(v->visit(this));
+    if (var_ != nullptr)
+      VISIT_COND(v->visit(var_.get()));
+    if (expr_ != nullptr)
+      VISIT_COND(v->visit(expr_.get()));
+    if (body_ != nullptr)
+      body_->accept(v);
   }
 };
 
@@ -1675,6 +2050,20 @@ struct CppSwitchBlock : public CppObj
     , body_(body)
   {
   }
+
+  void accept(CppVisitorBase* v) const override
+  {
+    VISIT_COND(v->visit(this));
+    if (cond_ != nullptr)
+      VISIT_COND(v->visit(cond_.get()));
+    for (auto& c : *body_)
+    {
+      if (c.case_ != nullptr)
+        VISIT_COND(v->visit(c.case_.get()));
+      if (c.body_ != nullptr)
+        c.body_->accept(v);
+    }
+  }
 };
 
 using CppSwitchBlockEPtr = CppEasyPtr<CppSwitchBlock>;
@@ -1707,6 +2096,21 @@ struct CppTryBlock : public CppObj
     catchBlocks_.emplace_back(catchBlock);
   }
 
+  void accept(CppVisitorBase* v) const override
+  {
+    VISIT_COND(v->visit(this));
+    if (tryStmt_ != nullptr)
+      tryStmt_->accept(v); // a block of code
+    for (auto& c : catchBlocks_)
+    {
+      if (c->exceptionType_ != nullptr)
+        VISIT_COND(v->visit(c->exceptionType_.get()));
+      // `c->exceptionName_` is string, not of an AST node type.
+      if (c->catchStmt_ != nullptr)
+        c->catchStmt_->accept(v); // a block of code
+    }
+  }
+
 private:
   CppCatchBlocks catchBlocks_;
 };
@@ -1724,6 +2128,11 @@ struct CppAsmBlock : public CppObj
     : CppObj(CppObjType::kAsmBlock, CppAccessType::kUnknown)
     , asm_(std::move(asmBlock))
   {
+  }
+
+  void accept(CppVisitorBase* v) const override
+  {
+    VISIT_COND(v->visit(this));
   }
 };
 
@@ -1761,6 +2170,11 @@ struct CppLabel : public CppObj
     : CppObj(kObjectType, CppAccessType::kUnknown)
     , label_(std::move(label))
   {
+  }
+
+  void accept(CppVisitorBase* v) const override
+  {
+    VISIT_COND(v->visit(this));
   }
 };
 
