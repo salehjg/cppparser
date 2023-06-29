@@ -1,25 +1,25 @@
 /*
-   The MIT License (MIT)
+The MIT License (MIT)
 
-   Copyright (c) 2018 Satya Das
+Copyright (c) 2018 Satya Das
 
-   Permission is hereby granted, free of charge, to any person obtaining a copy of
-   this software and associated documentation files (the "Software"), to deal in
-   the Software without restriction, including without limitation the rights to
-   use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
-   the Software, and to permit persons to whom the Software is furnished to do so,
-   subject to the following conditions:
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+                                                       the Software, and to permit persons to whom the Software is furnished to do so,
+subject to the following conditions:
 
-   The above copyright notice and this permission notice shall be included in all
-   copies or substantial portions of the Software.
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
-   FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
-   COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
-   IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
-   CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
- */
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+                                                               FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+                                                               COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+                                  CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+                                    */
 
 #pragma once
 
@@ -27,226 +27,226 @@
 #include "cppconst.h"
 #include "cpputil.h"
 
-inline CppAccessType accessType(const CppObj* cppObj)
+                                  inline CppAccessType accessType(CppObj* cppObj)
 {
-  if (cppObj->accessType_ != CppAccessType::kUnknown)
-    return cppObj->accessType_;
-  return (cppObj->owner() == nullptr) ? CppAccessType::kPublic : defaultAccessType(cppObj->owner()->compoundType());
+if (cppObj->accessType_ != CppAccessType::kUnknown)
+ return cppObj->accessType_;
+return (cppObj->owner() == nullptr) ? CppAccessType::kPublic : defaultAccessType(cppObj->owner()->compoundType());
 }
 
-inline CppAccessType accessType(const CppObjPtr& cppObj)
+inline CppAccessType accessType(CppObjPtr& cppObj)
 {
-  return accessType(cppObj.get());
+return accessType(cppObj.get());
 }
 
-inline bool isFunction(const CppObj* cppObj)
+inline bool isFunction(CppObj* cppObj)
 {
-  return cppObj->objType_ == CppObjType::kFunction;
+return cppObj->objType_ == CppObjType::kFunction;
 }
 
-inline bool isFunction(const CppObjPtr& cppObj)
+inline bool isFunction(CppObjPtr& cppObj)
 {
-  return isFunction(cppObj.get());
+return isFunction(cppObj.get());
 }
 
-inline bool isFunctionPtr(const CppObj* cppObj)
+inline bool isFunctionPtr(CppObj* cppObj)
 {
-  return cppObj->objType_ == CppObjType::kFunctionPtr;
+return cppObj->objType_ == CppObjType::kFunctionPtr;
 }
 
-inline bool isFunctionPtr(const CppObjPtr& cppObj)
+inline bool isFunctionPtr(CppObjPtr& cppObj)
 {
-  return isFunctionPtr(cppObj.get());
+return isFunctionPtr(cppObj.get());
 }
 
-inline bool isFunctionLike(const CppObj* cppObj)
+inline bool isFunctionLike(CppObj* cppObj)
 {
-  return cppObj->objType_ == CppObjType::kFunction || cppObj->objType_ == CppObjType::kConstructor
-         || cppObj->objType_ == CppObjType::kDestructor || cppObj->objType_ == CppObjType::kTypeConverter;
+return cppObj->objType_ == CppObjType::kFunction || cppObj->objType_ == CppObjType::kConstructor
+      || cppObj->objType_ == CppObjType::kDestructor || cppObj->objType_ == CppObjType::kTypeConverter;
 }
 
-inline bool isFunctionLike(const CppObjPtr& cppObj)
+inline bool isFunctionLike(CppObjPtr& cppObj)
 {
-  return isFunctionLike(cppObj.get());
+return isFunctionLike(cppObj.get());
 }
 
-inline bool isDestructor(const CppObj* cppObj)
+inline bool isDestructor(CppObj* cppObj)
 {
-  return cppObj->objType_ == CppObjType::kDestructor;
+return cppObj->objType_ == CppObjType::kDestructor;
 }
 
-inline bool isDestructor(const CppObjPtr& cppObj)
+inline bool isDestructor(CppObjPtr& cppObj)
 {
-  return isDestructor(cppObj.get());
+return isDestructor(cppObj.get());
 }
 
-inline bool isEnum(const CppObj* cppObj)
+inline bool isEnum(CppObj* cppObj)
 {
-  return cppObj->objType_ == CppObjType::kEnum;
+return cppObj->objType_ == CppObjType::kEnum;
 }
 
-inline bool isEnum(const CppObjPtr cppObj)
+inline bool isEnum(CppObjPtr cppObj)
 {
-  return isEnum(cppObj.get());
+return isEnum(cppObj.get());
 }
 
-inline bool isTypedefName(const CppObj* cppObj)
+inline bool isTypedefName(CppObj* cppObj)
 {
-  return cppObj->objType_ == CppObjType::kTypedefName;
+return cppObj->objType_ == CppObjType::kTypedefName;
 }
 
-inline bool isTypedefName(const CppObjPtr& cppObj)
+inline bool isTypedefName(CppObjPtr& cppObj)
 {
-  return isTypedefName(cppObj.get());
+return isTypedefName(cppObj.get());
 }
 
-inline bool isUsingDecl(const CppObj* cppObj)
+inline bool isUsingDecl(CppObj* cppObj)
 {
-  return cppObj->objType_ == CppObjType::kUsingDecl;
+return cppObj->objType_ == CppObjType::kUsingDecl;
 }
 
-inline bool isUsingDecl(const CppObjPtr& cppObj)
+inline bool isUsingDecl(CppObjPtr& cppObj)
 {
-  return isUsingDecl(cppObj.get());
+return isUsingDecl(cppObj.get());
 }
 
-inline bool isCompound(const CppObj* cppObj)
+inline bool isCompound(CppObj* cppObj)
 {
-  return cppObj->objType_ == CppObjType::kCompound;
+return cppObj->objType_ == CppObjType::kCompound;
 }
 
-inline bool isCompound(const CppObjPtr& cppObj)
+inline bool isCompound(CppObjPtr& cppObj)
 {
-  return isCompound(cppObj.get());
+return isCompound(cppObj.get());
 }
 
-inline bool isFwdClsDecl(const CppObj* cppObj)
+inline bool isFwdClsDecl(CppObj* cppObj)
 {
-  return cppObj->objType_ == CppObjType::kFwdClsDecl;
+return cppObj->objType_ == CppObjType::kFwdClsDecl;
 }
 
-inline bool isFwdClsDecl(const CppObjPtr& cppObj)
+inline bool isFwdClsDecl(CppObjPtr& cppObj)
 {
-  return isFwdClsDecl(cppObj.get());
+return isFwdClsDecl(cppObj.get());
 }
 
-inline bool isNamespaceLike(const CppObj* cppObj)
+inline bool isNamespaceLike(CppObj* cppObj)
 {
-  if (!isCompound(cppObj))
-    return false;
-  auto* compound = static_cast<const CppCompound*>(cppObj);
-  return compound->compoundType() & CppCompoundType::kNamespace;
+if (!isCompound(cppObj))
+ return false;
+auto* compound = static_cast<CppCompound*>(cppObj);
+return compound->compoundType() & CppCompoundType::kNamespace;
 }
 
-inline bool isNamespaceLike(const CppObjPtr& cppObj)
+inline bool isNamespaceLike(CppObjPtr& cppObj)
 {
-  return isNamespaceLike(cppObj.get());
+return isNamespaceLike(cppObj.get());
 }
 
-inline bool isClassLike(const CppObj* cppObj)
+inline bool isClassLike(CppObj* cppObj)
 {
-  if (!isCompound(cppObj))
-    return false;
-  auto* compound = static_cast<const CppCompound*>(cppObj);
-  return (compound->compoundType() & CppCompoundType::kClass) == CppCompoundType::kClass;
+if (!isCompound(cppObj))
+ return false;
+auto* compound = static_cast<CppCompound*>(cppObj);
+return (compound->compoundType() & CppCompoundType::kClass) == CppCompoundType::kClass;
 }
 
-inline bool isClassLike(const CppObjPtr& cppObj)
+inline bool isClassLike(CppObjPtr& cppObj)
 {
-  return isClassLike(cppObj.get());
+return isClassLike(cppObj.get());
 }
 
-inline bool isTypedefLike(const CppObj* cppObj)
+inline bool isTypedefLike(CppObj* cppObj)
 {
-  return (cppObj->objType_ == CppObjType::kTypedefName) || (cppObj->objType_ == CppObjType::kUsingDecl);
+return (cppObj->objType_ == CppObjType::kTypedefName) || (cppObj->objType_ == CppObjType::kUsingDecl);
 }
 
-inline bool isTypedefLike(const CppObjPtr& cppObj)
+inline bool isTypedefLike(CppObjPtr& cppObj)
 {
-  return isTypedefLike(cppObj.get());
+return isTypedefLike(cppObj.get());
 }
 
-inline bool isPreProcessorType(const CppObj* cppObj)
+inline bool isPreProcessorType(CppObj* cppObj)
 {
-  return cppObj->objType_ > CppObjType::kCPreProcessorTypeStarts
-         && cppObj->objType_ < CppObjType::kCPreProcessorTypeEnds;
+return cppObj->objType_ > CppObjType::kCPreProcessorTypeStarts
+      && cppObj->objType_ < CppObjType::kCPreProcessorTypeEnds;
 }
 
-inline bool isPreProcessorType(const CppObjPtr& cppObj)
+inline bool isPreProcessorType(CppObjPtr& cppObj)
 {
-  return isPreProcessorType(cppObj.get());
+return isPreProcessorType(cppObj.get());
 }
 
-inline bool isVar(const CppObj* cppObj)
+inline bool isVar(CppObj* cppObj)
 {
-  return cppObj->objType_ == CppObjType::kVar;
+return cppObj->objType_ == CppObjType::kVar;
 }
 
-inline bool isVar(const CppObjPtr& cppObj)
+inline bool isVar(CppObjPtr& cppObj)
 {
-  return isVar(cppObj.get());
+return isVar(cppObj.get());
 }
 
-inline bool isVarList(const CppObj* cppObj)
+inline bool isVarList(CppObj* cppObj)
 {
-  return cppObj->objType_ == CppObjType::kVarList;
+return cppObj->objType_ == CppObjType::kVarList;
 }
 
-inline bool isVarList(const CppObjPtr& cppObj)
+inline bool isVarList(CppObjPtr& cppObj)
 {
-  return isVarList(cppObj.get());
+return isVarList(cppObj.get());
 }
 
-inline bool isExpr(const CppObj* cppObj)
+inline bool isExpr(CppObj* cppObj)
 {
-  return cppObj->objType_ == CppObjType::kExpression;
+return cppObj->objType_ == CppObjType::kExpression;
 }
 
-inline bool isExpr(const CppObjPtr& cppObj)
+inline bool isExpr(CppObjPtr& cppObj)
 {
-  return isExpr(cppObj.get());
+return isExpr(cppObj.get());
 }
 
-inline bool isPublic(const CppObj* cppObj)
+inline bool isPublic(CppObj* cppObj)
 {
-  return accessType(cppObj) == CppAccessType::kPublic;
+return accessType(cppObj) == CppAccessType::kPublic;
 }
 
-inline bool isPublic(const CppObjPtr& cppObj)
+inline bool isPublic(CppObjPtr& cppObj)
 {
-  return isPublic(cppObj.get());
+return isPublic(cppObj.get());
 }
 
-inline bool isProtected(const CppObj* cppObj)
+inline bool isProtected(CppObj* cppObj)
 {
-  return accessType(cppObj) == CppAccessType::kProtected;
+return accessType(cppObj) == CppAccessType::kProtected;
 }
 
-inline bool isProtected(const CppObjPtr& cppObj)
+inline bool isProtected(CppObjPtr& cppObj)
 {
-  return accessType(cppObj) == CppAccessType::kProtected;
+return accessType(cppObj) == CppAccessType::kProtected;
 }
 
-inline bool isPrivate(const CppObj* cppObj)
+inline bool isPrivate(CppObj* cppObj)
 {
-  return accessType(cppObj) == CppAccessType::kPrivate;
+return accessType(cppObj) == CppAccessType::kPrivate;
 }
 
-inline bool isPrivate(const CppObjPtr& cppObj)
+inline bool isPrivate(CppObjPtr& cppObj)
 {
-  return isPrivate(cppObj.get());
+return isPrivate(cppObj.get());
 }
 
-inline CppCompound* root(const CppObj* cppObj)
+inline CppCompound* root(CppObj* cppObj)
 {
-  if (cppObj->owner() == nullptr)
-    return isCompound(cppObj) ? const_cast<CppCompound*>(static_cast<const CppCompound*>(cppObj)) : nullptr;
-  if (cppObj->owner()->owner() == nullptr)
-    return cppObj->owner();
-  return root(cppObj->owner());
+if (cppObj->owner() == nullptr)
+ return isCompound(cppObj) ? const_cast<CppCompound*>(static_cast<CppCompound*>(cppObj)) : nullptr;
+if (cppObj->owner()->owner() == nullptr)
+ return cppObj->owner();
+return root(cppObj->owner());
 }
 
-inline CppCompound* root(const CppObjPtr& cppObj)
+inline CppCompound* root(CppObjPtr& cppObj)
 {
-  return root(cppObj.get());
+return root(cppObj.get());
 }

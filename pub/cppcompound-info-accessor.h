@@ -1,25 +1,25 @@
 /*
-   The MIT License (MIT)
+The MIT License (MIT)
 
-   Copyright (c) 2018 Satya Das
+Copyright (c) 2018 Satya Das
 
-   Permission is hereby granted, free of charge, to any person obtaining a copy of
-   this software and associated documentation files (the "Software"), to deal in
-   the Software without restriction, including without limitation the rights to
-   use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
-   the Software, and to permit persons to whom the Software is furnished to do so,
-   subject to the following conditions:
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+                                                       the Software, and to permit persons to whom the Software is furnished to do so,
+subject to the following conditions:
 
-   The above copyright notice and this permission notice shall be included in all
-   copies or substantial portions of the Software.
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
-   FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
-   COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
-   IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
-   CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
- */
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+                                                               FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+                                                               COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+                                  CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+                                    */
 
 #pragma once
 
@@ -31,90 +31,90 @@
 
 #include <functional>
 
-inline bool forEachMember(CppConstCompoundEPtr compound, std::function<bool(const CppObj*)> visitor)
+                                  inline bool forEachMember(CppCompoundEPtr compound, std::function<bool(CppObj*)> visitor)
 {
-  for (const auto& mem : compound->members())
-  {
-    if (visitor(mem.get()))
-      return true;
-  }
-
-  return false;
+for (auto& mem : compound->members())
+{
+ if (visitor(mem.get()))
+   return true;
 }
 
-inline bool forEachMember(CppConstCompoundEPtr               compound,
-                          CppAccessType                      memAccessType,
-                          std::function<bool(const CppObj*)> visitor)
-{
-  for (const auto& mem : compound->members())
-  {
-    if ((accessType(mem.get()) == memAccessType) && visitor(mem.get()))
-      return true;
-  }
-
-  return false;
+return false;
 }
 
-inline bool isNamespace(CppConstCompoundEPtr compound)
+inline bool forEachMember(CppCompoundEPtr               compound,
+                       CppAccessType                      memAccessType,
+                       std::function<bool(CppObj*)> visitor)
 {
-  return compound->compoundType() == CppCompoundType::kNamespace;
+for (auto& mem : compound->members())
+{
+ if ((accessType(mem.get()) == memAccessType) && visitor(mem.get()))
+   return true;
 }
-inline bool isClass(CppConstCompoundEPtr compound)
-{
-  return compound->compoundType() == CppCompoundType::kClass;
+
+return false;
 }
-inline bool isStruct(CppConstCompoundEPtr compound)
+
+inline bool isNamespace(CppCompoundEPtr compound)
 {
-  return compound->compoundType() == CppCompoundType::kStruct;
+return compound->compoundType() == CppCompoundType::kNamespace;
 }
-inline bool isUnion(CppConstCompoundEPtr compound)
+inline bool isClass(CppCompoundEPtr compound)
 {
-  return compound->compoundType() == CppCompoundType::kUnion;
+return compound->compoundType() == CppCompoundType::kClass;
 }
-inline bool isCppFile(CppConstCompoundEPtr compound)
+inline bool isStruct(CppCompoundEPtr compound)
 {
-  return compound->compoundType() == CppCompoundType::kCppFile;
+return compound->compoundType() == CppCompoundType::kStruct;
 }
-inline bool isBlock(CppConstCompoundEPtr compound)
+inline bool isUnion(CppCompoundEPtr compound)
 {
-  return compound->compoundType() == CppCompoundType::kBlock;
+return compound->compoundType() == CppCompoundType::kUnion;
+}
+inline bool isCppFile(CppCompoundEPtr compound)
+{
+return compound->compoundType() == CppCompoundType::kCppFile;
+}
+inline bool isBlock(CppCompoundEPtr compound)
+{
+return compound->compoundType() == CppCompoundType::kBlock;
 }
 
 /// @return full name of compound type.
-inline std::string fullName(CppConstCompoundEPtr compound)
+inline std::string fullName(CppCompoundEPtr compound)
 {
-  if (!isNamespaceLike(compound))
-    return "";
-  if (compound->owner() && isNamespaceLike(compound->owner()))
-    return fullName(compound->owner()) + "::" + compound->name();
-  else
-    return compound->name();
+if (!isNamespaceLike(compound))
+ return "";
+if (compound->owner() && isNamespaceLike(compound->owner()))
+ return fullName(compound->owner()) + "::" + compound->name();
+else
+ return compound->name();
 }
 
-inline bool traverse(CppConstCompoundEPtr compound, std::function<bool(const CppObj*)> visitor)
+inline bool traverse(CppCompoundEPtr compound, std::function<bool(CppObj*)> visitor)
 {
-  forEachMember(compound, [&](const CppObj* mem) {
-    if (isNamespaceLike(mem) && traverse(mem, visitor))
-      return true;
-    if (visitor(mem))
-      return true;
+forEachMember(compound, [&](CppObj* mem) {
+ if (isNamespaceLike(mem) && traverse(mem, visitor))
+   return true;
+ if (visitor(mem))
+   return true;
 
-    return false;
-  });
+ return false;
+});
 
-  return false;
+return false;
 }
 
-inline bool traversePreorder(CppConstCompoundEPtr compound, std::function<bool(const CppObj*)> visitor)
+inline bool traversePreorder(CppCompoundEPtr compound, std::function<bool(CppObj*)> visitor)
 {
-  forEachMember(compound, [&](const CppObj* mem) {
-    if (visitor(mem))
-      return true;
-    if (isNamespaceLike(mem) && traverse(mem, visitor))
-      return true;
+forEachMember(compound, [&](CppObj* mem) {
+ if (visitor(mem))
+   return true;
+ if (isNamespaceLike(mem) && traverse(mem, visitor))
+   return true;
 
-    return false;
-  });
+ return false;
+});
 
-  return false;
+return false;
 }

@@ -30,7 +30,7 @@ TEST_CASE_METHOD(UniformInitTest, "uniform init test")
   CppVarEPtr var = members[0];
   REQUIRE(var);
 
-  CppConstExprEPtr assignExpr = var->assignValue();
+  CppExprEPtr assignExpr = var->assignValue();
   REQUIRE(assignExpr);
   CHECK(assignExpr->oper_ == kUniformInitCall);
 }

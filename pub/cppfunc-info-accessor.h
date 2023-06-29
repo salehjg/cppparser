@@ -1,25 +1,25 @@
 /*
-   The MIT License (MIT)
+The MIT License (MIT)
 
-   Copyright (c) 2018 Satya Das
+Copyright (c) 2018 Satya Das
 
-   Permission is hereby granted, free of charge, to any person obtaining a copy of
-   this software and associated documentation files (the "Software"), to deal in
-   the Software without restriction, including without limitation the rights to
-   use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
-   the Software, and to permit persons to whom the Software is furnished to do so,
-   subject to the following conditions:
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+                                                       the Software, and to permit persons to whom the Software is furnished to do so,
+subject to the following conditions:
 
-   The above copyright notice and this permission notice shall be included in all
-   copies or substantial portions of the Software.
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
-   FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
-   COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
-   IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
-   CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
- */
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+                                                               FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+                                                               COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+                                  CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+                                    */
 
 /***************************************************************************************/
 
@@ -30,40 +30,40 @@
 
 #include "cppobj-info-accessor.h"
 
-inline bool isConst(const CppFunctionBase* func)
+                                  inline bool isConst(CppFunctionBase* func)
 {
-  return (func->attr() & kConst) == kConst;
+return (func->attr() & kConst) == kConst;
 }
-inline bool isVirtual(const CppFunctionBase* func)
+inline bool isVirtual(CppFunctionBase* func)
 {
-  return (func->attr() & (kVirtual | kOverride)) == kVirtual;
+return (func->attr() & (kVirtual | kOverride)) == kVirtual;
 }
-inline bool isPureVirtual(const CppFunctionBase* func)
+inline bool isPureVirtual(CppFunctionBase* func)
 {
-  return (func->attr() & kPureVirtual) == kPureVirtual;
+return (func->attr() & kPureVirtual) == kPureVirtual;
 }
-inline bool isStatic(const CppFunctionBase* func)
+inline bool isStatic(CppFunctionBase* func)
 {
-  return (func->attr() & kStatic) == kStatic;
+return (func->attr() & kStatic) == kStatic;
 }
-inline bool isInline(const CppFunctionBase* func)
+inline bool isInline(CppFunctionBase* func)
 {
-  return (func->attr() & kInline) == kInline;
+return (func->attr() & kInline) == kInline;
 }
-inline bool isOverride(const CppFunctionBase* func)
+inline bool isOverride(CppFunctionBase* func)
 {
-  return (func->attr() & kOverride) == kOverride;
+return (func->attr() & kOverride) == kOverride;
 }
-inline bool isDeleted(const CppFunctionBase* func)
+inline bool isDeleted(CppFunctionBase* func)
 {
-  return (func->attr() & kDelete) == kDelete;
+return (func->attr() & kDelete) == kDelete;
 }
-inline bool isFinal(const CppFunctionBase* func)
+inline bool isFinal(CppFunctionBase* func)
 {
-  return (func->attr() & kFinal) == kFinal;
+return (func->attr() & kFinal) == kFinal;
 }
 
-inline bool isMethod(CppConstFunctionEPtr func)
+inline bool isMethod(CppFunctionEPtr func)
 {
-  return func->owner() && isClassLike(func->owner());
+return func->owner() && isClassLike(func->owner());
 }
