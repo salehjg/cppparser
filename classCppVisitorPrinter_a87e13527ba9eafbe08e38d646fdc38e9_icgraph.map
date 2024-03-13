@@ -1,6 +1,5 @@
 <map id="CppVisitorPrinter::astToString" name="CppVisitorPrinter::astToString">
-<area shape="rect" id="node1" title="Converts the given pointer to an AST node to its equivalent string of code using CppWriter class." alt="" coords="553,5,680,45"/>
-<area shape="rect" id="node2" href="$classCppVisitorMatcher.html#a130a97c67e900ac74ddd05a5006aed4a" title="The virtual method to be called when a tree node is matched." alt="" coords="371,5,505,45"/>
-<area shape="rect" id="node3" href="$classCppVisitorMatcher.html#ab8e734c78be8c5fa2e649c5f1718e97d" title="Checks the given pointer to the current AST node against the node types that are to be matched." alt="" coords="188,5,323,45"/>
-<area shape="rect" id="node4" href="$classCppVisitorMatcher.html#a168ee1b816c8cf3f5af2fe68893d7747" title="The visitor pattern&#39;s visit methods for the given types." alt="" coords="5,5,140,45"/>
+<area shape="rect" id="node1" title="Converts the given pointer to an AST node to its equivalent string of code using CppWriter class." alt="" coords="371,5,497,45"/>
+<area shape="rect" id="node2" href="$classCppVisitorMatcher.html#a130a97c67e900ac74ddd05a5006aed4a" title="The virtual method to be called when a tree node is matched." alt="" coords="188,5,323,45"/>
+<area shape="rect" id="node3" href="$classCppVisitorMatcher.html#a0a6e18a5692a90495975db4f86cdbc58" title="The only ctor of the class." alt="" coords="5,5,140,45"/>
 </map>

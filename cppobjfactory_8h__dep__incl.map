@@ -1,9 +1,10 @@
 <map id="pub/cppobjfactory.h" name="pub/cppobjfactory.h">
-<area shape="rect" id="node1" title=" " alt="" coords="189,5,323,31"/>
-<area shape="rect" id="node2" href="$cppparser_8h.html" title=" " alt="" coords="49,79,164,104"/>
-<area shape="rect" id="node5" href="$cppparser_8cpp.html" title=" " alt="" coords="139,152,264,177"/>
-<area shape="rect" id="node6" href="$cppobjfactory_8cpp.html" title=" " alt="" coords="239,79,385,104"/>
-<area shape="rect" id="node7" href="$obj-factory-helper_8h.html" title=" " alt="" coords="409,79,562,104"/>
-<area shape="rect" id="node3" href="$cppprog_8h.html" title=" " alt="" coords="11,152,114,177"/>
-<area shape="rect" id="node4" href="$cppprog_8cpp.html" title=" " alt="" coords="5,225,120,251"/>
+<area shape="rect" id="node1" title=" " alt="" coords="283,5,418,31"/>
+<area shape="rect" id="node2" href="$cppparser_8h.html" title=" " alt="" coords="133,79,248,104"/>
+<area shape="rect" id="node6" href="$cppparser_8cpp.html" title=" " alt="" coords="245,152,371,177"/>
+<area shape="rect" id="node7" href="$cppobjfactory_8cpp.html" title=" " alt="" coords="334,79,479,104"/>
+<area shape="rect" id="node8" href="$obj-factory-helper_8h.html" title=" " alt="" coords="503,79,657,104"/>
+<area shape="rect" id="node3" href="$clone_8h.html" title=" " alt="" coords="5,152,93,177"/>
+<area shape="rect" id="node4" href="$cppprog_8h.html" title=" " alt="" coords="118,152,221,177"/>
+<area shape="rect" id="node5" href="$cppprog_8cpp.html" title=" " alt="" coords="112,225,227,251"/>
 </map>

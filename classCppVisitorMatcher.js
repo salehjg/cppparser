@@ -1,6 +1,8 @@
 var classCppVisitorMatcher =
 [
+    [ "MatchedFuncType", "classCppVisitorMatcher.html#a76fc5ac82ea95d12817ec7d9b40070f2", null ],
     [ "CppVisitorMatcher", "classCppVisitorMatcher.html#a0a6e18a5692a90495975db4f86cdbc58", null ],
+    [ "CppVisitorMatcher", "classCppVisitorMatcher.html#a433257d65fd2781f2e459bd379742a3b", null ],
     [ "~CppVisitorMatcher", "classCppVisitorMatcher.html#ac0d732addde115bd7c6a3ed94e4c4e67", null ],
     [ "check", "classCppVisitorMatcher.html#ab8e734c78be8c5fa2e649c5f1718e97d", null ],
     [ "matched", "classCppVisitorMatcher.html#a130a97c67e900ac74ddd05a5006aed4a", null ],
@@ -43,5 +45,6 @@ var classCppVisitorMatcher =
     [ "visit", "classCppVisitorMatcher.html#ac578d54828885dacd9e2054b84e471c8", null ],
     [ "visit", "classCppVisitorMatcher.html#a8e7f863b438b23c7ed714eb866dfb219", null ],
     [ "visit", "classCppVisitorMatcher.html#a168ee1b816c8cf3f5af2fe68893d7747", null ],
+    [ "matchedFunc", "classCppVisitorMatcher.html#ae18c9be78f6efdc4897c620c1bc0bd21", null ],
     [ "typesToMatch", "classCppVisitorMatcher.html#a983a539795b11d15a0fdfda38ed65f1d", null ]
 ];

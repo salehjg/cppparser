@@ -1,5 +1,6 @@
 var dir_6adfbdedc0af998d73448f1440bea6bc =
 [
+    [ "clone.h", "clone_8h.html", "clone_8h" ],
     [ "cppast.h", "cppast_8h.html", "cppast_8h" ],
     [ "cppcompound-info-accessor.h", "cppcompound-info-accessor_8h.html", "cppcompound-info-accessor_8h" ],
     [ "cppconst.h", "cppconst_8h.html", "cppconst_8h" ],

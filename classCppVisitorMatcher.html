@@ -99,6 +99,7 @@ $(document).ready(function(){initNavTree('classCppVisitorMatcher.html',''); init
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pri-types">Private Types</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classCppVisitorMatcher-members.html">List of all members</a>  </div>
@@ -112,7 +113,7 @@ Inheritance diagram for CppVisitorMatcher:</div>
 <div class="dyncontent">
 <div class="center"><img src="classCppVisitorMatcher__inherit__graph.png" border="0" usemap="#aCppVisitorMatcher_inherit__map" alt="Inheritance graph"/></div>
 <map name="aCppVisitorMatcher_inherit__map" id="aCppVisitorMatcher_inherit__map">
-<area shape="rect" title=" " alt="" coords="5,343,160,705"/>
+<area shape="rect" title=" " alt="" coords="5,343,160,735"/>
 <area shape="rect" href="classCppVisitorBase.html" title=" " alt="" coords="11,5,155,295"/>
 </map>
 </div>
@@ -121,7 +122,7 @@ Collaboration diagram for CppVisitorMatcher:</div>
 <div class="dyncontent">
 <div class="center"><img src="classCppVisitorMatcher__coll__graph.png" border="0" usemap="#aCppVisitorMatcher_coll__map" alt="Collaboration graph"/></div>
 <map name="aCppVisitorMatcher_coll__map" id="aCppVisitorMatcher_coll__map">
-<area shape="rect" title=" " alt="" coords="57,563,212,911"/>
+<area shape="rect" title=" " alt="" coords="57,563,212,940"/>
 <area shape="rect" href="classCppVisitorBase.html" title=" " alt="" coords="5,211,149,500"/>
 <area shape="rect" title=" " alt="" coords="173,328,352,383"/>
 <area shape="rect" title=" " alt="" coords="205,108,321,148"/>
@@ -134,6 +135,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a0a6e18a5692a90495975db4f86cdbc58"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCppVisitorMatcher.html#a0a6e18a5692a90495975db4f86cdbc58">CppVisitorMatcher</a> (const std::vector&lt; <a class="el" href="cppconst_8h.html#a88c3f5421bbecd1bc56e234e219e495e">CppObjType</a> &gt; &amp;<a class="el" href="classCppVisitorMatcher.html#a983a539795b11d15a0fdfda38ed65f1d">typesToMatch</a>)</td></tr>
 <tr class="memdesc:a0a6e18a5692a90495975db4f86cdbc58"><td class="mdescLeft">&#160;</td><td class="mdescRight">The only ctor of the class.  <a href="classCppVisitorMatcher.html#a0a6e18a5692a90495975db4f86cdbc58">More...</a><br /></td></tr>
 <tr class="separator:a0a6e18a5692a90495975db4f86cdbc58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a433257d65fd2781f2e459bd379742a3b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCppVisitorMatcher.html#a433257d65fd2781f2e459bd379742a3b">CppVisitorMatcher</a> (const std::vector&lt; <a class="el" href="cppconst_8h.html#a88c3f5421bbecd1bc56e234e219e495e">CppObjType</a> &gt; &amp;<a class="el" href="classCppVisitorMatcher.html#a983a539795b11d15a0fdfda38ed65f1d">typesToMatch</a>, <a class="el" href="classCppVisitorMatcher.html#a76fc5ac82ea95d12817ec7d9b40070f2">MatchedFuncType</a> &amp;&amp;<a class="el" href="classCppVisitorMatcher.html#ae18c9be78f6efdc4897c620c1bc0bd21">matchedFunc</a>)</td></tr>
+<tr class="separator:a433257d65fd2781f2e459bd379742a3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a130a97c67e900ac74ddd05a5006aed4a"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCppVisitorMatcher.html#a130a97c67e900ac74ddd05a5006aed4a">matched</a> (const <a class="el" href="structCppObj.html">CppObj</a> *p)</td></tr>
 <tr class="memdesc:a130a97c67e900ac74ddd05a5006aed4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The virtual method to be called when a tree node is matched.  <a href="classCppVisitorMatcher.html#a130a97c67e900ac74ddd05a5006aed4a">More...</a><br /></td></tr>
 <tr class="separator:a130a97c67e900ac74ddd05a5006aed4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -304,6 +307,11 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a10b99b22cfecfff1f90f3c085ceabae7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCppVisitorMatcher.html#a10b99b22cfecfff1f90f3c085ceabae7">visit</a> (const <a class="el" href="structCppTypedefName.html">CppTypedefName</a> *p) override</td></tr>
 <tr class="separator:a10b99b22cfecfff1f90f3c085ceabae7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-types" name="pri-types"></a>
+Private Types</h2></td></tr>
+<tr class="memitem:a76fc5ac82ea95d12817ec7d9b40070f2"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCppVisitorMatcher.html#a76fc5ac82ea95d12817ec7d9b40070f2">MatchedFuncType</a> = std::function&lt; bool(const <a class="el" href="structCppObj.html">CppObj</a> *p)&gt;</td></tr>
+<tr class="separator:a76fc5ac82ea95d12817ec7d9b40070f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:ab8e734c78be8c5fa2e649c5f1718e97d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCppVisitorMatcher.html#ab8e734c78be8c5fa2e649c5f1718e97d">check</a> (const <a class="el" href="structCppObj.html">CppObj</a> *p)</td></tr>
@@ -314,13 +322,40 @@ Private Member Functions</h2></td></tr>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a983a539795b11d15a0fdfda38ed65f1d"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="cppconst_8h.html#a88c3f5421bbecd1bc56e234e219e495e">CppObjType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCppVisitorMatcher.html#a983a539795b11d15a0fdfda38ed65f1d">typesToMatch</a></td></tr>
 <tr class="separator:a983a539795b11d15a0fdfda38ed65f1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae18c9be78f6efdc4897c620c1bc0bd21"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classCppVisitorMatcher.html#a76fc5ac82ea95d12817ec7d9b40070f2">MatchedFuncType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCppVisitorMatcher.html#ae18c9be78f6efdc4897c620c1bc0bd21">matchedFunc</a></td></tr>
+<tr class="separator:ae18c9be78f6efdc4897c620c1bc0bd21"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
 <p class="definition">Definition at line <a class="el" href="cppvisitormatcher_8h_source.html#l00019">19</a> of file <a class="el" href="cppvisitormatcher_8h_source.html">cppvisitormatcher.h</a>.</p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="a76fc5ac82ea95d12817ec7d9b40070f2" name="a76fc5ac82ea95d12817ec7d9b40070f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76fc5ac82ea95d12817ec7d9b40070f2">&#9670;&#160;</a></span>MatchedFuncType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classCppVisitorMatcher.html#a76fc5ac82ea95d12817ec7d9b40070f2">CppVisitorMatcher::MatchedFuncType</a> =  std::function&lt;bool(const <a class="el" href="structCppObj.html">CppObj</a>* p)&gt;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="cppvisitormatcher_8h_source.html#l00021">21</a> of file <a class="el" href="cppvisitormatcher_8h_source.html">cppvisitormatcher.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a0a6e18a5692a90495975db4f86cdbc58" name="a0a6e18a5692a90495975db4f86cdbc58"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0a6e18a5692a90495975db4f86cdbc58">&#9670;&#160;</a></span>CppVisitorMatcher()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a6e18a5692a90495975db4f86cdbc58">&#9670;&#160;</a></span>CppVisitorMatcher() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -351,7 +386,56 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="cppvisitormatcher_8h_source.html#l00028">28</a> of file <a class="el" href="cppvisitormatcher_8h_source.html">cppvisitormatcher.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cppvisitormatcher_8h_source.html#l00030">30</a> of file <a class="el" href="cppvisitormatcher_8h_source.html">cppvisitormatcher.h</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classCppVisitorMatcher_a0a6e18a5692a90495975db4f86cdbc58_cgraph.png" border="0" usemap="#aclassCppVisitorMatcher_a0a6e18a5692a90495975db4f86cdbc58_cgraph" alt=""/></div>
+<map name="aclassCppVisitorMatcher_a0a6e18a5692a90495975db4f86cdbc58_cgraph" id="aclassCppVisitorMatcher_a0a6e18a5692a90495975db4f86cdbc58_cgraph">
+<area shape="rect" title="The only ctor of the class." alt="" coords="5,22,140,62"/>
+<area shape="rect" href="classCppVisitorMatcher.html#a130a97c67e900ac74ddd05a5006aed4a" title="The virtual method to be called when a tree node is matched." alt="" coords="188,22,323,62"/>
+<area shape="rect" href="classCppVisitorPrinter.html#a87e13527ba9eafbe08e38d646fdc38e9" title="Converts the given pointer to an AST node to its equivalent string of code using CppWriter class." alt="" coords="371,22,497,62"/>
+<area shape="rect" href="classCppWriter.html#afba339cf47d819d699be7d109335be1b" title=" " alt="" coords="545,29,656,55"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a433257d65fd2781f2e459bd379742a3b" name="a433257d65fd2781f2e459bd379742a3b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a433257d65fd2781f2e459bd379742a3b">&#9670;&#160;</a></span>CppVisitorMatcher() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">CppVisitorMatcher::CppVisitorMatcher </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="cppconst_8h.html#a88c3f5421bbecd1bc56e234e219e495e">CppObjType</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>typesToMatch</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classCppVisitorMatcher.html#a76fc5ac82ea95d12817ec7d9b40070f2">MatchedFuncType</a> &amp;&amp;&#160;</td>
+          <td class="paramname"><em>matchedFunc</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="cppvisitormatcher_8h_source.html#l00038">38</a> of file <a class="el" href="cppvisitormatcher_8h_source.html">cppvisitormatcher.h</a>.</p>
 
 </div>
 </div>
@@ -414,18 +498,7 @@ Private Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if the node did not match, otherwise, returns the value returned by CppVisitorMatcher::match. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="cppvisitormatcher_8h_source.html#l00055">55</a> of file <a class="el" href="cppvisitormatcher_8h_source.html">cppvisitormatcher.h</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classCppVisitorMatcher_ab8e734c78be8c5fa2e649c5f1718e97d_cgraph.png" border="0" usemap="#aclassCppVisitorMatcher_ab8e734c78be8c5fa2e649c5f1718e97d_cgraph" alt=""/></div>
-<map name="aclassCppVisitorMatcher_ab8e734c78be8c5fa2e649c5f1718e97d_cgraph" id="aclassCppVisitorMatcher_ab8e734c78be8c5fa2e649c5f1718e97d_cgraph">
-<area shape="rect" title="Checks the given pointer to the current AST node against the node types that are to be matched." alt="" coords="5,22,140,62"/>
-<area shape="rect" href="classCppVisitorMatcher.html#a130a97c67e900ac74ddd05a5006aed4a" title="The virtual method to be called when a tree node is matched." alt="" coords="188,22,323,62"/>
-<area shape="rect" href="classCppVisitorPrinter.html#a87e13527ba9eafbe08e38d646fdc38e9" title="Converts the given pointer to an AST node to its equivalent string of code using CppWriter class." alt="" coords="371,22,497,62"/>
-<area shape="rect" href="classCppWriter.html#afba339cf47d819d699be7d109335be1b" title=" " alt="" coords="545,29,656,55"/>
-</map>
-</div>
+<p class="definition">Definition at line <a class="el" href="cppvisitormatcher_8h_source.html#l00066">66</a> of file <a class="el" href="cppvisitormatcher_8h_source.html">cppvisitormatcher.h</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -471,7 +544,7 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Return true if you want continue traversing the tree, false otherwise. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="cppvisitormatcher_8h_source.html#l00039">39</a> of file <a class="el" href="cppvisitormatcher_8h_source.html">cppvisitormatcher.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cppvisitormatcher_8h_source.html#l00050">50</a> of file <a class="el" href="cppvisitormatcher_8h_source.html">cppvisitormatcher.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -487,9 +560,8 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classCppVisitorMatcher_a130a97c67e900ac74ddd05a5006aed4a_icgraph.png" border="0" usemap="#aclassCppVisitorMatcher_a130a97c67e900ac74ddd05a5006aed4a_icgraph" alt=""/></div>
 <map name="aclassCppVisitorMatcher_a130a97c67e900ac74ddd05a5006aed4a_icgraph" id="aclassCppVisitorMatcher_a130a97c67e900ac74ddd05a5006aed4a_icgraph">
-<area shape="rect" title="The virtual method to be called when a tree node is matched." alt="" coords="371,5,505,45"/>
-<area shape="rect" href="classCppVisitorMatcher.html#ab8e734c78be8c5fa2e649c5f1718e97d" title="Checks the given pointer to the current AST node against the node types that are to be matched." alt="" coords="188,5,323,45"/>
-<area shape="rect" href="classCppVisitorMatcher.html#a168ee1b816c8cf3f5af2fe68893d7747" title="The visitor pattern&#39;s visit methods for the given types." alt="" coords="5,5,140,45"/>
+<area shape="rect" title="The virtual method to be called when a tree node is matched." alt="" coords="188,5,323,45"/>
+<area shape="rect" href="classCppVisitorMatcher.html#a0a6e18a5692a90495975db4f86cdbc58" title="The only ctor of the class." alt="" coords="5,5,140,45"/>
 </map>
 </div>
 
@@ -521,17 +593,14 @@ Here is the caller graph for this function:</div>
 
 <p>Implements <a class="el" href="classCppVisitorBase.html#a11bd817f0a88c617af8dabaf0c3c7e26">CppVisitorBase</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="cppvisitormatcher_8h_source.html#l00109">109</a> of file <a class="el" href="cppvisitormatcher_8h_source.html">cppvisitormatcher.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cppvisitormatcher_8h_source.html#l00120">120</a> of file <a class="el" href="cppvisitormatcher_8h_source.html">cppvisitormatcher.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classCppVisitorMatcher_a70c9389e72b0d4a546e276726cad4677_cgraph.png" border="0" usemap="#aclassCppVisitorMatcher_a70c9389e72b0d4a546e276726cad4677_cgraph" alt=""/></div>
 <map name="aclassCppVisitorMatcher_a70c9389e72b0d4a546e276726cad4677_cgraph" id="aclassCppVisitorMatcher_a70c9389e72b0d4a546e276726cad4677_cgraph">
-<area shape="rect" title=" " alt="" coords="5,22,140,62"/>
-<area shape="rect" href="classCppVisitorMatcher.html#ab8e734c78be8c5fa2e649c5f1718e97d" title="Checks the given pointer to the current AST node against the node types that are to be matched." alt="" coords="188,22,323,62"/>
-<area shape="rect" href="classCppVisitorMatcher.html#a130a97c67e900ac74ddd05a5006aed4a" title="The virtual method to be called when a tree node is matched." alt="" coords="371,22,505,62"/>
-<area shape="rect" href="classCppVisitorPrinter.html#a87e13527ba9eafbe08e38d646fdc38e9" title="Converts the given pointer to an AST node to its equivalent string of code using CppWriter class." alt="" coords="553,22,680,62"/>
-<area shape="rect" href="classCppWriter.html#afba339cf47d819d699be7d109335be1b" title=" " alt="" coords="728,29,839,55"/>
+<area shape="rect" title=" " alt="" coords="5,5,140,45"/>
+<area shape="rect" href="classCppVisitorMatcher.html#ab8e734c78be8c5fa2e649c5f1718e97d" title="Checks the given pointer to the current AST node against the node types that are to be matched." alt="" coords="188,5,323,45"/>
 </map>
 </div>
 
@@ -563,17 +632,14 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="classCppVisitorBase.html#a8440759ee2dabf3f7cabe61d57e51b5c">CppVisitorBase</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="cppvisitormatcher_8h_source.html#l00113">113</a> of file <a class="el" href="cppvisitormatcher_8h_source.html">cppvisitormatcher.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cppvisitormatcher_8h_source.html#l00124">124</a> of file <a class="el" href="cppvisitormatcher_8h_source.html">cppvisitormatcher.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classCppVisitorMatcher_a382002a8be2ccd98cdfb8a7631d90131_cgraph.png" border="0" usemap="#aclassCppVisitorMatcher_a382002a8be2ccd98cdfb8a7631d90131_cgraph" alt=""/></div>
 <map name="aclassCppVisitorMatcher_a382002a8be2ccd98cdfb8a7631d90131_cgraph" id="aclassCppVisitorMatcher_a382002a8be2ccd98cdfb8a7631d90131_cgraph">
-<area shape="rect" title=" " alt="" coords="5,22,140,62"/>
-<area shape="rect" href="classCppVisitorMatcher.html#ab8e734c78be8c5fa2e649c5f1718e97d" title="Checks the given pointer to the current AST node against the node types that are to be matched." alt="" coords="188,22,323,62"/>
-<area shape="rect" href="classCppVisitorMatcher.html#a130a97c67e900ac74ddd05a5006aed4a" title="The virtual method to be called when a tree node is matched." alt="" coords="371,22,505,62"/>
-<area shape="rect" href="classCppVisitorPrinter.html#a87e13527ba9eafbe08e38d646fdc38e9" title="Converts the given pointer to an AST node to its equivalent string of code using CppWriter class." alt="" coords="553,22,680,62"/>
-<area shape="rect" href="classCppWriter.html#afba339cf47d819d699be7d109335be1b" title=" " alt="" coords="728,29,839,55"/>
+<area shape="rect" title=" " alt="" coords="5,5,140,45"/>
+<area shape="rect" href="classCppVisitorMatcher.html#ab8e734c78be8c5fa2e649c5f1718e97d" title="Checks the given pointer to the current AST node against the node types that are to be matched." alt="" coords="188,5,323,45"/>
 </map>
 </div>
 
@@ -605,17 +671,14 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="classCppVisitorBase.html#ac45873acd595eb1d1129e8fbce340cd4">CppVisitorBase</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="cppvisitormatcher_8h_source.html#l00105">105</a> of file <a class="el" href="cppvisitormatcher_8h_source.html">cppvisitormatcher.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cppvisitormatcher_8h_source.html#l00116">116</a> of file <a class="el" href="cppvisitormatcher_8h_source.html">cppvisitormatcher.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classCppVisitorMatcher_ae88c8490870779364a5efab92d283d31_cgraph.png" border="0" usemap="#aclassCppVisitorMatcher_ae88c8490870779364a5efab92d283d31_cgraph" alt=""/></div>
 <map name="aclassCppVisitorMatcher_ae88c8490870779364a5efab92d283d31_cgraph" id="aclassCppVisitorMatcher_ae88c8490870779364a5efab92d283d31_cgraph">
-<area shape="rect" title=" " alt="" coords="5,22,140,62"/>
-<area shape="rect" href="classCppVisitorMatcher.html#ab8e734c78be8c5fa2e649c5f1718e97d" title="Checks the given pointer to the current AST node against the node types that are to be matched." alt="" coords="188,22,323,62"/>
-<area shape="rect" href="classCppVisitorMatcher.html#a130a97c67e900ac74ddd05a5006aed4a" title="The virtual method to be called when a tree node is matched." alt="" coords="371,22,505,62"/>
-<area shape="rect" href="classCppVisitorPrinter.html#a87e13527ba9eafbe08e38d646fdc38e9" title="Converts the given pointer to an AST node to its equivalent string of code using CppWriter class." alt="" coords="553,22,680,62"/>
-<area shape="rect" href="classCppWriter.html#afba339cf47d819d699be7d109335be1b" title=" " alt="" coords="728,29,839,55"/>
+<area shape="rect" title=" " alt="" coords="5,5,140,45"/>
+<area shape="rect" href="classCppVisitorMatcher.html#ab8e734c78be8c5fa2e649c5f1718e97d" title="Checks the given pointer to the current AST node against the node types that are to be matched." alt="" coords="188,5,323,45"/>
 </map>
 </div>
 
@@ -647,17 +710,14 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="classCppVisitorBase.html#a336a69f7eed40a68da85c1587e91736e">CppVisitorBase</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="cppvisitormatcher_8h_source.html#l00097">97</a> of file <a class="el" href="cppvisitormatcher_8h_source.html">cppvisitormatcher.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cppvisitormatcher_8h_source.html#l00108">108</a> of file <a class="el" href="cppvisitormatcher_8h_source.html">cppvisitormatcher.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classCppVisitorMatcher_aea5de99635e612d304c91c786bb52bb1_cgraph.png" border="0" usemap="#aclassCppVisitorMatcher_aea5de99635e612d304c91c786bb52bb1_cgraph" alt=""/></div>
 <map name="aclassCppVisitorMatcher_aea5de99635e612d304c91c786bb52bb1_cgraph" id="aclassCppVisitorMatcher_aea5de99635e612d304c91c786bb52bb1_cgraph">
-<area shape="rect" title=" " alt="" coords="5,22,140,62"/>
-<area shape="rect" href="classCppVisitorMatcher.html#ab8e734c78be8c5fa2e649c5f1718e97d" title="Checks the given pointer to the current AST node against the node types that are to be matched." alt="" coords="188,22,323,62"/>
-<area shape="rect" href="classCppVisitorMatcher.html#a130a97c67e900ac74ddd05a5006aed4a" title="The virtual method to be called when a tree node is matched." alt="" coords="371,22,505,62"/>
-<area shape="rect" href="classCppVisitorPrinter.html#a87e13527ba9eafbe08e38d646fdc38e9" title="Converts the given pointer to an AST node to its equivalent string of code using CppWriter class." alt="" coords="553,22,680,62"/>
-<area shape="rect" href="classCppWriter.html#afba339cf47d819d699be7d109335be1b" title=" " alt="" coords="728,29,839,55"/>
+<area shape="rect" title=" " alt="" coords="5,5,140,45"/>
+<area shape="rect" href="classCppVisitorMatcher.html#ab8e734c78be8c5fa2e649c5f1718e97d" title="Checks the given pointer to the current AST node against the node types that are to be matched." alt="" coords="188,5,323,45"/>
 </map>
 </div>
 
@@ -689,17 +749,14 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="classCppVisitorBase.html#a69cbd701e687b3f9c817ab5df39d5b40">CppVisitorBase</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="cppvisitormatcher_8h_source.html#l00101">101</a> of file <a class="el" href="cppvisitormatcher_8h_source.html">cppvisitormatcher.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cppvisitormatcher_8h_source.html#l00112">112</a> of file <a class="el" href="cppvisitormatcher_8h_source.html">cppvisitormatcher.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classCppVisitorMatcher_a80e42933bd3c083bb892e55313e51869_cgraph.png" border="0" usemap="#aclassCppVisitorMatcher_a80e42933bd3c083bb892e55313e51869_cgraph" alt=""/></div>
 <map name="aclassCppVisitorMatcher_a80e42933bd3c083bb892e55313e51869_cgraph" id="aclassCppVisitorMatcher_a80e42933bd3c083bb892e55313e51869_cgraph">
-<area shape="rect" title=" " alt="" coords="5,22,140,62"/>
-<area shape="rect" href="classCppVisitorMatcher.html#ab8e734c78be8c5fa2e649c5f1718e97d" title="Checks the given pointer to the current AST node against the node types that are to be matched." alt="" coords="188,22,323,62"/>
-<area shape="rect" href="classCppVisitorMatcher.html#a130a97c67e900ac74ddd05a5006aed4a" title="The virtual method to be called when a tree node is matched." alt="" coords="371,22,505,62"/>
-<area shape="rect" href="classCppVisitorPrinter.html#a87e13527ba9eafbe08e38d646fdc38e9" title="Converts the given pointer to an AST node to its equivalent string of code using CppWriter class." alt="" coords="553,22,680,62"/>
-<area shape="rect" href="classCppWriter.html#afba339cf47d819d699be7d109335be1b" title=" " alt="" coords="728,29,839,55"/>
+<area shape="rect" title=" " alt="" coords="5,5,140,45"/>
+<area shape="rect" href="classCppVisitorMatcher.html#ab8e734c78be8c5fa2e649c5f1718e97d" title="Checks the given pointer to the current AST node against the node types that are to be matched." alt="" coords="188,5,323,45"/>
 </map>
 </div>
 
@@ -731,17 +788,14 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="classCppVisitorBase.html#af6542968b2f91205c40eeb1218c56e47">CppVisitorBase</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="cppvisitormatcher_8h_source.html#l00069">69</a> of file <a class="el" href="cppvisitormatcher_8h_source.html">cppvisitormatcher.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cppvisitormatcher_8h_source.html#l00080">80</a> of file <a class="el" href="cppvisitormatcher_8h_source.html">cppvisitormatcher.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classCppVisitorMatcher_af8e7cf764663c38364ee1a227030908e_cgraph.png" border="0" usemap="#aclassCppVisitorMatcher_af8e7cf764663c38364ee1a227030908e_cgraph" alt=""/></div>
 <map name="aclassCppVisitorMatcher_af8e7cf764663c38364ee1a227030908e_cgraph" id="aclassCppVisitorMatcher_af8e7cf764663c38364ee1a227030908e_cgraph">
-<area shape="rect" title=" " alt="" coords="5,22,140,62"/>
-<area shape="rect" href="classCppVisitorMatcher.html#ab8e734c78be8c5fa2e649c5f1718e97d" title="Checks the given pointer to the current AST node against the node types that are to be matched." alt="" coords="188,22,323,62"/>
-<area shape="rect" href="classCppVisitorMatcher.html#a130a97c67e900ac74ddd05a5006aed4a" title="The virtual method to be called when a tree node is matched." alt="" coords="371,22,505,62"/>
-<area shape="rect" href="classCppVisitorPrinter.html#a87e13527ba9eafbe08e38d646fdc38e9" title="Converts the given pointer to an AST node to its equivalent string of code using CppWriter class." alt="" coords="553,22,680,62"/>
-<area shape="rect" href="classCppWriter.html#afba339cf47d819d699be7d109335be1b" title=" " alt="" coords="728,29,839,55"/>
+<area shape="rect" title=" " alt="" coords="5,5,140,45"/>
+<area shape="rect" href="classCppVisitorMatcher.html#ab8e734c78be8c5fa2e649c5f1718e97d" title="Checks the given pointer to the current AST node against the node types that are to be matched." alt="" coords="188,5,323,45"/>
 </map>
 </div>
 
@@ -773,17 +827,14 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="classCppVisitorBase.html#a1cdcfaafab66b979e6cb512ad891de93">CppVisitorBase</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="cppvisitormatcher_8h_source.html#l00145">145</a> of file <a class="el" href="cppvisitormatcher_8h_source.html">cppvisitormatcher.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cppvisitormatcher_8h_source.html#l00156">156</a> of file <a class="el" href="cppvisitormatcher_8h_source.html">cppvisitormatcher.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classCppVisitorMatcher_a3221dae305ea3597ee4097ea40781192_cgraph.png" border="0" usemap="#aclassCppVisitorMatcher_a3221dae305ea3597ee4097ea40781192_cgraph" alt=""/></div>
 <map name="aclassCppVisitorMatcher_a3221dae305ea3597ee4097ea40781192_cgraph" id="aclassCppVisitorMatcher_a3221dae305ea3597ee4097ea40781192_cgraph">
-<area shape="rect" title=" " alt="" coords="5,22,140,62"/>
-<area shape="rect" href="classCppVisitorMatcher.html#ab8e734c78be8c5fa2e649c5f1718e97d" title="Checks the given pointer to the current AST node against the node types that are to be matched." alt="" coords="188,22,323,62"/>
-<area shape="rect" href="classCppVisitorMatcher.html#a130a97c67e900ac74ddd05a5006aed4a" title="The virtual method to be called when a tree node is matched." alt="" coords="371,22,505,62"/>
-<area shape="rect" href="classCppVisitorPrinter.html#a87e13527ba9eafbe08e38d646fdc38e9" title="Converts the given pointer to an AST node to its equivalent string of code using CppWriter class." alt="" coords="553,22,680,62"/>
-<area shape="rect" href="classCppWriter.html#afba339cf47d819d699be7d109335be1b" title=" " alt="" coords="728,29,839,55"/>
+<area shape="rect" title=" " alt="" coords="5,5,140,45"/>
+<area shape="rect" href="classCppVisitorMatcher.html#ab8e734c78be8c5fa2e649c5f1718e97d" title="Checks the given pointer to the current AST node against the node types that are to be matched." alt="" coords="188,5,323,45"/>
 </map>
 </div>
 
@@ -815,17 +866,14 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="classCppVisitorBase.html#a5f6a4253c5e0557c81246690ae58a3b2">CppVisitorBase</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="cppvisitormatcher_8h_source.html#l00117">117</a> of file <a class="el" href="cppvisitormatcher_8h_source.html">cppvisitormatcher.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cppvisitormatcher_8h_source.html#l00128">128</a> of file <a class="el" href="cppvisitormatcher_8h_source.html">cppvisitormatcher.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classCppVisitorMatcher_a88da5b23d48546e7fd862293448797ef_cgraph.png" border="0" usemap="#aclassCppVisitorMatcher_a88da5b23d48546e7fd862293448797ef_cgraph" alt=""/></div>
 <map name="aclassCppVisitorMatcher_a88da5b23d48546e7fd862293448797ef_cgraph" id="aclassCppVisitorMatcher_a88da5b23d48546e7fd862293448797ef_cgraph">
-<area shape="rect" title=" " alt="" coords="5,22,140,62"/>
-<area shape="rect" href="classCppVisitorMatcher.html#ab8e734c78be8c5fa2e649c5f1718e97d" title="Checks the given pointer to the current AST node against the node types that are to be matched." alt="" coords="188,22,323,62"/>
-<area shape="rect" href="classCppVisitorMatcher.html#a130a97c67e900ac74ddd05a5006aed4a" title="The virtual method to be called when a tree node is matched." alt="" coords="371,22,505,62"/>
-<area shape="rect" href="classCppVisitorPrinter.html#a87e13527ba9eafbe08e38d646fdc38e9" title="Converts the given pointer to an AST node to its equivalent string of code using CppWriter class." alt="" coords="553,22,680,62"/>
-<area shape="rect" href="classCppWriter.html#afba339cf47d819d699be7d109335be1b" title=" " alt="" coords="728,29,839,55"/>
+<area shape="rect" title=" " alt="" coords="5,5,140,45"/>
+<area shape="rect" href="classCppVisitorMatcher.html#ab8e734c78be8c5fa2e649c5f1718e97d" title="Checks the given pointer to the current AST node against the node types that are to be matched." alt="" coords="188,5,323,45"/>
 </map>
 </div>
 
@@ -857,17 +905,14 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="classCppVisitorBase.html#a8a1a089d416f6f18a780f0f046f8385e">CppVisitorBase</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="cppvisitormatcher_8h_source.html#l00141">141</a> of file <a class="el" href="cppvisitormatcher_8h_source.html">cppvisitormatcher.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cppvisitormatcher_8h_source.html#l00152">152</a> of file <a class="el" href="cppvisitormatcher_8h_source.html">cppvisitormatcher.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classCppVisitorMatcher_a38acc89359c7afbbd19fba317bd321a4_cgraph.png" border="0" usemap="#aclassCppVisitorMatcher_a38acc89359c7afbbd19fba317bd321a4_cgraph" alt=""/></div>
 <map name="aclassCppVisitorMatcher_a38acc89359c7afbbd19fba317bd321a4_cgraph" id="aclassCppVisitorMatcher_a38acc89359c7afbbd19fba317bd321a4_cgraph">
-<area shape="rect" title=" " alt="" coords="5,22,140,62"/>
-<area shape="rect" href="classCppVisitorMatcher.html#ab8e734c78be8c5fa2e649c5f1718e97d" title="Checks the given pointer to the current AST node against the node types that are to be matched." alt="" coords="188,22,323,62"/>
-<area shape="rect" href="classCppVisitorMatcher.html#a130a97c67e900ac74ddd05a5006aed4a" title="The virtual method to be called when a tree node is matched." alt="" coords="371,22,505,62"/>
-<area shape="rect" href="classCppVisitorPrinter.html#a87e13527ba9eafbe08e38d646fdc38e9" title="Converts the given pointer to an AST node to its equivalent string of code using CppWriter class." alt="" coords="553,22,680,62"/>
-<area shape="rect" href="classCppWriter.html#afba339cf47d819d699be7d109335be1b" title=" " alt="" coords="728,29,839,55"/>
+<area shape="rect" title=" " alt="" coords="5,5,140,45"/>
+<area shape="rect" href="classCppVisitorMatcher.html#ab8e734c78be8c5fa2e649c5f1718e97d" title="Checks the given pointer to the current AST node against the node types that are to be matched." alt="" coords="188,5,323,45"/>
 </map>
 </div>
 
@@ -899,17 +944,14 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="classCppVisitorBase.html#aa27939ab08ab5e9a5bf742566968d92a">CppVisitorBase</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="cppvisitormatcher_8h_source.html#l00121">121</a> of file <a class="el" href="cppvisitormatcher_8h_source.html">cppvisitormatcher.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cppvisitormatcher_8h_source.html#l00132">132</a> of file <a class="el" href="cppvisitormatcher_8h_source.html">cppvisitormatcher.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classCppVisitorMatcher_a552b9d07b19976299be3a5dc4b1952ab_cgraph.png" border="0" usemap="#aclassCppVisitorMatcher_a552b9d07b19976299be3a5dc4b1952ab_cgraph" alt=""/></div>
 <map name="aclassCppVisitorMatcher_a552b9d07b19976299be3a5dc4b1952ab_cgraph" id="aclassCppVisitorMatcher_a552b9d07b19976299be3a5dc4b1952ab_cgraph">
-<area shape="rect" title=" " alt="" coords="5,22,140,62"/>
-<area shape="rect" href="classCppVisitorMatcher.html#ab8e734c78be8c5fa2e649c5f1718e97d" title="Checks the given pointer to the current AST node against the node types that are to be matched." alt="" coords="188,22,323,62"/>
-<area shape="rect" href="classCppVisitorMatcher.html#a130a97c67e900ac74ddd05a5006aed4a" title="The virtual method to be called when a tree node is matched." alt="" coords="371,22,505,62"/>
-<area shape="rect" href="classCppVisitorPrinter.html#a87e13527ba9eafbe08e38d646fdc38e9" title="Converts the given pointer to an AST node to its equivalent string of code using CppWriter class." alt="" coords="553,22,680,62"/>
-<area shape="rect" href="classCppWriter.html#afba339cf47d819d699be7d109335be1b" title=" " alt="" coords="728,29,839,55"/>
+<area shape="rect" title=" " alt="" coords="5,5,140,45"/>
+<area shape="rect" href="classCppVisitorMatcher.html#ab8e734c78be8c5fa2e649c5f1718e97d" title="Checks the given pointer to the current AST node against the node types that are to be matched." alt="" coords="188,5,323,45"/>
 </map>
 </div>
 
@@ -941,17 +983,14 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="classCppVisitorBase.html#aa5f71fcbe4af29c8b47dc16de93c5337">CppVisitorBase</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="cppvisitormatcher_8h_source.html#l00125">125</a> of file <a class="el" href="cppvisitormatcher_8h_source.html">cppvisitormatcher.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cppvisitormatcher_8h_source.html#l00136">136</a> of file <a class="el" href="cppvisitormatcher_8h_source.html">cppvisitormatcher.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classCppVisitorMatcher_a85fd14c74c0658a00acf1094f686356c_cgraph.png" border="0" usemap="#aclassCppVisitorMatcher_a85fd14c74c0658a00acf1094f686356c_cgraph" alt=""/></div>
 <map name="aclassCppVisitorMatcher_a85fd14c74c0658a00acf1094f686356c_cgraph" id="aclassCppVisitorMatcher_a85fd14c74c0658a00acf1094f686356c_cgraph">
-<area shape="rect" title=" " alt="" coords="5,22,140,62"/>
-<area shape="rect" href="classCppVisitorMatcher.html#ab8e734c78be8c5fa2e649c5f1718e97d" title="Checks the given pointer to the current AST node against the node types that are to be matched." alt="" coords="188,22,323,62"/>
-<area shape="rect" href="classCppVisitorMatcher.html#a130a97c67e900ac74ddd05a5006aed4a" title="The virtual method to be called when a tree node is matched." alt="" coords="371,22,505,62"/>
-<area shape="rect" href="classCppVisitorPrinter.html#a87e13527ba9eafbe08e38d646fdc38e9" title="Converts the given pointer to an AST node to its equivalent string of code using CppWriter class." alt="" coords="553,22,680,62"/>
-<area shape="rect" href="classCppWriter.html#afba339cf47d819d699be7d109335be1b" title=" " alt="" coords="728,29,839,55"/>
+<area shape="rect" title=" " alt="" coords="5,5,140,45"/>
+<area shape="rect" href="classCppVisitorMatcher.html#ab8e734c78be8c5fa2e649c5f1718e97d" title="Checks the given pointer to the current AST node against the node types that are to be matched." alt="" coords="188,5,323,45"/>
 </map>
 </div>
 
@@ -983,17 +1022,14 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="classCppVisitorBase.html#a77011f7adb0f8b29d619718cfd76e239">CppVisitorBase</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="cppvisitormatcher_8h_source.html#l00129">129</a> of file <a class="el" href="cppvisitormatcher_8h_source.html">cppvisitormatcher.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cppvisitormatcher_8h_source.html#l00140">140</a> of file <a class="el" href="cppvisitormatcher_8h_source.html">cppvisitormatcher.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classCppVisitorMatcher_ada335c3fe47cfc8b03005d535fa936b8_cgraph.png" border="0" usemap="#aclassCppVisitorMatcher_ada335c3fe47cfc8b03005d535fa936b8_cgraph" alt=""/></div>
 <map name="aclassCppVisitorMatcher_ada335c3fe47cfc8b03005d535fa936b8_cgraph" id="aclassCppVisitorMatcher_ada335c3fe47cfc8b03005d535fa936b8_cgraph">
-<area shape="rect" title=" " alt="" coords="5,22,140,62"/>
-<area shape="rect" href="classCppVisitorMatcher.html#ab8e734c78be8c5fa2e649c5f1718e97d" title="Checks the given pointer to the current AST node against the node types that are to be matched." alt="" coords="188,22,323,62"/>
-<area shape="rect" href="classCppVisitorMatcher.html#a130a97c67e900ac74ddd05a5006aed4a" title="The virtual method to be called when a tree node is matched." alt="" coords="371,22,505,62"/>
-<area shape="rect" href="classCppVisitorPrinter.html#a87e13527ba9eafbe08e38d646fdc38e9" title="Converts the given pointer to an AST node to its equivalent string of code using CppWriter class." alt="" coords="553,22,680,62"/>
-<area shape="rect" href="classCppWriter.html#afba339cf47d819d699be7d109335be1b" title=" " alt="" coords="728,29,839,55"/>
+<area shape="rect" title=" " alt="" coords="5,5,140,45"/>
+<area shape="rect" href="classCppVisitorMatcher.html#ab8e734c78be8c5fa2e649c5f1718e97d" title="Checks the given pointer to the current AST node against the node types that are to be matched." alt="" coords="188,5,323,45"/>
 </map>
 </div>
 
@@ -1025,17 +1061,14 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="classCppVisitorBase.html#aa97de37315649454cb2b0e5f69370654">CppVisitorBase</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="cppvisitormatcher_8h_source.html#l00133">133</a> of file <a class="el" href="cppvisitormatcher_8h_source.html">cppvisitormatcher.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cppvisitormatcher_8h_source.html#l00144">144</a> of file <a class="el" href="cppvisitormatcher_8h_source.html">cppvisitormatcher.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classCppVisitorMatcher_ac41f2d54d5932e45dfcb4e4ff6b0fb6a_cgraph.png" border="0" usemap="#aclassCppVisitorMatcher_ac41f2d54d5932e45dfcb4e4ff6b0fb6a_cgraph" alt=""/></div>
 <map name="aclassCppVisitorMatcher_ac41f2d54d5932e45dfcb4e4ff6b0fb6a_cgraph" id="aclassCppVisitorMatcher_ac41f2d54d5932e45dfcb4e4ff6b0fb6a_cgraph">
-<area shape="rect" title=" " alt="" coords="5,22,140,62"/>
-<area shape="rect" href="classCppVisitorMatcher.html#ab8e734c78be8c5fa2e649c5f1718e97d" title="Checks the given pointer to the current AST node against the node types that are to be matched." alt="" coords="188,22,323,62"/>
-<area shape="rect" href="classCppVisitorMatcher.html#a130a97c67e900ac74ddd05a5006aed4a" title="The virtual method to be called when a tree node is matched." alt="" coords="371,22,505,62"/>
-<area shape="rect" href="classCppVisitorPrinter.html#a87e13527ba9eafbe08e38d646fdc38e9" title="Converts the given pointer to an AST node to its equivalent string of code using CppWriter class." alt="" coords="553,22,680,62"/>
-<area shape="rect" href="classCppWriter.html#afba339cf47d819d699be7d109335be1b" title=" " alt="" coords="728,29,839,55"/>
+<area shape="rect" title=" " alt="" coords="5,5,140,45"/>
+<area shape="rect" href="classCppVisitorMatcher.html#ab8e734c78be8c5fa2e649c5f1718e97d" title="Checks the given pointer to the current AST node against the node types that are to be matched." alt="" coords="188,5,323,45"/>
 </map>
 </div>
 
@@ -1067,17 +1100,14 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="classCppVisitorBase.html#ae5011f8ce29891a07d056c2105e43822">CppVisitorBase</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="cppvisitormatcher_8h_source.html#l00149">149</a> of file <a class="el" href="cppvisitormatcher_8h_source.html">cppvisitormatcher.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cppvisitormatcher_8h_source.html#l00160">160</a> of file <a class="el" href="cppvisitormatcher_8h_source.html">cppvisitormatcher.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classCppVisitorMatcher_a482b033fff7009bdbdf9d578934ff562_cgraph.png" border="0" usemap="#aclassCppVisitorMatcher_a482b033fff7009bdbdf9d578934ff562_cgraph" alt=""/></div>
 <map name="aclassCppVisitorMatcher_a482b033fff7009bdbdf9d578934ff562_cgraph" id="aclassCppVisitorMatcher_a482b033fff7009bdbdf9d578934ff562_cgraph">
-<area shape="rect" title=" " alt="" coords="5,22,140,62"/>
-<area shape="rect" href="classCppVisitorMatcher.html#ab8e734c78be8c5fa2e649c5f1718e97d" title="Checks the given pointer to the current AST node against the node types that are to be matched." alt="" coords="188,22,323,62"/>
-<area shape="rect" href="classCppVisitorMatcher.html#a130a97c67e900ac74ddd05a5006aed4a" title="The virtual method to be called when a tree node is matched." alt="" coords="371,22,505,62"/>
-<area shape="rect" href="classCppVisitorPrinter.html#a87e13527ba9eafbe08e38d646fdc38e9" title="Converts the given pointer to an AST node to its equivalent string of code using CppWriter class." alt="" coords="553,22,680,62"/>
-<area shape="rect" href="classCppWriter.html#afba339cf47d819d699be7d109335be1b" title=" " alt="" coords="728,29,839,55"/>
+<area shape="rect" title=" " alt="" coords="5,5,140,45"/>
+<area shape="rect" href="classCppVisitorMatcher.html#ab8e734c78be8c5fa2e649c5f1718e97d" title="Checks the given pointer to the current AST node against the node types that are to be matched." alt="" coords="188,5,323,45"/>
 </map>
 </div>
 
@@ -1109,17 +1139,14 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="classCppVisitorBase.html#aae939913c9cff5b3773ec47f460a5289">CppVisitorBase</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="cppvisitormatcher_8h_source.html#l00153">153</a> of file <a class="el" href="cppvisitormatcher_8h_source.html">cppvisitormatcher.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cppvisitormatcher_8h_source.html#l00164">164</a> of file <a class="el" href="cppvisitormatcher_8h_source.html">cppvisitormatcher.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classCppVisitorMatcher_abf539dc48b8da082ec6ae14c3924c329_cgraph.png" border="0" usemap="#aclassCppVisitorMatcher_abf539dc48b8da082ec6ae14c3924c329_cgraph" alt=""/></div>
 <map name="aclassCppVisitorMatcher_abf539dc48b8da082ec6ae14c3924c329_cgraph" id="aclassCppVisitorMatcher_abf539dc48b8da082ec6ae14c3924c329_cgraph">
-<area shape="rect" title=" " alt="" coords="5,22,140,62"/>
-<area shape="rect" href="classCppVisitorMatcher.html#ab8e734c78be8c5fa2e649c5f1718e97d" title="Checks the given pointer to the current AST node against the node types that are to be matched." alt="" coords="188,22,323,62"/>
-<area shape="rect" href="classCppVisitorMatcher.html#a130a97c67e900ac74ddd05a5006aed4a" title="The virtual method to be called when a tree node is matched." alt="" coords="371,22,505,62"/>
-<area shape="rect" href="classCppVisitorPrinter.html#a87e13527ba9eafbe08e38d646fdc38e9" title="Converts the given pointer to an AST node to its equivalent string of code using CppWriter class." alt="" coords="553,22,680,62"/>
-<area shape="rect" href="classCppWriter.html#afba339cf47d819d699be7d109335be1b" title=" " alt="" coords="728,29,839,55"/>
+<area shape="rect" title=" " alt="" coords="5,5,140,45"/>
+<area shape="rect" href="classCppVisitorMatcher.html#ab8e734c78be8c5fa2e649c5f1718e97d" title="Checks the given pointer to the current AST node against the node types that are to be matched." alt="" coords="188,5,323,45"/>
 </map>
 </div>
 
@@ -1151,17 +1178,14 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="classCppVisitorBase.html#a970c99f9865b1742c641c1cf58ac57f2">CppVisitorBase</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="cppvisitormatcher_8h_source.html#l00161">161</a> of file <a class="el" href="cppvisitormatcher_8h_source.html">cppvisitormatcher.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cppvisitormatcher_8h_source.html#l00172">172</a> of file <a class="el" href="cppvisitormatcher_8h_source.html">cppvisitormatcher.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classCppVisitorMatcher_a97de73ad9ac0e7b62a9ff99230427ffa_cgraph.png" border="0" usemap="#aclassCppVisitorMatcher_a97de73ad9ac0e7b62a9ff99230427ffa_cgraph" alt=""/></div>
 <map name="aclassCppVisitorMatcher_a97de73ad9ac0e7b62a9ff99230427ffa_cgraph" id="aclassCppVisitorMatcher_a97de73ad9ac0e7b62a9ff99230427ffa_cgraph">
-<area shape="rect" title=" " alt="" coords="5,22,140,62"/>
-<area shape="rect" href="classCppVisitorMatcher.html#ab8e734c78be8c5fa2e649c5f1718e97d" title="Checks the given pointer to the current AST node against the node types that are to be matched." alt="" coords="188,22,323,62"/>
-<area shape="rect" href="classCppVisitorMatcher.html#a130a97c67e900ac74ddd05a5006aed4a" title="The virtual method to be called when a tree node is matched." alt="" coords="371,22,505,62"/>
-<area shape="rect" href="classCppVisitorPrinter.html#a87e13527ba9eafbe08e38d646fdc38e9" title="Converts the given pointer to an AST node to its equivalent string of code using CppWriter class." alt="" coords="553,22,680,62"/>
-<area shape="rect" href="classCppWriter.html#afba339cf47d819d699be7d109335be1b" title=" " alt="" coords="728,29,839,55"/>
+<area shape="rect" title=" " alt="" coords="5,5,140,45"/>
+<area shape="rect" href="classCppVisitorMatcher.html#ab8e734c78be8c5fa2e649c5f1718e97d" title="Checks the given pointer to the current AST node against the node types that are to be matched." alt="" coords="188,5,323,45"/>
 </map>
 </div>
 
@@ -1193,17 +1217,14 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="classCppVisitorBase.html#a2e8522a5fac964e1388819fc8f55c465">CppVisitorBase</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="cppvisitormatcher_8h_source.html#l00165">165</a> of file <a class="el" href="cppvisitormatcher_8h_source.html">cppvisitormatcher.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cppvisitormatcher_8h_source.html#l00176">176</a> of file <a class="el" href="cppvisitormatcher_8h_source.html">cppvisitormatcher.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classCppVisitorMatcher_a921e0d9598f108389bf8d1f343a819c5_cgraph.png" border="0" usemap="#aclassCppVisitorMatcher_a921e0d9598f108389bf8d1f343a819c5_cgraph" alt=""/></div>
 <map name="aclassCppVisitorMatcher_a921e0d9598f108389bf8d1f343a819c5_cgraph" id="aclassCppVisitorMatcher_a921e0d9598f108389bf8d1f343a819c5_cgraph">
-<area shape="rect" title=" " alt="" coords="5,22,140,62"/>
-<area shape="rect" href="classCppVisitorMatcher.html#ab8e734c78be8c5fa2e649c5f1718e97d" title="Checks the given pointer to the current AST node against the node types that are to be matched." alt="" coords="188,22,323,62"/>
-<area shape="rect" href="classCppVisitorMatcher.html#a130a97c67e900ac74ddd05a5006aed4a" title="The virtual method to be called when a tree node is matched." alt="" coords="371,22,505,62"/>
-<area shape="rect" href="classCppVisitorPrinter.html#a87e13527ba9eafbe08e38d646fdc38e9" title="Converts the given pointer to an AST node to its equivalent string of code using CppWriter class." alt="" coords="553,22,680,62"/>
-<area shape="rect" href="classCppWriter.html#afba339cf47d819d699be7d109335be1b" title=" " alt="" coords="728,29,839,55"/>
+<area shape="rect" title=" " alt="" coords="5,5,140,45"/>
+<area shape="rect" href="classCppVisitorMatcher.html#ab8e734c78be8c5fa2e649c5f1718e97d" title="Checks the given pointer to the current AST node against the node types that are to be matched." alt="" coords="188,5,323,45"/>
 </map>
 </div>
 
@@ -1235,17 +1256,14 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="classCppVisitorBase.html#a789fbfa5dafa20e9891da44db37338e3">CppVisitorBase</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="cppvisitormatcher_8h_source.html#l00169">169</a> of file <a class="el" href="cppvisitormatcher_8h_source.html">cppvisitormatcher.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cppvisitormatcher_8h_source.html#l00180">180</a> of file <a class="el" href="cppvisitormatcher_8h_source.html">cppvisitormatcher.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classCppVisitorMatcher_a0c41e14226b9e1920159c31d589241bc_cgraph.png" border="0" usemap="#aclassCppVisitorMatcher_a0c41e14226b9e1920159c31d589241bc_cgraph" alt=""/></div>
 <map name="aclassCppVisitorMatcher_a0c41e14226b9e1920159c31d589241bc_cgraph" id="aclassCppVisitorMatcher_a0c41e14226b9e1920159c31d589241bc_cgraph">
-<area shape="rect" title=" " alt="" coords="5,22,140,62"/>
-<area shape="rect" href="classCppVisitorMatcher.html#ab8e734c78be8c5fa2e649c5f1718e97d" title="Checks the given pointer to the current AST node against the node types that are to be matched." alt="" coords="188,22,323,62"/>
-<area shape="rect" href="classCppVisitorMatcher.html#a130a97c67e900ac74ddd05a5006aed4a" title="The virtual method to be called when a tree node is matched." alt="" coords="371,22,505,62"/>
-<area shape="rect" href="classCppVisitorPrinter.html#a87e13527ba9eafbe08e38d646fdc38e9" title="Converts the given pointer to an AST node to its equivalent string of code using CppWriter class." alt="" coords="553,22,680,62"/>
-<area shape="rect" href="classCppWriter.html#afba339cf47d819d699be7d109335be1b" title=" " alt="" coords="728,29,839,55"/>
+<area shape="rect" title=" " alt="" coords="5,5,140,45"/>
+<area shape="rect" href="classCppVisitorMatcher.html#ab8e734c78be8c5fa2e649c5f1718e97d" title="Checks the given pointer to the current AST node against the node types that are to be matched." alt="" coords="188,5,323,45"/>
 </map>
 </div>
 
@@ -1277,17 +1295,14 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="classCppVisitorBase.html#a8d2e6ce43cfdc0380b3e0a06f277c298">CppVisitorBase</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="cppvisitormatcher_8h_source.html#l00173">173</a> of file <a class="el" href="cppvisitormatcher_8h_source.html">cppvisitormatcher.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cppvisitormatcher_8h_source.html#l00184">184</a> of file <a class="el" href="cppvisitormatcher_8h_source.html">cppvisitormatcher.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classCppVisitorMatcher_a710a2bd14a0dbc2bac9aaf003ae57cc0_cgraph.png" border="0" usemap="#aclassCppVisitorMatcher_a710a2bd14a0dbc2bac9aaf003ae57cc0_cgraph" alt=""/></div>
 <map name="aclassCppVisitorMatcher_a710a2bd14a0dbc2bac9aaf003ae57cc0_cgraph" id="aclassCppVisitorMatcher_a710a2bd14a0dbc2bac9aaf003ae57cc0_cgraph">
-<area shape="rect" title=" " alt="" coords="5,22,140,62"/>
-<area shape="rect" href="classCppVisitorMatcher.html#ab8e734c78be8c5fa2e649c5f1718e97d" title="Checks the given pointer to the current AST node against the node types that are to be matched." alt="" coords="188,22,323,62"/>
-<area shape="rect" href="classCppVisitorMatcher.html#a130a97c67e900ac74ddd05a5006aed4a" title="The virtual method to be called when a tree node is matched." alt="" coords="371,22,505,62"/>
-<area shape="rect" href="classCppVisitorPrinter.html#a87e13527ba9eafbe08e38d646fdc38e9" title="Converts the given pointer to an AST node to its equivalent string of code using CppWriter class." alt="" coords="553,22,680,62"/>
-<area shape="rect" href="classCppWriter.html#afba339cf47d819d699be7d109335be1b" title=" " alt="" coords="728,29,839,55"/>
+<area shape="rect" title=" " alt="" coords="5,5,140,45"/>
+<area shape="rect" href="classCppVisitorMatcher.html#ab8e734c78be8c5fa2e649c5f1718e97d" title="Checks the given pointer to the current AST node against the node types that are to be matched." alt="" coords="188,5,323,45"/>
 </map>
 </div>
 
@@ -1319,17 +1334,14 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="classCppVisitorBase.html#a9a15915d7883b2d32b72004d5ce7131a">CppVisitorBase</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="cppvisitormatcher_8h_source.html#l00177">177</a> of file <a class="el" href="cppvisitormatcher_8h_source.html">cppvisitormatcher.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cppvisitormatcher_8h_source.html#l00188">188</a> of file <a class="el" href="cppvisitormatcher_8h_source.html">cppvisitormatcher.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classCppVisitorMatcher_adb29dade647fad6be79655c843cb774b_cgraph.png" border="0" usemap="#aclassCppVisitorMatcher_adb29dade647fad6be79655c843cb774b_cgraph" alt=""/></div>
 <map name="aclassCppVisitorMatcher_adb29dade647fad6be79655c843cb774b_cgraph" id="aclassCppVisitorMatcher_adb29dade647fad6be79655c843cb774b_cgraph">
-<area shape="rect" title=" " alt="" coords="5,22,140,62"/>
-<area shape="rect" href="classCppVisitorMatcher.html#ab8e734c78be8c5fa2e649c5f1718e97d" title="Checks the given pointer to the current AST node against the node types that are to be matched." alt="" coords="188,22,323,62"/>
-<area shape="rect" href="classCppVisitorMatcher.html#a130a97c67e900ac74ddd05a5006aed4a" title="The virtual method to be called when a tree node is matched." alt="" coords="371,22,505,62"/>
-<area shape="rect" href="classCppVisitorPrinter.html#a87e13527ba9eafbe08e38d646fdc38e9" title="Converts the given pointer to an AST node to its equivalent string of code using CppWriter class." alt="" coords="553,22,680,62"/>
-<area shape="rect" href="classCppWriter.html#afba339cf47d819d699be7d109335be1b" title=" " alt="" coords="728,29,839,55"/>
+<area shape="rect" title=" " alt="" coords="5,5,140,45"/>
+<area shape="rect" href="classCppVisitorMatcher.html#ab8e734c78be8c5fa2e649c5f1718e97d" title="Checks the given pointer to the current AST node against the node types that are to be matched." alt="" coords="188,5,323,45"/>
 </map>
 </div>
 
@@ -1361,17 +1373,14 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="classCppVisitorBase.html#a29d3bc0c987cee1fcf6faa2bf3ec561c">CppVisitorBase</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="cppvisitormatcher_8h_source.html#l00181">181</a> of file <a class="el" href="cppvisitormatcher_8h_source.html">cppvisitormatcher.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cppvisitormatcher_8h_source.html#l00192">192</a> of file <a class="el" href="cppvisitormatcher_8h_source.html">cppvisitormatcher.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classCppVisitorMatcher_a2f3ce4b2adddaaa3c2918526ad053873_cgraph.png" border="0" usemap="#aclassCppVisitorMatcher_a2f3ce4b2adddaaa3c2918526ad053873_cgraph" alt=""/></div>
 <map name="aclassCppVisitorMatcher_a2f3ce4b2adddaaa3c2918526ad053873_cgraph" id="aclassCppVisitorMatcher_a2f3ce4b2adddaaa3c2918526ad053873_cgraph">
-<area shape="rect" title=" " alt="" coords="5,22,140,62"/>
-<area shape="rect" href="classCppVisitorMatcher.html#ab8e734c78be8c5fa2e649c5f1718e97d" title="Checks the given pointer to the current AST node against the node types that are to be matched." alt="" coords="188,22,323,62"/>
-<area shape="rect" href="classCppVisitorMatcher.html#a130a97c67e900ac74ddd05a5006aed4a" title="The virtual method to be called when a tree node is matched." alt="" coords="371,22,505,62"/>
-<area shape="rect" href="classCppVisitorPrinter.html#a87e13527ba9eafbe08e38d646fdc38e9" title="Converts the given pointer to an AST node to its equivalent string of code using CppWriter class." alt="" coords="553,22,680,62"/>
-<area shape="rect" href="classCppWriter.html#afba339cf47d819d699be7d109335be1b" title=" " alt="" coords="728,29,839,55"/>
+<area shape="rect" title=" " alt="" coords="5,5,140,45"/>
+<area shape="rect" href="classCppVisitorMatcher.html#ab8e734c78be8c5fa2e649c5f1718e97d" title="Checks the given pointer to the current AST node against the node types that are to be matched." alt="" coords="188,5,323,45"/>
 </map>
 </div>
 
@@ -1403,17 +1412,14 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="classCppVisitorBase.html#a064ad5786b8b041e1960f27204201b4f">CppVisitorBase</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="cppvisitormatcher_8h_source.html#l00185">185</a> of file <a class="el" href="cppvisitormatcher_8h_source.html">cppvisitormatcher.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cppvisitormatcher_8h_source.html#l00196">196</a> of file <a class="el" href="cppvisitormatcher_8h_source.html">cppvisitormatcher.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classCppVisitorMatcher_a86474b476303fe12cec6f2c3abc86792_cgraph.png" border="0" usemap="#aclassCppVisitorMatcher_a86474b476303fe12cec6f2c3abc86792_cgraph" alt=""/></div>
 <map name="aclassCppVisitorMatcher_a86474b476303fe12cec6f2c3abc86792_cgraph" id="aclassCppVisitorMatcher_a86474b476303fe12cec6f2c3abc86792_cgraph">
-<area shape="rect" title=" " alt="" coords="5,22,140,62"/>
-<area shape="rect" href="classCppVisitorMatcher.html#ab8e734c78be8c5fa2e649c5f1718e97d" title="Checks the given pointer to the current AST node against the node types that are to be matched." alt="" coords="188,22,323,62"/>
-<area shape="rect" href="classCppVisitorMatcher.html#a130a97c67e900ac74ddd05a5006aed4a" title="The virtual method to be called when a tree node is matched." alt="" coords="371,22,505,62"/>
-<area shape="rect" href="classCppVisitorPrinter.html#a87e13527ba9eafbe08e38d646fdc38e9" title="Converts the given pointer to an AST node to its equivalent string of code using CppWriter class." alt="" coords="553,22,680,62"/>
-<area shape="rect" href="classCppWriter.html#afba339cf47d819d699be7d109335be1b" title=" " alt="" coords="728,29,839,55"/>
+<area shape="rect" title=" " alt="" coords="5,5,140,45"/>
+<area shape="rect" href="classCppVisitorMatcher.html#ab8e734c78be8c5fa2e649c5f1718e97d" title="Checks the given pointer to the current AST node against the node types that are to be matched." alt="" coords="188,5,323,45"/>
 </map>
 </div>
 
@@ -1445,17 +1451,14 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="classCppVisitorBase.html#a2e5c9f78384c37bb0c69ea1898a0df8f">CppVisitorBase</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="cppvisitormatcher_8h_source.html#l00137">137</a> of file <a class="el" href="cppvisitormatcher_8h_source.html">cppvisitormatcher.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cppvisitormatcher_8h_source.html#l00148">148</a> of file <a class="el" href="cppvisitormatcher_8h_source.html">cppvisitormatcher.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classCppVisitorMatcher_abfea170547348ea3b2797354856fa254_cgraph.png" border="0" usemap="#aclassCppVisitorMatcher_abfea170547348ea3b2797354856fa254_cgraph" alt=""/></div>
 <map name="aclassCppVisitorMatcher_abfea170547348ea3b2797354856fa254_cgraph" id="aclassCppVisitorMatcher_abfea170547348ea3b2797354856fa254_cgraph">
-<area shape="rect" title=" " alt="" coords="5,22,140,62"/>
-<area shape="rect" href="classCppVisitorMatcher.html#ab8e734c78be8c5fa2e649c5f1718e97d" title="Checks the given pointer to the current AST node against the node types that are to be matched." alt="" coords="188,22,323,62"/>
-<area shape="rect" href="classCppVisitorMatcher.html#a130a97c67e900ac74ddd05a5006aed4a" title="The virtual method to be called when a tree node is matched." alt="" coords="371,22,505,62"/>
-<area shape="rect" href="classCppVisitorPrinter.html#a87e13527ba9eafbe08e38d646fdc38e9" title="Converts the given pointer to an AST node to its equivalent string of code using CppWriter class." alt="" coords="553,22,680,62"/>
-<area shape="rect" href="classCppWriter.html#afba339cf47d819d699be7d109335be1b" title=" " alt="" coords="728,29,839,55"/>
+<area shape="rect" title=" " alt="" coords="5,5,140,45"/>
+<area shape="rect" href="classCppVisitorMatcher.html#ab8e734c78be8c5fa2e649c5f1718e97d" title="Checks the given pointer to the current AST node against the node types that are to be matched." alt="" coords="188,5,323,45"/>
 </map>
 </div>
 
@@ -1487,17 +1490,14 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="classCppVisitorBase.html#a23f4e72b75955344f1414d3bde266a8f">CppVisitorBase</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="cppvisitormatcher_8h_source.html#l00189">189</a> of file <a class="el" href="cppvisitormatcher_8h_source.html">cppvisitormatcher.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cppvisitormatcher_8h_source.html#l00200">200</a> of file <a class="el" href="cppvisitormatcher_8h_source.html">cppvisitormatcher.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classCppVisitorMatcher_a485be147a136772054498e08cc0a1704_cgraph.png" border="0" usemap="#aclassCppVisitorMatcher_a485be147a136772054498e08cc0a1704_cgraph" alt=""/></div>
 <map name="aclassCppVisitorMatcher_a485be147a136772054498e08cc0a1704_cgraph" id="aclassCppVisitorMatcher_a485be147a136772054498e08cc0a1704_cgraph">
-<area shape="rect" title=" " alt="" coords="5,22,140,62"/>
-<area shape="rect" href="classCppVisitorMatcher.html#ab8e734c78be8c5fa2e649c5f1718e97d" title="Checks the given pointer to the current AST node against the node types that are to be matched." alt="" coords="188,22,323,62"/>
-<area shape="rect" href="classCppVisitorMatcher.html#a130a97c67e900ac74ddd05a5006aed4a" title="The virtual method to be called when a tree node is matched." alt="" coords="371,22,505,62"/>
-<area shape="rect" href="classCppVisitorPrinter.html#a87e13527ba9eafbe08e38d646fdc38e9" title="Converts the given pointer to an AST node to its equivalent string of code using CppWriter class." alt="" coords="553,22,680,62"/>
-<area shape="rect" href="classCppWriter.html#afba339cf47d819d699be7d109335be1b" title=" " alt="" coords="728,29,839,55"/>
+<area shape="rect" title=" " alt="" coords="5,5,140,45"/>
+<area shape="rect" href="classCppVisitorMatcher.html#ab8e734c78be8c5fa2e649c5f1718e97d" title="Checks the given pointer to the current AST node against the node types that are to be matched." alt="" coords="188,5,323,45"/>
 </map>
 </div>
 
@@ -1529,17 +1529,14 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="classCppVisitorBase.html#a7b728ebbe720325f40039a4186f5bb6f">CppVisitorBase</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="cppvisitormatcher_8h_source.html#l00193">193</a> of file <a class="el" href="cppvisitormatcher_8h_source.html">cppvisitormatcher.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cppvisitormatcher_8h_source.html#l00204">204</a> of file <a class="el" href="cppvisitormatcher_8h_source.html">cppvisitormatcher.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classCppVisitorMatcher_ae365992d850298bc8e2224bfc5e18dd4_cgraph.png" border="0" usemap="#aclassCppVisitorMatcher_ae365992d850298bc8e2224bfc5e18dd4_cgraph" alt=""/></div>
 <map name="aclassCppVisitorMatcher_ae365992d850298bc8e2224bfc5e18dd4_cgraph" id="aclassCppVisitorMatcher_ae365992d850298bc8e2224bfc5e18dd4_cgraph">
-<area shape="rect" title=" " alt="" coords="5,22,140,62"/>
-<area shape="rect" href="classCppVisitorMatcher.html#ab8e734c78be8c5fa2e649c5f1718e97d" title="Checks the given pointer to the current AST node against the node types that are to be matched." alt="" coords="188,22,323,62"/>
-<area shape="rect" href="classCppVisitorMatcher.html#a130a97c67e900ac74ddd05a5006aed4a" title="The virtual method to be called when a tree node is matched." alt="" coords="371,22,505,62"/>
-<area shape="rect" href="classCppVisitorPrinter.html#a87e13527ba9eafbe08e38d646fdc38e9" title="Converts the given pointer to an AST node to its equivalent string of code using CppWriter class." alt="" coords="553,22,680,62"/>
-<area shape="rect" href="classCppWriter.html#afba339cf47d819d699be7d109335be1b" title=" " alt="" coords="728,29,839,55"/>
+<area shape="rect" title=" " alt="" coords="5,5,140,45"/>
+<area shape="rect" href="classCppVisitorMatcher.html#ab8e734c78be8c5fa2e649c5f1718e97d" title="Checks the given pointer to the current AST node against the node types that are to be matched." alt="" coords="188,5,323,45"/>
 </map>
 </div>
 
@@ -1571,17 +1568,14 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="classCppVisitorBase.html#a9469d9b03b0950269e953d330399799a">CppVisitorBase</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="cppvisitormatcher_8h_source.html#l00197">197</a> of file <a class="el" href="cppvisitormatcher_8h_source.html">cppvisitormatcher.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cppvisitormatcher_8h_source.html#l00208">208</a> of file <a class="el" href="cppvisitormatcher_8h_source.html">cppvisitormatcher.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classCppVisitorMatcher_ac4b4e2236b050a09885b36ce0480d24f_cgraph.png" border="0" usemap="#aclassCppVisitorMatcher_ac4b4e2236b050a09885b36ce0480d24f_cgraph" alt=""/></div>
 <map name="aclassCppVisitorMatcher_ac4b4e2236b050a09885b36ce0480d24f_cgraph" id="aclassCppVisitorMatcher_ac4b4e2236b050a09885b36ce0480d24f_cgraph">
-<area shape="rect" title=" " alt="" coords="5,22,140,62"/>
-<area shape="rect" href="classCppVisitorMatcher.html#ab8e734c78be8c5fa2e649c5f1718e97d" title="Checks the given pointer to the current AST node against the node types that are to be matched." alt="" coords="188,22,323,62"/>
-<area shape="rect" href="classCppVisitorMatcher.html#a130a97c67e900ac74ddd05a5006aed4a" title="The virtual method to be called when a tree node is matched." alt="" coords="371,22,505,62"/>
-<area shape="rect" href="classCppVisitorPrinter.html#a87e13527ba9eafbe08e38d646fdc38e9" title="Converts the given pointer to an AST node to its equivalent string of code using CppWriter class." alt="" coords="553,22,680,62"/>
-<area shape="rect" href="classCppWriter.html#afba339cf47d819d699be7d109335be1b" title=" " alt="" coords="728,29,839,55"/>
+<area shape="rect" title=" " alt="" coords="5,5,140,45"/>
+<area shape="rect" href="classCppVisitorMatcher.html#ab8e734c78be8c5fa2e649c5f1718e97d" title="Checks the given pointer to the current AST node against the node types that are to be matched." alt="" coords="188,5,323,45"/>
 </map>
 </div>
 
@@ -1613,17 +1607,14 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="classCppVisitorBase.html#a0ed1df072218bdf958c7280b8e905883">CppVisitorBase</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="cppvisitormatcher_8h_source.html#l00201">201</a> of file <a class="el" href="cppvisitormatcher_8h_source.html">cppvisitormatcher.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cppvisitormatcher_8h_source.html#l00212">212</a> of file <a class="el" href="cppvisitormatcher_8h_source.html">cppvisitormatcher.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classCppVisitorMatcher_a7f985988802c6d5ad048ad099527b04f_cgraph.png" border="0" usemap="#aclassCppVisitorMatcher_a7f985988802c6d5ad048ad099527b04f_cgraph" alt=""/></div>
 <map name="aclassCppVisitorMatcher_a7f985988802c6d5ad048ad099527b04f_cgraph" id="aclassCppVisitorMatcher_a7f985988802c6d5ad048ad099527b04f_cgraph">
-<area shape="rect" title=" " alt="" coords="5,22,140,62"/>
-<area shape="rect" href="classCppVisitorMatcher.html#ab8e734c78be8c5fa2e649c5f1718e97d" title="Checks the given pointer to the current AST node against the node types that are to be matched." alt="" coords="188,22,323,62"/>
-<area shape="rect" href="classCppVisitorMatcher.html#a130a97c67e900ac74ddd05a5006aed4a" title="The virtual method to be called when a tree node is matched." alt="" coords="371,22,505,62"/>
-<area shape="rect" href="classCppVisitorPrinter.html#a87e13527ba9eafbe08e38d646fdc38e9" title="Converts the given pointer to an AST node to its equivalent string of code using CppWriter class." alt="" coords="553,22,680,62"/>
-<area shape="rect" href="classCppWriter.html#afba339cf47d819d699be7d109335be1b" title=" " alt="" coords="728,29,839,55"/>
+<area shape="rect" title=" " alt="" coords="5,5,140,45"/>
+<area shape="rect" href="classCppVisitorMatcher.html#ab8e734c78be8c5fa2e649c5f1718e97d" title="Checks the given pointer to the current AST node against the node types that are to be matched." alt="" coords="188,5,323,45"/>
 </map>
 </div>
 
@@ -1655,17 +1646,14 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="classCppVisitorBase.html#ac2c88c709df6edbdb17b37f878761381">CppVisitorBase</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="cppvisitormatcher_8h_source.html#l00205">205</a> of file <a class="el" href="cppvisitormatcher_8h_source.html">cppvisitormatcher.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cppvisitormatcher_8h_source.html#l00216">216</a> of file <a class="el" href="cppvisitormatcher_8h_source.html">cppvisitormatcher.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classCppVisitorMatcher_a3a4714434bc003af47beaebbf76444d4_cgraph.png" border="0" usemap="#aclassCppVisitorMatcher_a3a4714434bc003af47beaebbf76444d4_cgraph" alt=""/></div>
 <map name="aclassCppVisitorMatcher_a3a4714434bc003af47beaebbf76444d4_cgraph" id="aclassCppVisitorMatcher_a3a4714434bc003af47beaebbf76444d4_cgraph">
-<area shape="rect" title=" " alt="" coords="5,22,140,62"/>
-<area shape="rect" href="classCppVisitorMatcher.html#ab8e734c78be8c5fa2e649c5f1718e97d" title="Checks the given pointer to the current AST node against the node types that are to be matched." alt="" coords="188,22,323,62"/>
-<area shape="rect" href="classCppVisitorMatcher.html#a130a97c67e900ac74ddd05a5006aed4a" title="The virtual method to be called when a tree node is matched." alt="" coords="371,22,505,62"/>
-<area shape="rect" href="classCppVisitorPrinter.html#a87e13527ba9eafbe08e38d646fdc38e9" title="Converts the given pointer to an AST node to its equivalent string of code using CppWriter class." alt="" coords="553,22,680,62"/>
-<area shape="rect" href="classCppWriter.html#afba339cf47d819d699be7d109335be1b" title=" " alt="" coords="728,29,839,55"/>
+<area shape="rect" title=" " alt="" coords="5,5,140,45"/>
+<area shape="rect" href="classCppVisitorMatcher.html#ab8e734c78be8c5fa2e649c5f1718e97d" title="Checks the given pointer to the current AST node against the node types that are to be matched." alt="" coords="188,5,323,45"/>
 </map>
 </div>
 
@@ -1697,17 +1685,14 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="classCppVisitorBase.html#aba7871557768028c860375d62e3d8bc0">CppVisitorBase</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="cppvisitormatcher_8h_source.html#l00209">209</a> of file <a class="el" href="cppvisitormatcher_8h_source.html">cppvisitormatcher.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cppvisitormatcher_8h_source.html#l00220">220</a> of file <a class="el" href="cppvisitormatcher_8h_source.html">cppvisitormatcher.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classCppVisitorMatcher_a516fb1390c9a3649d948359b8ae9a25f_cgraph.png" border="0" usemap="#aclassCppVisitorMatcher_a516fb1390c9a3649d948359b8ae9a25f_cgraph" alt=""/></div>
 <map name="aclassCppVisitorMatcher_a516fb1390c9a3649d948359b8ae9a25f_cgraph" id="aclassCppVisitorMatcher_a516fb1390c9a3649d948359b8ae9a25f_cgraph">
-<area shape="rect" title=" " alt="" coords="5,22,140,62"/>
-<area shape="rect" href="classCppVisitorMatcher.html#ab8e734c78be8c5fa2e649c5f1718e97d" title="Checks the given pointer to the current AST node against the node types that are to be matched." alt="" coords="188,22,323,62"/>
-<area shape="rect" href="classCppVisitorMatcher.html#a130a97c67e900ac74ddd05a5006aed4a" title="The virtual method to be called when a tree node is matched." alt="" coords="371,22,505,62"/>
-<area shape="rect" href="classCppVisitorPrinter.html#a87e13527ba9eafbe08e38d646fdc38e9" title="Converts the given pointer to an AST node to its equivalent string of code using CppWriter class." alt="" coords="553,22,680,62"/>
-<area shape="rect" href="classCppWriter.html#afba339cf47d819d699be7d109335be1b" title=" " alt="" coords="728,29,839,55"/>
+<area shape="rect" title=" " alt="" coords="5,5,140,45"/>
+<area shape="rect" href="classCppVisitorMatcher.html#ab8e734c78be8c5fa2e649c5f1718e97d" title="Checks the given pointer to the current AST node against the node types that are to be matched." alt="" coords="188,5,323,45"/>
 </map>
 </div>
 
@@ -1739,17 +1724,14 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="classCppVisitorBase.html#a9ee7cb270fb255daa4186e20c8e26c8f">CppVisitorBase</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="cppvisitormatcher_8h_source.html#l00157">157</a> of file <a class="el" href="cppvisitormatcher_8h_source.html">cppvisitormatcher.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cppvisitormatcher_8h_source.html#l00168">168</a> of file <a class="el" href="cppvisitormatcher_8h_source.html">cppvisitormatcher.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classCppVisitorMatcher_a8aa7be002ea84e29c3321067e82f6918_cgraph.png" border="0" usemap="#aclassCppVisitorMatcher_a8aa7be002ea84e29c3321067e82f6918_cgraph" alt=""/></div>
 <map name="aclassCppVisitorMatcher_a8aa7be002ea84e29c3321067e82f6918_cgraph" id="aclassCppVisitorMatcher_a8aa7be002ea84e29c3321067e82f6918_cgraph">
-<area shape="rect" title=" " alt="" coords="5,22,140,62"/>
-<area shape="rect" href="classCppVisitorMatcher.html#ab8e734c78be8c5fa2e649c5f1718e97d" title="Checks the given pointer to the current AST node against the node types that are to be matched." alt="" coords="188,22,323,62"/>
-<area shape="rect" href="classCppVisitorMatcher.html#a130a97c67e900ac74ddd05a5006aed4a" title="The virtual method to be called when a tree node is matched." alt="" coords="371,22,505,62"/>
-<area shape="rect" href="classCppVisitorPrinter.html#a87e13527ba9eafbe08e38d646fdc38e9" title="Converts the given pointer to an AST node to its equivalent string of code using CppWriter class." alt="" coords="553,22,680,62"/>
-<area shape="rect" href="classCppWriter.html#afba339cf47d819d699be7d109335be1b" title=" " alt="" coords="728,29,839,55"/>
+<area shape="rect" title=" " alt="" coords="5,5,140,45"/>
+<area shape="rect" href="classCppVisitorMatcher.html#ab8e734c78be8c5fa2e649c5f1718e97d" title="Checks the given pointer to the current AST node against the node types that are to be matched." alt="" coords="188,5,323,45"/>
 </map>
 </div>
 
@@ -1781,17 +1763,14 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="classCppVisitorBase.html#afec39e17a1e618598fd482299c7b5516">CppVisitorBase</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="cppvisitormatcher_8h_source.html#l00213">213</a> of file <a class="el" href="cppvisitormatcher_8h_source.html">cppvisitormatcher.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cppvisitormatcher_8h_source.html#l00224">224</a> of file <a class="el" href="cppvisitormatcher_8h_source.html">cppvisitormatcher.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classCppVisitorMatcher_ae5a1e033063f4cedf87410f84e9ac0ac_cgraph.png" border="0" usemap="#aclassCppVisitorMatcher_ae5a1e033063f4cedf87410f84e9ac0ac_cgraph" alt=""/></div>
 <map name="aclassCppVisitorMatcher_ae5a1e033063f4cedf87410f84e9ac0ac_cgraph" id="aclassCppVisitorMatcher_ae5a1e033063f4cedf87410f84e9ac0ac_cgraph">
-<area shape="rect" title=" " alt="" coords="5,22,140,62"/>
-<area shape="rect" href="classCppVisitorMatcher.html#ab8e734c78be8c5fa2e649c5f1718e97d" title="Checks the given pointer to the current AST node against the node types that are to be matched." alt="" coords="188,22,323,62"/>
-<area shape="rect" href="classCppVisitorMatcher.html#a130a97c67e900ac74ddd05a5006aed4a" title="The virtual method to be called when a tree node is matched." alt="" coords="371,22,505,62"/>
-<area shape="rect" href="classCppVisitorPrinter.html#a87e13527ba9eafbe08e38d646fdc38e9" title="Converts the given pointer to an AST node to its equivalent string of code using CppWriter class." alt="" coords="553,22,680,62"/>
-<area shape="rect" href="classCppWriter.html#afba339cf47d819d699be7d109335be1b" title=" " alt="" coords="728,29,839,55"/>
+<area shape="rect" title=" " alt="" coords="5,5,140,45"/>
+<area shape="rect" href="classCppVisitorMatcher.html#ab8e734c78be8c5fa2e649c5f1718e97d" title="Checks the given pointer to the current AST node against the node types that are to be matched." alt="" coords="188,5,323,45"/>
 </map>
 </div>
 
@@ -1823,17 +1802,14 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="classCppVisitorBase.html#a32a1d9a4d7c055553c53c7479f06fb81">CppVisitorBase</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="cppvisitormatcher_8h_source.html#l00217">217</a> of file <a class="el" href="cppvisitormatcher_8h_source.html">cppvisitormatcher.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cppvisitormatcher_8h_source.html#l00228">228</a> of file <a class="el" href="cppvisitormatcher_8h_source.html">cppvisitormatcher.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classCppVisitorMatcher_a10b99b22cfecfff1f90f3c085ceabae7_cgraph.png" border="0" usemap="#aclassCppVisitorMatcher_a10b99b22cfecfff1f90f3c085ceabae7_cgraph" alt=""/></div>
 <map name="aclassCppVisitorMatcher_a10b99b22cfecfff1f90f3c085ceabae7_cgraph" id="aclassCppVisitorMatcher_a10b99b22cfecfff1f90f3c085ceabae7_cgraph">
-<area shape="rect" title=" " alt="" coords="5,22,140,62"/>
-<area shape="rect" href="classCppVisitorMatcher.html#ab8e734c78be8c5fa2e649c5f1718e97d" title="Checks the given pointer to the current AST node against the node types that are to be matched." alt="" coords="188,22,323,62"/>
-<area shape="rect" href="classCppVisitorMatcher.html#a130a97c67e900ac74ddd05a5006aed4a" title="The virtual method to be called when a tree node is matched." alt="" coords="371,22,505,62"/>
-<area shape="rect" href="classCppVisitorPrinter.html#a87e13527ba9eafbe08e38d646fdc38e9" title="Converts the given pointer to an AST node to its equivalent string of code using CppWriter class." alt="" coords="553,22,680,62"/>
-<area shape="rect" href="classCppWriter.html#afba339cf47d819d699be7d109335be1b" title=" " alt="" coords="728,29,839,55"/>
+<area shape="rect" title=" " alt="" coords="5,5,140,45"/>
+<area shape="rect" href="classCppVisitorMatcher.html#ab8e734c78be8c5fa2e649c5f1718e97d" title="Checks the given pointer to the current AST node against the node types that are to be matched." alt="" coords="188,5,323,45"/>
 </map>
 </div>
 
@@ -1865,17 +1841,14 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="classCppVisitorBase.html#a6e7f1e290f9bd2fb1247fe0610c188ff">CppVisitorBase</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="cppvisitormatcher_8h_source.html#l00077">77</a> of file <a class="el" href="cppvisitormatcher_8h_source.html">cppvisitormatcher.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cppvisitormatcher_8h_source.html#l00088">88</a> of file <a class="el" href="cppvisitormatcher_8h_source.html">cppvisitormatcher.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classCppVisitorMatcher_a661b2f85ad4b46ab2f2a8498620db970_cgraph.png" border="0" usemap="#aclassCppVisitorMatcher_a661b2f85ad4b46ab2f2a8498620db970_cgraph" alt=""/></div>
 <map name="aclassCppVisitorMatcher_a661b2f85ad4b46ab2f2a8498620db970_cgraph" id="aclassCppVisitorMatcher_a661b2f85ad4b46ab2f2a8498620db970_cgraph">
-<area shape="rect" title=" " alt="" coords="5,22,140,62"/>
-<area shape="rect" href="classCppVisitorMatcher.html#ab8e734c78be8c5fa2e649c5f1718e97d" title="Checks the given pointer to the current AST node against the node types that are to be matched." alt="" coords="188,22,323,62"/>
-<area shape="rect" href="classCppVisitorMatcher.html#a130a97c67e900ac74ddd05a5006aed4a" title="The virtual method to be called when a tree node is matched." alt="" coords="371,22,505,62"/>
-<area shape="rect" href="classCppVisitorPrinter.html#a87e13527ba9eafbe08e38d646fdc38e9" title="Converts the given pointer to an AST node to its equivalent string of code using CppWriter class." alt="" coords="553,22,680,62"/>
-<area shape="rect" href="classCppWriter.html#afba339cf47d819d699be7d109335be1b" title=" " alt="" coords="728,29,839,55"/>
+<area shape="rect" title=" " alt="" coords="5,5,140,45"/>
+<area shape="rect" href="classCppVisitorMatcher.html#ab8e734c78be8c5fa2e649c5f1718e97d" title="Checks the given pointer to the current AST node against the node types that are to be matched." alt="" coords="188,5,323,45"/>
 </map>
 </div>
 
@@ -1907,17 +1880,14 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="classCppVisitorBase.html#a555da866da7d8c41ee3aa1014745c562">CppVisitorBase</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="cppvisitormatcher_8h_source.html#l00073">73</a> of file <a class="el" href="cppvisitormatcher_8h_source.html">cppvisitormatcher.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cppvisitormatcher_8h_source.html#l00084">84</a> of file <a class="el" href="cppvisitormatcher_8h_source.html">cppvisitormatcher.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classCppVisitorMatcher_adc7f3c6bde68ff36be8906a606d831c2_cgraph.png" border="0" usemap="#aclassCppVisitorMatcher_adc7f3c6bde68ff36be8906a606d831c2_cgraph" alt=""/></div>
 <map name="aclassCppVisitorMatcher_adc7f3c6bde68ff36be8906a606d831c2_cgraph" id="aclassCppVisitorMatcher_adc7f3c6bde68ff36be8906a606d831c2_cgraph">
-<area shape="rect" title=" " alt="" coords="5,22,140,62"/>
-<area shape="rect" href="classCppVisitorMatcher.html#ab8e734c78be8c5fa2e649c5f1718e97d" title="Checks the given pointer to the current AST node against the node types that are to be matched." alt="" coords="188,22,323,62"/>
-<area shape="rect" href="classCppVisitorMatcher.html#a130a97c67e900ac74ddd05a5006aed4a" title="The virtual method to be called when a tree node is matched." alt="" coords="371,22,505,62"/>
-<area shape="rect" href="classCppVisitorPrinter.html#a87e13527ba9eafbe08e38d646fdc38e9" title="Converts the given pointer to an AST node to its equivalent string of code using CppWriter class." alt="" coords="553,22,680,62"/>
-<area shape="rect" href="classCppWriter.html#afba339cf47d819d699be7d109335be1b" title=" " alt="" coords="728,29,839,55"/>
+<area shape="rect" title=" " alt="" coords="5,5,140,45"/>
+<area shape="rect" href="classCppVisitorMatcher.html#ab8e734c78be8c5fa2e649c5f1718e97d" title="Checks the given pointer to the current AST node against the node types that are to be matched." alt="" coords="188,5,323,45"/>
 </map>
 </div>
 
@@ -1949,17 +1919,14 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="classCppVisitorBase.html#af74aa015b757d8cb63d3199647ac3099">CppVisitorBase</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="cppvisitormatcher_8h_source.html#l00081">81</a> of file <a class="el" href="cppvisitormatcher_8h_source.html">cppvisitormatcher.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cppvisitormatcher_8h_source.html#l00092">92</a> of file <a class="el" href="cppvisitormatcher_8h_source.html">cppvisitormatcher.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classCppVisitorMatcher_a6e4c16252b18f959c15bf91c40050afd_cgraph.png" border="0" usemap="#aclassCppVisitorMatcher_a6e4c16252b18f959c15bf91c40050afd_cgraph" alt=""/></div>
 <map name="aclassCppVisitorMatcher_a6e4c16252b18f959c15bf91c40050afd_cgraph" id="aclassCppVisitorMatcher_a6e4c16252b18f959c15bf91c40050afd_cgraph">
-<area shape="rect" title=" " alt="" coords="5,22,140,62"/>
-<area shape="rect" href="classCppVisitorMatcher.html#ab8e734c78be8c5fa2e649c5f1718e97d" title="Checks the given pointer to the current AST node against the node types that are to be matched." alt="" coords="188,22,323,62"/>
-<area shape="rect" href="classCppVisitorMatcher.html#a130a97c67e900ac74ddd05a5006aed4a" title="The virtual method to be called when a tree node is matched." alt="" coords="371,22,505,62"/>
-<area shape="rect" href="classCppVisitorPrinter.html#a87e13527ba9eafbe08e38d646fdc38e9" title="Converts the given pointer to an AST node to its equivalent string of code using CppWriter class." alt="" coords="553,22,680,62"/>
-<area shape="rect" href="classCppWriter.html#afba339cf47d819d699be7d109335be1b" title=" " alt="" coords="728,29,839,55"/>
+<area shape="rect" title=" " alt="" coords="5,5,140,45"/>
+<area shape="rect" href="classCppVisitorMatcher.html#ab8e734c78be8c5fa2e649c5f1718e97d" title="Checks the given pointer to the current AST node against the node types that are to be matched." alt="" coords="188,5,323,45"/>
 </map>
 </div>
 
@@ -1991,17 +1958,14 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="classCppVisitorBase.html#ad4db530d6d756bfbe1c7c3d1efb3134a">CppVisitorBase</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="cppvisitormatcher_8h_source.html#l00085">85</a> of file <a class="el" href="cppvisitormatcher_8h_source.html">cppvisitormatcher.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cppvisitormatcher_8h_source.html#l00096">96</a> of file <a class="el" href="cppvisitormatcher_8h_source.html">cppvisitormatcher.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classCppVisitorMatcher_a72f270cd1ae122c7ffeecc6129bc99d6_cgraph.png" border="0" usemap="#aclassCppVisitorMatcher_a72f270cd1ae122c7ffeecc6129bc99d6_cgraph" alt=""/></div>
 <map name="aclassCppVisitorMatcher_a72f270cd1ae122c7ffeecc6129bc99d6_cgraph" id="aclassCppVisitorMatcher_a72f270cd1ae122c7ffeecc6129bc99d6_cgraph">
-<area shape="rect" title=" " alt="" coords="5,22,140,62"/>
-<area shape="rect" href="classCppVisitorMatcher.html#ab8e734c78be8c5fa2e649c5f1718e97d" title="Checks the given pointer to the current AST node against the node types that are to be matched." alt="" coords="188,22,323,62"/>
-<area shape="rect" href="classCppVisitorMatcher.html#a130a97c67e900ac74ddd05a5006aed4a" title="The virtual method to be called when a tree node is matched." alt="" coords="371,22,505,62"/>
-<area shape="rect" href="classCppVisitorPrinter.html#a87e13527ba9eafbe08e38d646fdc38e9" title="Converts the given pointer to an AST node to its equivalent string of code using CppWriter class." alt="" coords="553,22,680,62"/>
-<area shape="rect" href="classCppWriter.html#afba339cf47d819d699be7d109335be1b" title=" " alt="" coords="728,29,839,55"/>
+<area shape="rect" title=" " alt="" coords="5,5,140,45"/>
+<area shape="rect" href="classCppVisitorMatcher.html#ab8e734c78be8c5fa2e649c5f1718e97d" title="Checks the given pointer to the current AST node against the node types that are to be matched." alt="" coords="188,5,323,45"/>
 </map>
 </div>
 
@@ -2033,17 +1997,14 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="classCppVisitorBase.html#a61ac2f9d443a0581645322b9995b924e">CppVisitorBase</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="cppvisitormatcher_8h_source.html#l00089">89</a> of file <a class="el" href="cppvisitormatcher_8h_source.html">cppvisitormatcher.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cppvisitormatcher_8h_source.html#l00100">100</a> of file <a class="el" href="cppvisitormatcher_8h_source.html">cppvisitormatcher.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classCppVisitorMatcher_ac578d54828885dacd9e2054b84e471c8_cgraph.png" border="0" usemap="#aclassCppVisitorMatcher_ac578d54828885dacd9e2054b84e471c8_cgraph" alt=""/></div>
 <map name="aclassCppVisitorMatcher_ac578d54828885dacd9e2054b84e471c8_cgraph" id="aclassCppVisitorMatcher_ac578d54828885dacd9e2054b84e471c8_cgraph">
-<area shape="rect" title=" " alt="" coords="5,22,140,62"/>
-<area shape="rect" href="classCppVisitorMatcher.html#ab8e734c78be8c5fa2e649c5f1718e97d" title="Checks the given pointer to the current AST node against the node types that are to be matched." alt="" coords="188,22,323,62"/>
-<area shape="rect" href="classCppVisitorMatcher.html#a130a97c67e900ac74ddd05a5006aed4a" title="The virtual method to be called when a tree node is matched." alt="" coords="371,22,505,62"/>
-<area shape="rect" href="classCppVisitorPrinter.html#a87e13527ba9eafbe08e38d646fdc38e9" title="Converts the given pointer to an AST node to its equivalent string of code using CppWriter class." alt="" coords="553,22,680,62"/>
-<area shape="rect" href="classCppWriter.html#afba339cf47d819d699be7d109335be1b" title=" " alt="" coords="728,29,839,55"/>
+<area shape="rect" title=" " alt="" coords="5,5,140,45"/>
+<area shape="rect" href="classCppVisitorMatcher.html#ab8e734c78be8c5fa2e649c5f1718e97d" title="Checks the given pointer to the current AST node against the node types that are to be matched." alt="" coords="188,5,323,45"/>
 </map>
 </div>
 
@@ -2075,17 +2036,14 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="classCppVisitorBase.html#ae6a9ac2ce01ae8871d58c1058d5c2bb8">CppVisitorBase</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="cppvisitormatcher_8h_source.html#l00093">93</a> of file <a class="el" href="cppvisitormatcher_8h_source.html">cppvisitormatcher.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cppvisitormatcher_8h_source.html#l00104">104</a> of file <a class="el" href="cppvisitormatcher_8h_source.html">cppvisitormatcher.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classCppVisitorMatcher_a8e7f863b438b23c7ed714eb866dfb219_cgraph.png" border="0" usemap="#aclassCppVisitorMatcher_a8e7f863b438b23c7ed714eb866dfb219_cgraph" alt=""/></div>
 <map name="aclassCppVisitorMatcher_a8e7f863b438b23c7ed714eb866dfb219_cgraph" id="aclassCppVisitorMatcher_a8e7f863b438b23c7ed714eb866dfb219_cgraph">
-<area shape="rect" title=" " alt="" coords="5,22,140,62"/>
-<area shape="rect" href="classCppVisitorMatcher.html#ab8e734c78be8c5fa2e649c5f1718e97d" title="Checks the given pointer to the current AST node against the node types that are to be matched." alt="" coords="188,22,323,62"/>
-<area shape="rect" href="classCppVisitorMatcher.html#a130a97c67e900ac74ddd05a5006aed4a" title="The virtual method to be called when a tree node is matched." alt="" coords="371,22,505,62"/>
-<area shape="rect" href="classCppVisitorPrinter.html#a87e13527ba9eafbe08e38d646fdc38e9" title="Converts the given pointer to an AST node to its equivalent string of code using CppWriter class." alt="" coords="553,22,680,62"/>
-<area shape="rect" href="classCppWriter.html#afba339cf47d819d699be7d109335be1b" title=" " alt="" coords="728,29,839,55"/>
+<area shape="rect" title=" " alt="" coords="5,5,140,45"/>
+<area shape="rect" href="classCppVisitorMatcher.html#ab8e734c78be8c5fa2e649c5f1718e97d" title="Checks the given pointer to the current AST node against the node types that are to be matched." alt="" coords="188,5,323,45"/>
 </map>
 </div>
 
@@ -2126,23 +2084,44 @@ Here is the call graph for this function:</div>
 
 <p>Implements <a class="el" href="classCppVisitorBase.html#a3acc9f71d50bcf042323a58ca2184ea7">CppVisitorBase</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="cppvisitormatcher_8h_source.html#l00065">65</a> of file <a class="el" href="cppvisitormatcher_8h_source.html">cppvisitormatcher.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cppvisitormatcher_8h_source.html#l00076">76</a> of file <a class="el" href="cppvisitormatcher_8h_source.html">cppvisitormatcher.h</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classCppVisitorMatcher_a168ee1b816c8cf3f5af2fe68893d7747_cgraph.png" border="0" usemap="#aclassCppVisitorMatcher_a168ee1b816c8cf3f5af2fe68893d7747_cgraph" alt=""/></div>
 <map name="aclassCppVisitorMatcher_a168ee1b816c8cf3f5af2fe68893d7747_cgraph" id="aclassCppVisitorMatcher_a168ee1b816c8cf3f5af2fe68893d7747_cgraph">
-<area shape="rect" title="The visitor pattern&#39;s visit methods for the given types." alt="" coords="5,22,140,62"/>
-<area shape="rect" href="classCppVisitorMatcher.html#ab8e734c78be8c5fa2e649c5f1718e97d" title="Checks the given pointer to the current AST node against the node types that are to be matched." alt="" coords="188,22,323,62"/>
-<area shape="rect" href="classCppVisitorMatcher.html#a130a97c67e900ac74ddd05a5006aed4a" title="The virtual method to be called when a tree node is matched." alt="" coords="371,22,505,62"/>
-<area shape="rect" href="classCppVisitorPrinter.html#a87e13527ba9eafbe08e38d646fdc38e9" title="Converts the given pointer to an AST node to its equivalent string of code using CppWriter class." alt="" coords="553,22,680,62"/>
-<area shape="rect" href="classCppWriter.html#afba339cf47d819d699be7d109335be1b" title=" " alt="" coords="728,29,839,55"/>
+<area shape="rect" title="The visitor pattern&#39;s visit methods for the given types." alt="" coords="5,5,140,45"/>
+<area shape="rect" href="classCppVisitorMatcher.html#ab8e734c78be8c5fa2e649c5f1718e97d" title="Checks the given pointer to the current AST node against the node types that are to be matched." alt="" coords="188,5,323,45"/>
 </map>
 </div>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="ae18c9be78f6efdc4897c620c1bc0bd21" name="ae18c9be78f6efdc4897c620c1bc0bd21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae18c9be78f6efdc4897c620c1bc0bd21">&#9670;&#160;</a></span>matchedFunc</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classCppVisitorMatcher.html#a76fc5ac82ea95d12817ec7d9b40070f2">MatchedFuncType</a> CppVisitorMatcher::matchedFunc</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="cppvisitormatcher_8h_source.html#l00023">23</a> of file <a class="el" href="cppvisitormatcher_8h_source.html">cppvisitormatcher.h</a>.</p>
+
+</div>
+</div>
 <a id="a983a539795b11d15a0fdfda38ed65f1d" name="a983a539795b11d15a0fdfda38ed65f1d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a983a539795b11d15a0fdfda38ed65f1d">&#9670;&#160;</a></span>typesToMatch</h2>
 
@@ -2163,7 +2142,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="cppvisitormatcher_8h_source.html#l00021">21</a> of file <a class="el" href="cppvisitormatcher_8h_source.html">cppvisitormatcher.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="cppvisitormatcher_8h_source.html#l00022">22</a> of file <a class="el" href="cppvisitormatcher_8h_source.html">cppvisitormatcher.h</a>.</p>
 
 </div>
 </div>

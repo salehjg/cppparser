@@ -17,6 +17,8 @@ var classCppParser =
     [ "parseFile", "classCppParser.html#adbae1a777666573896b568a82ccfd3d7", null ],
     [ "parseFunctionBodyAsBlob", "classCppParser.html#a382728689e52e57e44fb8bfcc90a1f5f", null ],
     [ "parseStream", "classCppParser.html#a7aa45885d6ce205d3207b5e53bdb1089", null ],
+    [ "parseString", "classCppParser.html#a75f4dd7857e0ea280d92b871f5d9b183", null ],
+    [ "parseString", "classCppParser.html#ac9bcb195f7ff3105e2cab80fa39843e6", null ],
     [ "resetErrorHandler", "classCppParser.html#a8d97ee6c695f08ecb1d7050421443626", null ],
     [ "setErrorHandler", "classCppParser.html#ad6abe99003e72710de93db83b8f571ef", null ],
     [ "objFactory_", "classCppParser.html#a55c0474630ac55b7df31de94001e500c", null ]
