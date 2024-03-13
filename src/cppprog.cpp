@@ -60,7 +60,7 @@ void CppProgram::addCppAst(CppCompoundPtr cppAst)
   fileAsts_.emplace_back(std::move(cppAst));
 }
 
-void CppProgram::addCompound(const CppCompound* compound, CppTypeTreeNode* parentTypeNode)
+void CppProgram::addCompound(CppCompound* compound, CppTypeTreeNode* parentTypeNode)
 {
   if (compound->name().empty())
     return;
@@ -71,14 +71,14 @@ void CppProgram::addCompound(const CppCompound* compound, CppTypeTreeNode* paren
   loadType(compound, &childNode);
 }
 
-void CppProgram::addCompound(const CppCompound* compound, const CppCompound* parent)
+void CppProgram::addCompound(CppCompound* compound, CppCompound* parent)
 {
   auto itr = cppObjToTypeNode_.find(parent);
   if (itr != cppObjToTypeNode_.end())
     addCompound(compound, itr->second);
 }
 
-void CppProgram::loadType(const CppCompound* cppCompound, CppTypeTreeNode* typeNode)
+void CppProgram::loadType(CppCompound* cppCompound, CppTypeTreeNode* typeNode)
 {
   if (cppCompound == NULL)
     return;
@@ -87,7 +87,7 @@ void CppProgram::loadType(const CppCompound* cppCompound, CppTypeTreeNode* typeN
     cppObjToTypeNode_[cppCompound] = typeNode;
     typeNode->cppObjSet.insert(cppCompound);
   }
-  forEachMember(cppCompound, [&](const CppObj* mem) {
+  forEachMember(cppCompound, [&](CppObj* mem) {
     if (isCompound(mem))
     {
       addCompound((CppCompound*) mem, typeNode);
@@ -101,7 +101,7 @@ void CppProgram::loadType(const CppCompound* cppCompound, CppTypeTreeNode* typeN
     }
     else if (isTypedefName(mem))
     {
-      auto*            typedefName = static_cast<const CppTypedefName*>(mem);
+      auto*            typedefName = static_cast<CppTypedefName*>(mem);
       CppTypeTreeNode& childNode   = typeNode->children[typedefName->var_->name()];
       childNode.cppObjSet.insert(mem);
       childNode.parent       = typeNode;
@@ -109,7 +109,7 @@ void CppProgram::loadType(const CppCompound* cppCompound, CppTypeTreeNode* typeN
     }
     else if (isUsingDecl(mem))
     {
-      auto*            usingDecl = static_cast<const CppUsingDecl*>(mem);
+      auto*            usingDecl = static_cast<CppUsingDecl*>(mem);
       CppTypeTreeNode& childNode = typeNode->children[usingDecl->name_];
       childNode.cppObjSet.insert(mem);
       childNode.parent       = typeNode;
@@ -124,7 +124,7 @@ void CppProgram::loadType(const CppCompound* cppCompound, CppTypeTreeNode* typeN
     }
     else if (isFwdClsDecl(mem))
     {
-      auto* fwdCls = static_cast<const CppFwdClsDecl*>(mem);
+      auto* fwdCls = static_cast<CppFwdClsDecl*>(mem);
       if (!(fwdCls->attr() & kFriend))
       {
         CppTypeTreeNode& childNode = typeNode->children[((CppFwdClsDecl*) mem)->name_];

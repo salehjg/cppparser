@@ -1,11 +1,12 @@
 #include <catch/catch.hpp>
 
 #include "cppparser.h"
-#include "cppvisitorprinter.h"
 #include "cppvisitormatcher.h"
+#include "cppvisitorprinter.h"
+#include "cppwriter.h"
 
 #include <boost/filesystem.hpp>
-
+#include <fstream>
 #include <iostream>
 
 namespace fs = boost::filesystem;
@@ -19,10 +20,9 @@ TEST_CASE("Parsing hello world program")
   REQUIRE(ast != nullptr);
 
   {
-    //CppVisitorPrinter visitor;
-    //ast->accept(&visitor);
-  }
-  {
+    // CppVisitorPrinter visitor;
+    // ast->accept(&visitor);
+  } {
     CppVisitorMatcher matcher({CppObjType::kExpression, CppObjType::kHashInclude});
     ast->accept(&matcher);
   }
@@ -45,4 +45,34 @@ TEST_CASE("Parsing hello world program")
   CppExprEPtr coutHelloWorld = mainBodyMembers[0];
   REQUIRE(coutHelloWorld);
   CHECK(coutHelloWorld->oper_ == CppOperator::kInsertion);
+}
+
+class MyAstModifierVisitor : public CppVisitorMatcher
+{
+public:
+  explicit MyAstModifierVisitor(const std::vector<CppObjType>& typesToMatch)
+    : CppVisitorMatcher(typesToMatch)
+  {
+  }
+  bool matched(CppObj* p) override
+  {
+    auto* pCast = (CppFunction*) p;
+    pCast->name_ += "FuncNameModified";
+    return true;
+  }
+};
+
+TEST_CASE("Modifying AST with a visitor")
+{
+  CppParser  parser;
+  const auto testFilePath = fs::path(__FILE__).parent_path() / "test-files/hello-world.cpp";
+  const auto ast = parser.parseFile(testFilePath.string());
+  REQUIRE(ast != nullptr);
+  MyAstModifierVisitor matcher({CppObjType::kFunction});
+  ast->accept(&matcher);
+
+  std::ofstream ofStream("/tmp/T3.txt");
+  CppWriter cppWriter;
+  cppWriter.emit(ast.get(), ofStream);
+  std::cout << "Done." << std::endl;
 }

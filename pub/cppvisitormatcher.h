@@ -47,7 +47,7 @@ public:
    * @param p A pointer to the matched AST node.
    * @return Return true if you want continue traversing the tree, false otherwise.
    */
-  virtual bool matched(const CppObj* p)
+  virtual bool matched(CppObj* p)
   {
     std::cout << CppVisitorPrinter::astToString(p) << std::endl;
     return true;
@@ -63,7 +63,7 @@ private:
    * @param p A pointer to an AST node.
    * @return true if the node did not match, otherwise, returns the value returned by CppVisitorMatcher::match.
    */
-  inline bool check(const CppObj* p)
+  inline bool check(CppObj* p)
   {
     if (std::find(typesToMatch.begin(), typesToMatch.end(), p->objType_) != typesToMatch.end())
     {
@@ -73,159 +73,159 @@ private:
   }
 
 protected:
-  bool visit(const CppVarType* p) override
+  bool visit(CppVarType* p) override
   {
     return check(p);
   }
-  bool visit(const CppCompound* p) override
+  bool visit(CppCompound* p) override
   {
     return check(p);
   }
-  bool visit(const CppUnRecogPrePro* p) override
+  bool visit(CppUnRecogPrePro* p) override
   {
     return check(p);
   }
-  bool visit(const CppUndef* p) override
+  bool visit(CppUndef* p) override
   {
     return check(p);
   }
-  bool visit(const CppUsingDecl* p) override
+  bool visit(CppUsingDecl* p) override
   {
     return check(p);
   }
-  bool visit(const CppUsingNamespaceDecl* p) override
+  bool visit(CppUsingNamespaceDecl* p) override
   {
     return check(p);
   }
-  bool visit(const CppVar* p) override
+  bool visit(CppVar* p) override
   {
     return check(p);
   }
-  bool visit(const CppVarList* p) override
+  bool visit(CppVarList* p) override
   {
     return check(p);
   }
-  bool visit(const CppCommonBlock<CppObjType::kIfBlock>* p) override
+  bool visit(CppCommonBlock<CppObjType::kIfBlock>* p) override
   {
     return check(p);
   }
-  bool visit(const CppCommonBlock<CppObjType::kWhileBlock>* p) override
+  bool visit(CppCommonBlock<CppObjType::kWhileBlock>* p) override
   {
     return check(p);
   }
-  bool visit(const CppCommonBlock<CppObjType::kDoWhileBlock>* p) override
+  bool visit(CppCommonBlock<CppObjType::kDoWhileBlock>* p) override
   {
     return check(p);
   }
-  bool visit(const CppAsmBlock* p) override
+  bool visit(CppAsmBlock* p) override
   {
     return check(p);
   }
-  bool visit(const CppBlob* p) override
+  bool visit(CppBlob* p) override
   {
     return check(p);
   }
-  bool visit(const CppDefine* p) override
+  bool visit(CppDefine* p) override
   {
     return check(p);
   }
-  bool visit(const CppDocComment* p) override
+  bool visit(CppDocComment* p) override
   {
     return check(p);
   }
-  bool visit(const CppEnum* p) override
+  bool visit(CppEnum* p) override
   {
     return check(p);
   }
-  bool visit(const CppExpr* p) override
+  bool visit(CppExpr* p) override
   {
     return check(p);
   }
-  bool visit(const CppForBlock* p) override
+  bool visit(CppForBlock* p) override
   {
     return check(p);
   }
-  bool visit(const CppLambda* p) override
+  bool visit(CppLambda* p) override
   {
     return check(p);
   }
-  bool visit(const CppDestructor* p) override
+  bool visit(CppDestructor* p) override
   {
     return check(p);
   }
-  bool visit(const CppConstructor* p) override
+  bool visit(CppConstructor* p) override
   {
     return check(p);
   }
-  bool visit(const CppFunction* p) override
+  bool visit(CppFunction* p) override
   {
     return check(p);
   }
-  bool visit(const CppFunctionPointer* p) override
+  bool visit(CppFunctionPointer* p) override
   {
     return check(p);
   }
-  bool visit(const CppTypeConverter* p) override
+  bool visit(CppTypeConverter* p) override
   {
     return check(p);
   }
-  bool visit(const CppFwdClsDecl* p) override
+  bool visit(CppFwdClsDecl* p) override
   {
     return check(p);
   }
-  bool visit(const CppHashError* p) override
+  bool visit(CppHashError* p) override
   {
     return check(p);
   }
-  bool visit(const CppHashIf* p) override
+  bool visit(CppHashIf* p) override
   {
     return check(p);
   }
-  bool visit(const CppHashWarning* p) override
+  bool visit(CppHashWarning* p) override
   {
     return check(p);
   }
-  bool visit(const CppImport* p) override
+  bool visit(CppImport* p) override
   {
     return check(p);
   }
-  bool visit(const CppInclude* p) override
+  bool visit(CppInclude* p) override
   {
     return check(p);
   }
-  bool visit(const CppLabel* p) override
+  bool visit(CppLabel* p) override
   {
     return check(p);
   }
-  bool visit(const CppMacroCall* p) override
+  bool visit(CppMacroCall* p) override
   {
     return check(p);
   }
-  bool visit(const CppNamespaceAlias* p) override
+  bool visit(CppNamespaceAlias* p) override
   {
     return check(p);
   }
-  bool visit(const CppPragma* p) override
+  bool visit(CppPragma* p) override
   {
     return check(p);
   }
-  bool visit(const CppRangeForBlock* p) override
+  bool visit(CppRangeForBlock* p) override
   {
     return check(p);
   }
-  bool visit(const CppSwitchBlock* p) override
+  bool visit(CppSwitchBlock* p) override
   {
     return check(p);
   }
-  bool visit(const CppTryBlock* p) override
+  bool visit(CppTryBlock* p) override
   {
     return check(p);
   }
-  bool visit(const CppTypedefList* p) override
+  bool visit(CppTypedefList* p) override
   {
     return check(p);
   }
-  bool visit(const CppTypedefName* p) override
+  bool visit(CppTypedefName* p) override
   {
     return check(p);
   }

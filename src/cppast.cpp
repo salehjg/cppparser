@@ -1,25 +1,25 @@
 /*
-   The MIT License (MIT)
+The MIT License (MIT)
 
-   Copyright (c) 2018 Satya Das
+Copyright (c) 2018 Satya Das
 
-   Permission is hereby granted, free of charge, to any person obtaining a copy of
-   this software and associated documentation files (the "Software"), to deal in
-   the Software without restriction, including without limitation the rights to
-   use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
-   the Software, and to permit persons to whom the Software is furnished to do so,
-   subject to the following conditions:
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+                                                       the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-   The above copyright notice and this permission notice shall be included in all
-   copies or substantial portions of the Software.
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
-   FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
-   COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
-   IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
-   CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
- */
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+                                                               FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT
+SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF
+CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+                                    */
 
 #include "cppast.h"
 #include "cpputil.h"
@@ -29,7 +29,7 @@
 #include "cppobj-info-accessor.h"
 #include "cppvar-info-accessor.h"
 
-bool CppConstructor::isCopyConstructor() const
+bool CppConstructor::isCopyConstructor()
 {
   if (isCopyConstructor_ != TriStateBool::Unknown)
     return isCopyConstructor_ == TriStateBool::True;
@@ -37,10 +37,10 @@ bool CppConstructor::isCopyConstructor() const
   isCopyConstructor_ = TriStateBool::False;
   if (!params_ || (params_->size() != 1))
     return false;
-  const auto& param = params_->front();
+  auto& param = params_->front();
   if (!isVar(param.get()))
     return false;
-  const auto* var = static_cast<const CppVar*>(param.get());
+  auto* var = static_cast<CppVar*>(param.get());
   if (ptrLevel(var->varType()) != 0)
     return false;
   if (!isConst(var->varType()) || !isByRef(var->varType()))
@@ -63,7 +63,7 @@ bool CppConstructor::isCopyConstructor() const
   return true;
 }
 
-bool CppConstructor::isMoveConstructor() const
+bool CppConstructor::isMoveConstructor()
 {
   if (isMoveConstructor_ != TriStateBool::Unknown)
     return isMoveConstructor_ == TriStateBool::True;
@@ -71,10 +71,10 @@ bool CppConstructor::isMoveConstructor() const
   isMoveConstructor_ = TriStateBool::False;
   if (!params_ || (params_->size() != 1))
     return false;
-  const auto& param = params_->front();
+  auto& param = params_->front();
   if (!isVar(param.get()))
     return false;
-  const auto* var = static_cast<const CppVar*>(param.get());
+  auto* var = static_cast<CppVar*>(param.get());
   if (ptrLevel(var->varType()) != 0)
     return false;
   if (ptrLevel(var->varType()) != 0)
@@ -99,7 +99,7 @@ bool CppConstructor::isMoveConstructor() const
   return true;
 }
 
-bool CppCompound::hasPublicVirtualMethod() const
+bool CppCompound::hasPublicVirtualMethod()
 {
   if (!isClassLike(this))
     return false;
@@ -107,7 +107,7 @@ bool CppCompound::hasPublicVirtualMethod() const
     return hasVirtual_ == TriStateBool::True;
 
   hasVirtual_ = TriStateBool::False;
-  forEachMember(this, [&](const CppObj* mem) {
+  forEachMember(this, [&](CppObj* mem) {
     if (isFunction(mem) && isPublic(mem))
     {
       auto func = (CppFunction*) mem;
@@ -123,7 +123,7 @@ bool CppCompound::hasPublicVirtualMethod() const
   return hasVirtual_ == TriStateBool::True;
 }
 
-bool CppCompound::hasPureVirtual() const
+bool CppCompound::hasPureVirtual()
 {
   if (!isClassLike(this))
     return false;
@@ -131,10 +131,10 @@ bool CppCompound::hasPureVirtual() const
     return hasPureVirtual_ == TriStateBool::True;
 
   hasPureVirtual_ = TriStateBool::False;
-  forEachMember(this, [&](const CppObj* mem) {
+  forEachMember(this, [&](CppObj* mem) {
     if (isFunction(mem))
     {
-      auto func = static_cast<const CppFunction*>(mem);
+      auto func = static_cast<CppFunction*>(mem);
       if (isPureVirtual(func))
       {
         hasPureVirtual_ = TriStateBool::True;
@@ -143,7 +143,7 @@ bool CppCompound::hasPureVirtual() const
     }
     else if (isDestructor(mem))
     {
-      auto dtor = static_cast<const CppDestructor*>(mem);
+      auto dtor = static_cast<CppDestructor*>(mem);
       if (isPureVirtual(dtor))
       {
         hasPureVirtual_ = TriStateBool::True;
@@ -157,7 +157,7 @@ bool CppCompound::hasPureVirtual() const
   return hasPureVirtual_ == TriStateBool::True;
 }
 
-bool CppCompound::triviallyConstructable() const
+bool CppCompound::triviallyConstructable()
 {
   if (ctors_.empty())
     return true;
@@ -169,11 +169,11 @@ bool CppCompound::triviallyConstructable() const
   return false;
 }
 
-void CppCompound::assignSpecialMember(const CppObj* mem)
+void CppCompound::assignSpecialMember(CppObj* mem)
 {
   if (mem->objType_ == CppObjType::kConstructor)
   {
-    auto* ctor = static_cast<const CppConstructor*>(mem);
+    auto* ctor = static_cast<CppConstructor*>(mem);
     ctors_.push_back(ctor);
     if (ctor->isCopyConstructor())
       copyCtor_ = ctor;
@@ -182,11 +182,11 @@ void CppCompound::assignSpecialMember(const CppObj* mem)
   }
   else if (mem->objType_ == CppObjType::kDestructor)
   {
-    dtor_ = static_cast<const CppDestructor*>(mem);
+    dtor_ = static_cast<CppDestructor*>(mem);
   }
 }
 
-CppObjType objType(const CppObj* cppObj)
+CppObjType objType(CppObj* cppObj)
 {
   return cppObj ? cppObj->objType_ : CppObjType::kUnknown;
 }

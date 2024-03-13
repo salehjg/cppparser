@@ -18,7 +18,7 @@
 
 #define DBG_ENABLED
 #ifdef DBG_ENABLED
-  #define DBG(NAME, PTR) \
+#define DBG(NAME, PTR) \
       std::cout << NAME << ":" << std::endl; \
       std::cout << astToString(PTR) << std::endl; \
       std::cout << "------------------------------------------"<< std::endl;
@@ -36,7 +36,7 @@ public:
    * @param p A pointer to an AST tree node.
    * @return The string of the equivalent code of the tree node.
    */
-  static std::string astToString(const CppObj* p)
+  static std::string astToString(CppObj* p)
   {
     CppWriter w;
     std::stringstream stm;
@@ -45,197 +45,197 @@ public:
     return stm.str();
   }
 
-  bool visit(const CppVarType* p) override
+  bool visit(CppVarType* p) override
   {
     DBG("CppVarType", p);
     return true;
   }
-  bool visit(const CppCompound* p) override
+  bool visit(CppCompound* p) override
   {
     DBG("CppCompound", p);
     return true;
   }
-  bool visit(const CppUnRecogPrePro* p) override
+  bool visit(CppUnRecogPrePro* p) override
   {
     DBG("CppUnRecogPrePro", p);
     return true;
   }
-  bool visit(const CppUndef* p) override
+  bool visit(CppUndef* p) override
   {
     DBG("CppUndef", p);
     return true;
   }
-  bool visit(const CppUsingDecl* p) override
+  bool visit(CppUsingDecl* p) override
   {
     DBG("CppUsingDecl", p);
     return true;
   }
-  bool visit(const CppUsingNamespaceDecl* p) override
+  bool visit(CppUsingNamespaceDecl* p) override
   {
     DBG("CppUsingNamespaceDecl", p);
     return true;
   }
-  bool visit(const CppVar* p) override
+  bool visit(CppVar* p) override
   {
     DBG("CppVar", p);
     return true;
   }
-  bool visit(const CppVarList* p) override
+  bool visit(CppVarList* p) override
   {
     DBG("CppVarList", p);
     return true;
   }
-  bool visit(const CppCommonBlock<CppObjType::kIfBlock>* p) override
+  bool visit(CppCommonBlock<CppObjType::kIfBlock>* p) override
   {
     DBG("CppCommonBlock<CppObjType::kIfBlock>", p);
     return true;
   }
-  bool visit(const CppCommonBlock<CppObjType::kWhileBlock>* p) override
+  bool visit(CppCommonBlock<CppObjType::kWhileBlock>* p) override
   {
     DBG("CppCommonBlock<CppObjType::kWhileBlock>", p);
     return true;
   }
-  bool visit(const CppCommonBlock<CppObjType::kDoWhileBlock>* p) override
+  bool visit(CppCommonBlock<CppObjType::kDoWhileBlock>* p) override
   {
     DBG("CppCommonBlock<CppObjType::kDoWhileBlock>", p);
     return true;
   }
-  bool visit(const CppAsmBlock* p) override
+  bool visit(CppAsmBlock* p) override
   {
     DBG("CppAsmBlock", p);
     return true;
   }
-  bool visit(const CppBlob* p) override
+  bool visit(CppBlob* p) override
   {
     DBG("CppBlob", p);
     return true;
   }
-  bool visit(const CppDefine* p) override
+  bool visit(CppDefine* p) override
   {
     DBG("CppDefine", p);
     return true;
   }
-  bool visit(const CppDocComment* p) override
+  bool visit(CppDocComment* p) override
   {
     DBG("CppDocComment", p);
     return true;
   }
-  bool visit(const CppEnum* p) override
+  bool visit(CppEnum* p) override
   {
     DBG("CppEnum", p);
     return true;
   }
-  bool visit(const CppExpr* p) override
+  bool visit(CppExpr* p) override
   {
     DBG("CppExpr", p);
     return true;
   }
-  bool visit(const CppForBlock* p) override
+  bool visit(CppForBlock* p) override
   {
     DBG("CppForBlock", p);
     return true;
   }
-  bool visit(const CppLambda* p) override
+  bool visit(CppLambda* p) override
   {
     DBG("CppLambda", p);
     return true;
   }
-  bool visit(const CppDestructor* p) override
+  bool visit(CppDestructor* p) override
   {
     DBG("CppDestructor", p);
     return true;
   }
-  bool visit(const CppConstructor* p) override
+  bool visit(CppConstructor* p) override
   {
     DBG("CppConstructor", p);
     return true;
   }
-  bool visit(const CppFunction* p) override
+  bool visit(CppFunction* p) override
   {
     DBG("CppFunction", p);
     return true;
   }
-  bool visit(const CppFunctionPointer* p) override
+  bool visit(CppFunctionPointer* p) override
   {
     DBG("CppFunctionPointer", p);
     return true;
   }
-  bool visit(const CppTypeConverter* p) override
+  bool visit(CppTypeConverter* p) override
   {
     DBG("CppTypeConverter", p);
     return true;
   }
-  bool visit(const CppFwdClsDecl* p) override
+  bool visit(CppFwdClsDecl* p) override
   {
     DBG("CppFwdClsDecl", p);
     return true;
   }
-  bool visit(const CppHashError* p) override
+  bool visit(CppHashError* p) override
   {
     DBG("CppHashError", p);
     return true;
   }
-  bool visit(const CppHashIf* p) override
+  bool visit(CppHashIf* p) override
   {
     DBG("CppHashIf", p);
     return true;
   }
-  bool visit(const CppHashWarning* p) override
+  bool visit(CppHashWarning* p) override
   {
     DBG("CppHashWarning", p);
     return true;
   }
-  bool visit(const CppImport* p) override
+  bool visit(CppImport* p) override
   {
     DBG("CppImport", p);
     return true;
   }
-  bool visit(const CppInclude* p) override
+  bool visit(CppInclude* p) override
   {
     DBG("CppInclude", p);
     return true;
   }
-  bool visit(const CppLabel* p) override
+  bool visit(CppLabel* p) override
   {
     DBG("CppLabel", p);
     return true;
   }
-  bool visit(const CppMacroCall* p) override
+  bool visit(CppMacroCall* p) override
   {
     DBG("CppMacroCall", p);
     return true;
   }
-  bool visit(const CppNamespaceAlias* p) override
+  bool visit(CppNamespaceAlias* p) override
   {
     DBG("CppNamespaceAlias", p);
     return true;
   }
-  bool visit(const CppPragma* p) override
+  bool visit(CppPragma* p) override
   {
     DBG("CppPragma", p);
     return true;
   }
-  bool visit(const CppRangeForBlock* p) override
+  bool visit(CppRangeForBlock* p) override
   {
     DBG("CppRangeForBlock", p);
     return true;
   }
-  bool visit(const CppSwitchBlock* p) override
+  bool visit(CppSwitchBlock* p) override
   {
     DBG("CppSwitchBlock", p);
     return true;
   }
-  bool visit(const CppTryBlock* p) override
+  bool visit(CppTryBlock* p) override
   {
     DBG("CppTryBlock", p);
     return true;
   }
-  bool visit(const CppTypedefList* p) override
+  bool visit(CppTypedefList* p) override
   {
     DBG("CppTypedefList", p);
     return true;
   }
-  bool visit(const CppTypedefName* p) override
+  bool visit(CppTypedefName* p) override
   {
     DBG("CppTypedefName", p);
     return true;

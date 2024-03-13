@@ -1,25 +1,25 @@
 /*
-   The MIT License (MIT)
+The MIT License (MIT)
 
-   Copyright (c) 2018 Satya Das
+Copyright (c) 2018 Satya Das
 
-   Permission is hereby granted, free of charge, to any person obtaining a copy of
-   this software and associated documentation files (the "Software"), to deal in
-   the Software without restriction, including without limitation the rights to
-   use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
-   the Software, and to permit persons to whom the Software is furnished to do so,
-   subject to the following conditions:
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+                                                       the Software, and to permit persons to whom the Software is furnished to do so,
+subject to the following conditions:
 
-   The above copyright notice and this permission notice shall be included in all
-   copies or substantial portions of the Software.
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
-   FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
-   COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
-   IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
-   CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
- */
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+                                                               FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+                                                               COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+                                  CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+                                    */
 
 /***************************************************************************************/
 
@@ -28,346 +28,270 @@
 #include "cppast.h"
 #include "cppconst.h"
 
-inline std::uint8_t ptrLevel(const CppVarType* varType)
+                                  inline std::uint8_t ptrLevel(CppVarType* varType)
 {
-  return varType->typeModifier().ptrLevel_;
+return varType->typeModifier().ptrLevel_;
 }
 
-inline std::uint8_t ptrLevel(const std::unique_ptr<CppVarType>& varType)
+inline std::uint8_t ptrLevel(std::unique_ptr<CppVarType>& varType)
 {
-  return varType->typeModifier().ptrLevel_;
+return varType->typeModifier().ptrLevel_;
 }
 
 inline std::uint8_t ptrLevel(CppVarTypeEPtr varType)
 {
-  return varType->typeModifier().ptrLevel_;
+return varType->typeModifier().ptrLevel_;
 }
 
-inline std::uint8_t ptrLevel(CppConstVarTypeEPtr varType)
+inline CppRefType refType(CppVarType* varType)
 {
-  return varType->typeModifier().ptrLevel_;
+return varType->typeModifier().refType_;
 }
 
-inline CppRefType refType(const CppVarType* varType)
+inline CppRefType refType(std::unique_ptr<CppVarType>& varType)
 {
-  return varType->typeModifier().refType_;
-}
-
-inline CppRefType refType(const std::unique_ptr<CppVarType>& varType)
-{
-  return varType->typeModifier().refType_;
+return varType->typeModifier().refType_;
 }
 
 inline CppRefType refType(CppVarTypeEPtr varType)
 {
-  return varType->typeModifier().refType_;
+return varType->typeModifier().refType_;
 }
 
-inline CppRefType refType(CppConstVarTypeEPtr varType)
+inline std::uint8_t effectivePtrLevel(CppVarTypeEPtr& varType)
 {
-  return varType->typeModifier().refType_;
+return ptrLevel(varType) + [&varType]() {
+ switch (refType(varType))
+ {
+   case CppRefType::kByRef:
+   case CppRefType::kRValRef:
+     return 1;
+   case CppRefType::kNoRef:
+     break;
+ }
+ return 0;
+}();
 }
 
-inline std::uint8_t effectivePtrLevel(const CppConstVarTypeEPtr& varType)
+inline std::string& baseType(CppVarType* varType)
 {
-  return ptrLevel(varType) + [&varType]() {
-    switch (refType(varType))
-    {
-      case CppRefType::kByRef:
-      case CppRefType::kRValRef:
-        return 1;
-      case CppRefType::kNoRef:
-        break;
-    }
-    return 0;
-  }();
+return varType->baseType();
 }
 
-inline const std::string& baseType(const CppVarType* varType)
+inline std::string& baseType(std::unique_ptr<CppVarType>& varType)
 {
-  return varType->baseType();
+return varType->baseType();
 }
 
-inline const std::string& baseType(const std::unique_ptr<CppVarType>& varType)
+inline std::string& baseType(CppVarTypeEPtr varType)
 {
-  return varType->baseType();
+return varType->baseType();
 }
 
-inline const std::string& baseType(CppVarTypeEPtr varType)
+inline bool usesTemplateType(std::string& varTypeName)
 {
-  return varType->baseType();
+return varTypeName.find('<') != varTypeName.npos;
 }
 
-inline const std::string& baseType(CppConstVarTypeEPtr varType)
+inline bool usesTemplateType(CppVarTypeEPtr varType)
 {
-  return varType->baseType();
+return usesTemplateType(baseType(varType));
 }
 
-inline bool usesTemplateType(const std::string& varTypeName)
+inline bool isVoid(CppVarType* varType)
 {
-  return varTypeName.find('<') != varTypeName.npos;
+if (varType->typeModifier().ptrLevel_ != 0 || varType->typeModifier().refType_ != CppRefType::kNoRef)
+ return false;
+// return (varType->baseType().compare("void") == 0);
+// Above simple check fails to detect cases like usage of GrGLvoid
+if (varType->baseType().length() < 4)
+ return false;
+return (strncmp(varType->baseType().c_str() + varType->baseType().length() - 4, "void", 4) == 0);
 }
 
-inline bool usesTemplateType(CppConstVarTypeEPtr varType)
+inline bool isVoid(std::unique_ptr<CppVarType>& varType)
 {
-  return usesTemplateType(baseType(varType));
+return isVoid(varType.get());
 }
 
-inline bool isVoid(const CppVarType* varType)
+inline bool isByRef(CppVarType* varType)
 {
-  if (varType->typeModifier().ptrLevel_ != 0 || varType->typeModifier().refType_ != CppRefType::kNoRef)
-    return false;
-  // return (varType->baseType().compare("void") == 0);
-  // Above simple check fails to detect cases like usage of GrGLvoid
-  if (varType->baseType().length() < 4)
-    return false;
-  return (strncmp(varType->baseType().c_str() + varType->baseType().length() - 4, "void", 4) == 0);
+return varType->typeModifier().refType_ == CppRefType::kByRef;
 }
 
-inline bool isVoid(const std::unique_ptr<CppVarType>& varType)
+inline bool isByRef(std::unique_ptr<CppVarType>& varType)
 {
-  return isVoid(varType.get());
-}
-
-inline bool isByRef(const CppVarType* varType)
-{
-  return varType->typeModifier().refType_ == CppRefType::kByRef;
-}
-
-inline bool isByRef(const std::unique_ptr<CppVarType>& varType)
-{
-  return isByRef(varType.get());
+return isByRef(varType.get());
 }
 
 inline bool isByRef(CppVarTypeEPtr varType)
 {
-  return varType->typeModifier().refType_ == CppRefType::kByRef;
+return varType->typeModifier().refType_ == CppRefType::kByRef;
 }
 
-inline bool isByRef(CppConstVarTypeEPtr varType)
+inline bool isByRValueRef(CppVarType* varType)
 {
-  return varType->typeModifier().refType_ == CppRefType::kByRef;
+return varType->typeModifier().refType_ == CppRefType::kRValRef;
 }
 
-inline bool isByRValueRef(const CppVarType* varType)
+inline bool isByRValueRef(std::unique_ptr<CppVarType>& varType)
 {
-  return varType->typeModifier().refType_ == CppRefType::kRValRef;
-}
-
-inline bool isByRValueRef(const std::unique_ptr<CppVarType>& varType)
-{
-  return isByRValueRef(varType.get());
+return isByRValueRef(varType.get());
 }
 
 inline bool isByRValueRef(CppVarTypeEPtr varType)
 {
-  return varType->typeModifier().refType_ == CppRefType::kRValRef;
+return varType->typeModifier().refType_ == CppRefType::kRValRef;
 }
 
-inline bool isByRValueRef(CppConstVarTypeEPtr varType)
+inline bool isConst(CppVarType* varType)
 {
-  return varType->typeModifier().refType_ == CppRefType::kRValRef;
+return ((varType->typeAttr() & kConst) == kConst) || (varType->typeModifier().constBits_ & 1);
 }
 
-inline bool isConst(const CppVarType* varType)
+inline bool isConst(std::unique_ptr<CppVarType>& varType)
 {
-  return ((varType->typeAttr() & kConst) == kConst) || (varType->typeModifier().constBits_ & 1);
-}
-
-inline bool isConst(const std::unique_ptr<CppVarType>& varType)
-{
-  return isConst(varType.get());
+return isConst(varType.get());
 }
 
 inline bool isConst(CppVarTypeEPtr varType)
 {
-  return ((varType->typeAttr() & kConst) == kConst) || (varType->typeModifier().constBits_ & 1);
+return ((varType->typeAttr() & kConst) == kConst) || (varType->typeModifier().constBits_ & 1);
 }
 
-inline bool isConst(CppConstVarTypeEPtr varType)
+inline bool isByValue(CppVarType* varType)
 {
-  return ((varType->typeAttr() & kConst) == kConst) || (varType->typeModifier().constBits_ & 1);
+return !isVoid(varType) && (varType->typeModifier().refType_ == CppRefType::kNoRef)
+      && (varType->typeModifier().ptrLevel_ == 0);
 }
 
-inline bool isByValue(const CppVarType* varType)
+inline bool isByValue(std::unique_ptr<CppVarType>& varType)
 {
-  return !isVoid(varType) && (varType->typeModifier().refType_ == CppRefType::kNoRef)
-         && (varType->typeModifier().ptrLevel_ == 0);
-}
-
-inline bool isByValue(const std::unique_ptr<CppVarType>& varType)
-{
-  return isByValue(varType.get());
+return isByValue(varType.get());
 }
 
 inline bool isByValue(CppVarTypeEPtr varType)
 {
-  return !isVoid(varType) && (varType->typeModifier().refType_ == CppRefType::kNoRef)
-         && (varType->typeModifier().ptrLevel_ == 0);
+return !isVoid(varType) && (varType->typeModifier().refType_ == CppRefType::kNoRef)
+      && (varType->typeModifier().ptrLevel_ == 0);
 }
 
-inline bool isByValue(CppConstVarTypeEPtr varType)
+inline std::string& baseType(CppVar* var)
 {
-  return !isVoid(varType) && (varType->typeModifier().refType_ == CppRefType::kNoRef)
-         && (varType->typeModifier().ptrLevel_ == 0);
+return baseType(var->varType());
 }
 
-inline const std::string& baseType(const CppVar* var)
+inline std::string& baseType(std::unique_ptr<CppVar>& var)
 {
-  return baseType(var->varType());
+return baseType(var->varType());
 }
 
-inline const std::string& baseType(const std::unique_ptr<CppVar>& var)
+inline std::string& baseType(CppVarEPtr var)
 {
-  return baseType(var->varType());
+return baseType(var->varType());
 }
 
-inline const std::string& baseType(CppVarEPtr var)
+inline std::uint8_t ptrLevel(CppVar* var)
 {
-  return baseType(var->varType());
+return ptrLevel(var->varType());
 }
 
-inline const std::string& baseType(CppConstVarEPtr var)
+inline std::uint8_t ptrLevel(std::unique_ptr<CppVar>& var)
 {
-  return baseType(var->varType());
-}
-
-inline std::uint8_t ptrLevel(const CppVar* var)
-{
-  return ptrLevel(var->varType());
-}
-
-inline std::uint8_t ptrLevel(const std::unique_ptr<CppVar>& var)
-{
-  return ptrLevel(var->varType());
+return ptrLevel(var->varType());
 }
 
 inline std::uint8_t ptrLevel(CppVarEPtr var)
 {
-  return ptrLevel(var->varType());
+return ptrLevel(var->varType());
 }
 
-inline std::uint8_t ptrLevel(CppConstVarEPtr var)
+inline CppRefType refType(CppVar* var)
 {
-  return ptrLevel(var->varType());
+return refType(var->varType());
 }
 
-inline CppRefType refType(const CppVar* var)
+inline CppRefType refType(std::unique_ptr<CppVar>& var)
 {
-  return refType(var->varType());
-}
-
-inline CppRefType refType(const std::unique_ptr<CppVar>& var)
-{
-  return refType(var->varType());
+return refType(var->varType());
 }
 
 inline CppRefType refType(CppVarEPtr var)
 {
-  return refType(var->varType());
+return refType(var->varType());
 }
 
-inline CppRefType refType(CppConstVarEPtr var)
+inline std::string& name(CppVar* var)
 {
-  return refType(var->varType());
+return var->varDecl().name();
 }
 
-inline const std::string& name(const CppVar* var)
+inline std::string& name(std::unique_ptr<CppVar>& var)
 {
-  return var->varDecl().name();
+return name(var.get());
 }
 
-inline const std::string& name(const std::unique_ptr<CppVar>& var)
+inline std::string& name(CppVarEPtr var)
 {
-  return name(var.get());
+return var->varDecl().name();
 }
 
-inline const std::string& name(CppVarEPtr var)
+inline bool isByRef(CppVar* var)
 {
-  return var->varDecl().name();
+return isByRef(var->varType());
 }
 
-inline const std::string& name(CppConstVarEPtr var)
+inline bool isByRef(std::unique_ptr<CppVar>& var)
 {
-  return var->varDecl().name();
-}
-
-inline bool isByRef(const CppVar* var)
-{
-  return isByRef(var->varType());
-}
-
-inline bool isByRef(const std::unique_ptr<CppVar>& var)
-{
-  return isByRef(var->varType());
+return isByRef(var->varType());
 }
 
 inline bool isByRef(CppVarEPtr var)
 {
-  return isByRef(var->varType());
+return isByRef(var->varType());
 }
 
-inline bool isByRef(CppConstVarEPtr var)
+inline bool isByRValueRef(CppVar* var)
 {
-  return isByRef(var->varType());
+return isByRValueRef(var->varType());
 }
 
-inline bool isByRValueRef(const CppVar* var)
+inline bool isByRValueRef(std::unique_ptr<CppVar>& var)
 {
-  return isByRValueRef(var->varType());
-}
-
-inline bool isByRValueRef(const std::unique_ptr<CppVar>& var)
-{
-  return isByRValueRef(var->varType());
+return isByRValueRef(var->varType());
 }
 
 inline bool isByRValueRef(CppVarEPtr var)
 {
-  return isByRValueRef(var->varType());
+return isByRValueRef(var->varType());
 }
 
-inline bool isByRValueRef(CppConstVarEPtr var)
+inline bool isConst(CppVar* var)
 {
-  return isByRValueRef(var->varType());
+return isConst(var->varType());
 }
 
-inline bool isConst(const CppVar* var)
+inline bool isConst(std::unique_ptr<CppVar>& var)
 {
-  return isConst(var->varType());
-}
-
-inline bool isConst(const std::unique_ptr<CppVar>& var)
-{
-  return isConst(var->varType());
+return isConst(var->varType());
 }
 
 inline bool isConst(CppVarEPtr var)
 {
-  return isConst(var->varType());
+return isConst(var->varType());
 }
 
-inline bool isConst(CppConstVarEPtr var)
+inline bool isByValue(CppVar* var)
 {
-  return isConst(var->varType());
+return isByValue(var->varType());
 }
 
-inline bool isByValue(const CppVar* var)
+inline bool isByValue(std::unique_ptr<CppVar>& var)
 {
-  return isByValue(var->varType());
-}
-
-inline bool isByValue(const std::unique_ptr<CppVar>& var)
-{
-  return isByValue(var->varType());
+return isByValue(var->varType());
 }
 
 inline bool isByValue(CppVarEPtr var)
 {
-  return isByValue(var->varType());
-}
-
-inline bool isByValue(CppConstVarEPtr var)
-{
-  return isByValue(var->varType());
+return isByValue(var->varType());
 }

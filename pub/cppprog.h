@@ -93,11 +93,11 @@ public:
    * @return CppTypeTreeNode for CppObj.
    * \note Return value may be nullptr if CppObj does not represent a valid type.
    */
-  const CppTypeTreeNode* typeTreeNodeFromCppObj(const CppObj* cppObj) const;
+  const CppTypeTreeNode* typeTreeNodeFromCppObj(CppObj* cppObj) const;
   /**
    * @return An array of CppCompound each element of which represents AST of a C++ file.
    */
-  const CppCompoundArray& getFileAsts() const;
+  CppCompoundArray& getFileAsts();
 
 public:
   /**
@@ -105,26 +105,26 @@ public:
    * \warning It is a no-op if \a cppAst is not of CppCompoundType::kCppFile type.
    */
   void addCppAst(CppCompoundPtr cppAst);
-  void addCompound(const CppCompound* compound, const CppCompound* parent);
-  void addCompound(const CppCompound* compound, CppTypeTreeNode* parentTypeNode);
+  void addCompound(CppCompound* compound, CppCompound* parent);
+  void addCompound(CppCompound* compound, CppTypeTreeNode* parentTypeNode);
 
 private:
-  void loadType(const CppCompound* cppCompound, CppTypeTreeNode* typeNode);
+  void loadType(CppCompound* cppCompound, CppTypeTreeNode* typeNode);
 
 private:
-  using CppObjToTypeNodeMap = std::map<const CppObj*, CppTypeTreeNode*>;
+  using CppObjToTypeNodeMap = std::map<CppObj*, CppTypeTreeNode*>;
 
   CppCompoundArray    fileAsts_;        ///< Array of all top level ASTs corresponding to files.
   CppTypeTreeNode     cppTypeTreeRoot_; ///< Repository of all compound objects arranged as type-tree.
   CppObjToTypeNodeMap cppObjToTypeNode_;
 };
 
-inline const CppCompoundArray& CppProgram::getFileAsts() const
+inline CppCompoundArray& CppProgram::getFileAsts()
 {
   return fileAsts_;
 }
 
-inline const CppTypeTreeNode* CppProgram::typeTreeNodeFromCppObj(const CppObj* cppObj) const
+inline const CppTypeTreeNode* CppProgram::typeTreeNodeFromCppObj(CppObj* cppObj) const
 {
   CppObjToTypeNodeMap::const_iterator itr = cppObjToTypeNode_.find(cppObj);
   return itr == cppObjToTypeNode_.end() ? nullptr : itr->second;
