@@ -1,13 +1,13 @@
 <map id="CppProgram::addCppAst" name="CppProgram::addCppAst">
 <area shape="rect" id="node1" title="Adds a new file AST to this program." alt="" coords="5,177,169,203"/>
-<area shape="rect" id="node2" href="$cppcompound-info-accessor_8h.html#a20e3688f63f83055c684bb9110726391" title=" " alt="" coords="471,5,547,31"/>
-<area shape="rect" id="node3" href="$classCppProgram.html#a7a80055797d1476e59fe9b1f7d5c2b39" title=" " alt="" coords="217,203,369,228"/>
-<area shape="rect" id="node4" href="$classCppProgram.html#a2c9e10bcec9b0be06f8c6dc8e708af91" title=" " alt="" coords="417,79,600,104"/>
-<area shape="rect" id="node5" href="$cppcompound-info-accessor_8h.html#aea897076f8519986da35d66f7e867cbb" title=" " alt="" coords="452,128,565,153"/>
-<area shape="rect" id="node6" href="$cppobj-info-accessor_8h.html#aaa2b1585523920e0e8b911bb1a21c617" title=" " alt="" coords="461,177,556,203"/>
-<area shape="rect" id="node7" href="$cppobj-info-accessor_8h.html#ae4866f01c13cebf8055ee07631dccbd0" title=" " alt="" coords="476,227,541,252"/>
-<area shape="rect" id="node8" href="$cppobj-info-accessor_8h.html#a8924b8a895a6ece6c655bb63393b577d" title=" " alt="" coords="459,276,558,301"/>
-<area shape="rect" id="node9" href="$cppobj-info-accessor_8h.html#a76e217cdb661418b58dcecbd0731ac23" title=" " alt="" coords="457,325,560,351"/>
-<area shape="rect" id="node10" href="$cppobj-info-accessor_8h.html#adae59ec7ccb6212ef7a59024447a881b" title=" " alt="" coords="452,375,565,400"/>
-<area shape="rect" id="node11" href="$cppobj-info-accessor_8h.html#a2a1fa2d71e5dc3ab8d9e509d3e79af6c" title=" " alt="" coords="463,424,555,449"/>
+<area shape="rect" id="node2" href="$cppcompound-info-accessor_8h.html#ac8131e26eb3598e0ffea2911ef134752" title=" " alt="" coords="471,5,547,31"/>
+<area shape="rect" id="node3" href="$classCppProgram.html#a8c2cbfd1807713e8d1aee6a57e48708a" title=" " alt="" coords="217,203,369,228"/>
+<area shape="rect" id="node4" href="$classCppProgram.html#a47808cdc37341ac21e93dd8e800530a3" title=" " alt="" coords="417,79,600,104"/>
+<area shape="rect" id="node5" href="$cppcompound-info-accessor_8h.html#a4f009b4a051b0c05788c6c10b3385650" title=" " alt="" coords="452,128,565,153"/>
+<area shape="rect" id="node6" href="$cppobj-info-accessor_8h.html#acd4aa3d1b3b3511d7ba8e77107e9703b" title=" " alt="" coords="461,177,556,203"/>
+<area shape="rect" id="node7" href="$cppobj-info-accessor_8h.html#a6814ff80a124155bc811ec0920aad3b3" title=" " alt="" coords="476,227,541,252"/>
+<area shape="rect" id="node8" href="$cppobj-info-accessor_8h.html#af14b354aa79fbeb79ea131cb93b5308d" title=" " alt="" coords="459,276,558,301"/>
+<area shape="rect" id="node9" href="$cppobj-info-accessor_8h.html#a656bf655ab2dc9fa48caf923d71b8f91" title=" " alt="" coords="457,325,560,351"/>
+<area shape="rect" id="node10" href="$cppobj-info-accessor_8h.html#add2df0b64265cc4479470b5d9e0bf15c" title=" " alt="" coords="452,375,565,400"/>
+<area shape="rect" id="node11" href="$cppobj-info-accessor_8h.html#aa80dbf60ab74528e8bfeb7d784e75f33" title=" " alt="" coords="463,424,555,449"/>
 </map>

@@ -1,5 +1,0 @@
-<map id="CppVisitorPrinter::astToString" name="CppVisitorPrinter::astToString">
-<area shape="rect" id="node1" title="Converts the given pointer to an AST node to its equivalent string of code using CppWriter class." alt="" coords="371,5,497,45"/>
-<area shape="rect" id="node2" href="$classCppVisitorMatcher.html#a130a97c67e900ac74ddd05a5006aed4a" title="The virtual method to be called when a tree node is matched." alt="" coords="188,5,323,45"/>
-<area shape="rect" id="node3" href="$classCppVisitorMatcher.html#a0a6e18a5692a90495975db4f86cdbc58" title="The only ctor of the class." alt="" coords="5,5,140,45"/>
-</map>

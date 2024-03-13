@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['macrocall_5f_0',['macroCall_',['../structCppMacroCall.html#af807bb693dcc11f607b41fdd2f02e1bf',1,'CppMacroCall']]],
+  ['macrocall_5f_0',['macroCall_',['../structCppMacroCall.html#a55aba733a4acb97ef22900488ccf8a2d',1,'CppMacroCall']]],
   ['macrodefineinfo_1',['MacroDefineInfo',['../parser_8l_8h.html#a5ee286e710856af4808e691bc38857a8',1,'parser.l.h']]],
   ['macrodependentcodeenablement_2',['macroDependentCodeEnablement',['../structCodeEnablementInfo.html#a1a064d0d8bb2edd6dbf058f2ba2dce65',1,'CodeEnablementInfo']]],
   ['macrodependentcodeenablement_3',['MacroDependentCodeEnablement',['../parser_8l_8h.html#a2fe8690a18922291eec46dc4f1aaf7f2',1,'parser.l.h']]],
@@ -8,13 +8,13 @@ var searchData=
   ['makecpptoken_5',['makeCppToken',['../cpptoken_8h.html#adcbf8944025c2a290482e1466fb07db7',1,'makeCppToken(const char *sz, size_t len):&#160;cpptoken.h'],['../cpptoken_8h.html#a201635257297ef89661fbfeea3596a73',1,'makeCppToken(const char *beg, const char *end):&#160;cpptoken.h']]],
   ['makecpptypemodifier_6',['makeCppTypeModifier',['../typemodifier_8h.html#a2169db3a1a0c97279c0b5f82a806ea08',1,'typemodifier.h']]],
   ['makeemptycppmeminitlist_7',['makeEmptyCppMemInitList',['../cppast_8h.html#ae3242ff4316455fb4038d4570b0aeb32',1,'cppast.h']]],
-  ['matched_8',['matched',['../classCppVisitorMatcher.html#a130a97c67e900ac74ddd05a5006aed4a',1,'CppVisitorMatcher']]],
+  ['matched_8',['matched',['../classCppVisitorMatcher.html#ad31e78b9ed085b01341fe2c234cba5d8',1,'CppVisitorMatcher']]],
   ['matchedfunc_9',['matchedFunc',['../classCppVisitorMatcher.html#ae18c9be78f6efdc4897c620c1bc0bd21',1,'CppVisitorMatcher']]],
   ['matchedfunctype_10',['MatchedFuncType',['../classCppVisitorMatcher.html#a76fc5ac82ea95d12817ec7d9b40070f2',1,'CppVisitorMatcher']]],
   ['mbracketdepthstack_11',['mBracketDepthStack',['../structLexerData.html#a14e36d079efd438c0c3bfe11e8f05294',1,'LexerData']]],
   ['mdeflookslike_12',['mDefLooksLike',['../structLexerData.html#affb61b06b28f6fd8858af834dd1230b9',1,'LexerData']]],
   ['mem_13',['mem',['../structCppNtMemInit.html#a4d7de3851010069b83c88d4b8a03caf6',1,'CppNtMemInit']]],
-  ['members_14',['members',['../structCppCompound.html#a5244e7a78ab36013bbc7fed834531287',1,'CppCompound']]],
+  ['members_14',['members',['../structCppCompound.html#a289ccec756353980781767cc7fd73f02',1,'CppCompound']]],
   ['members_5f_15',['members_',['../structCppCompound.html#a05e31e5dfe4db90940e35541a3827776',1,'CppCompound']]],
   ['meminitlist_16',['memInitList',['../structCppMemInits.html#a41b6310ad89dd25f53c87927fc28ff48',1,'CppMemInits']]],
   ['meminitlistisablob_5f_17',['memInitListIsABlob_',['../structCppMemInits.html#a1a25f3a2a1650ee9d2bbf4ae45cbd9fb',1,'CppMemInits']]],
@@ -33,8 +33,8 @@ var searchData=
   ['mnestedcurlybracketdepth_30',['mNestedCurlyBracketDepth',['../structLexerData.html#a53114e8f25289331db15d9b392d1cffe',1,'LexerData']]],
   ['mnotameminitcolon_31',['mNotAMemInitColon',['../structLexerData.html#a2bbd353c3c1014557e74676c36a5deb4',1,'LexerData']]],
   ['moldyytext_32',['mOldYytext',['../structLexerData.html#aa90d6787d415d644e80ca7b7cfee527a',1,'LexerData']]],
-  ['movector_33',['moveCtor',['../structCppCompound.html#a8d75a166170d978c0f1446faf1ea2096',1,'CppCompound']]],
-  ['movector_5f_34',['moveCtor_',['../structCppCompound.html#a2f6ce1410647f7deac1510e5f8c561d7',1,'CppCompound']]],
+  ['movector_33',['moveCtor',['../structCppCompound.html#aed7df8562af9a59e1ed993e6c11809d3',1,'CppCompound']]],
+  ['movector_5f_34',['moveCtor_',['../structCppCompound.html#ab40190e69cdc1d6277eb3a51a5307501',1,'CppCompound']]],
   ['mpossiblefuncimplstartbraceposition_35',['mPossibleFuncImplStartBracePosition',['../structLexerData.html#a716db3b2bb0583757bee680bb8b312f8',1,'LexerData']]],
   ['mtokenizecomment_36',['mTokenizeComment',['../structLexerData.html#ac554c91a14931792c5fb26a45b3267e8',1,'LexerData']]]
 ];

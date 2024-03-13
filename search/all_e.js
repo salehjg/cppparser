@@ -2,9 +2,9 @@ var searchData=
 [
   ['obj_2dfactory_2dhelper_2eh_0',['obj-factory-helper.h',['../obj-factory-helper_8h.html',1,'']]],
   ['objfactory_5f_1',['objFactory_',['../classCppParser.html#a55c0474630ac55b7df31de94001e500c',1,'CppParser']]],
-  ['objtype_2',['objType',['../cppast_8cpp.html#a03d21f7803082603ec55dd209a1a857b',1,'objType(const CppObj *cppObj):&#160;cppast.cpp'],['../cppeasyptr_8h.html#a03d21f7803082603ec55dd209a1a857b',1,'objType(const CppObj *cppObj):&#160;cppast.cpp']]],
-  ['objtype_5f_3',['objType_',['../structCppObj.html#a96ab69f17d3fed9dc6c4acd81569da56',1,'CppObj']]],
-  ['oper_5f_4',['oper_',['../structCppExpr.html#ae1bbc91c08577844c08ff767ec686dfe',1,'CppExpr']]],
+  ['objtype_2',['objType',['../cppast_8cpp.html#a1865fbcc5887592a76772f816ec1eed4',1,'objType(CppObj *cppObj):&#160;cppast.cpp'],['../cppeasyptr_8h.html#a03d21f7803082603ec55dd209a1a857b',1,'objType(const CppObj *cppObj):&#160;cppeasyptr.h']]],
+  ['objtype_5f_3',['objType_',['../structCppObj.html#ad9cf0eaef28568bed4174d10935aa0eb',1,'CppObj']]],
+  ['oper_5f_4',['oper_',['../structCppExpr.html#a68d0b8201e68af4a5eaf542684e772bd',1,'CppExpr']]],
   ['operator_20_5fucppobj_20_2a_5',['operator _UCppObj *',['../classCppEasyPtr.html#a1552c6e49c59ec97f024c11547cc9367',1,'CppEasyPtr']]],
   ['operator_20bool_6',['operator bool',['../classCppEasyPtr.html#a60d0a1431d437ae1bf806d58258aaccd',1,'CppEasyPtr']]],
   ['operator_20const_20cppobj_20_2a_7',['operator const CppObj *',['../classCppEasyPtr.html#aaea4b0974ac15e1cfa5f7d348eea9b51',1,'CppEasyPtr']]],
@@ -16,10 +16,10 @@ var searchData=
   ['operator_2b_2b_13',['operator++',['../classCppIndent.html#a19a3a321568e6f316edafbd69c40651e',1,'CppIndent::operator++(int)'],['../classCppIndent.html#a4623a24bce70880c41e6e045b7759d42',1,'CppIndent::operator++()']]],
   ['operator_2d_2d_14',['operator--',['../classCppIndent.html#aa839d1a497a0d1692a67100e53fcf9b1',1,'CppIndent::operator--(int)'],['../classCppIndent.html#ae8de03be5d951c4dd084c45ffba87790',1,'CppIndent::operator--()']]],
   ['operator_2d_3e_15',['operator-&gt;',['../classCppEasyPtr.html#a539250aaa8d9775313fe81d4646082cf',1,'CppEasyPtr']]],
-  ['operator_3c_3c_16',['operator&lt;&lt;',['../cpptoken_8h.html#a00ea6027372fd9476cf063516e240c15',1,'operator&lt;&lt;(_ST &amp;stm, const CppToken &amp;token):&#160;cpptoken.h'],['../cppwriter_8h.html#a21fe45cde449dcfcf122a6f05d7ca96b',1,'operator&lt;&lt;(std::ostream &amp;stm, const CppIndent &amp;indentation):&#160;cppwriter.h'],['../cppwriter_8h.html#acc1be6fb04cb01b756d211d956872cf6',1,'operator&lt;&lt;(std::ostream &amp;stm, CppAccessType accessType):&#160;cppwriter.h'],['../cppwriter_8h.html#a8f93505d8e45dcd8f2a4302c06f6ea9b',1,'operator&lt;&lt;(std::ostream &amp;stm, CppCompoundType cmpndType):&#160;cppwriter.h']]],
+  ['operator_3c_3c_16',['operator&lt;&lt;',['../cpptoken_8h.html#a00ea6027372fd9476cf063516e240c15',1,'operator&lt;&lt;(_ST &amp;stm, const CppToken &amp;token):&#160;cpptoken.h'],['../cppwriter_8h.html#ad2c901bf3670f62c8cca1fe1b6266d13',1,'operator&lt;&lt;(std::ostream &amp;stm, CppIndent &amp;indentation):&#160;cppwriter.h'],['../cppwriter_8h.html#acc1be6fb04cb01b756d211d956872cf6',1,'operator&lt;&lt;(std::ostream &amp;stm, CppAccessType accessType):&#160;cppwriter.h'],['../cppwriter_8h.html#a8f93505d8e45dcd8f2a4302c06f6ea9b',1,'operator&lt;&lt;(std::ostream &amp;stm, CppCompoundType cmpndType):&#160;cppwriter.h']]],
   ['operator_3d_3d_17',['operator==',['../structCppToken.html#a4b33904738cf7f4036f374fa465f0dd0',1,'CppToken::operator==()'],['../cppast_8cpp.html#a094b86c0c64b1c613afff65a67c4b6a5',1,'operator==(const CppExpr &amp;expr1, const CppExpr &amp;expr2):&#160;cppast.cpp'],['../cppast_8h.html#a094b86c0c64b1c613afff65a67c4b6a5',1,'operator==(const CppExpr &amp;expr1, const CppExpr &amp;expr2):&#160;cppast.cpp'],['../cppast_8h.html#a28dd90d4d922e7569a6f0bc3dfb78605',1,'operator==(const CppExprAtom &amp;exprAtom1, const CppExprAtom &amp;exprAtom2):&#160;cppast.h']]],
-  ['owner_18',['owner',['../structCppObj.html#a346a902135d896f146ba1209c4acaad3',1,'CppObj::owner(CppCompound *o)'],['../structCppObj.html#ab9e4b48ecc95ab4e494e26aa4d2f1568',1,'CppObj::owner() const']]],
+  ['owner_18',['owner',['../structCppObj.html#a346a902135d896f146ba1209c4acaad3',1,'CppObj::owner(CppCompound *o)'],['../structCppObj.html#a80230ea2d92e562476a43fc97187f6df',1,'CppObj::owner()']]],
   ['owner_5f_19',['owner_',['../structCppObj.html#aec5ead2a1d8551271f58540166895eea',1,'CppObj']]],
-  ['ownername_5f_20',['ownerName_',['../structCppFunctionPointer.html#a54873509bbcb8439d7b8cf1a3797909d',1,'CppFunctionPointer']]],
+  ['ownername_5f_20',['ownerName_',['../structCppFunctionPointer.html#a3c8150413ae1abf676bae457b1811f64',1,'CppFunctionPointer']]],
   ['string_21',['string',['../structCppToken.html#aba07d7bba7e1318259689668ffd4e4f1',1,'CppToken']]]
 ];

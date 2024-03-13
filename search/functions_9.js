@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['justname_0',['justName',['../structCppCompound.html#afe8b42dcf399e4a6c8d0a20a9efce869',1,'CppCompound']]]
+  ['justname_0',['justName',['../structCppCompound.html#a4abadeb1d36dc31fe0e31d836529e917',1,'CppCompound']]]
 ];
