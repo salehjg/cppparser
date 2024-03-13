@@ -18,7 +18,9 @@
 
 class CppVisitorMatcher : public CppVisitorBase
 {
+  using MatchedFuncType = std::function<bool(const CppObj* p)>;
   const std::vector<CppObjType> typesToMatch;
+  MatchedFuncType matchedFunc;
 
 public:
   /**
@@ -28,6 +30,15 @@ public:
   explicit CppVisitorMatcher(const std::vector<CppObjType>& typesToMatch)
     : typesToMatch(typesToMatch)
   {
+      matchedFunc = [&](const CppObj* p) -> bool {
+          matched(p);
+      };
+  }
+
+  explicit CppVisitorMatcher(const std::vector<CppObjType>& typesToMatch, MatchedFuncType &&matchedFunc)
+    : typesToMatch(typesToMatch)
+  {
+      this->matchedFunc = matchedFunc;
   }
 
   /**
@@ -56,7 +67,7 @@ private:
   {
     if (std::find(typesToMatch.begin(), typesToMatch.end(), p->objType_) != typesToMatch.end())
     {
-      return matched(p); // continue traversing the tree only if the user wants to.
+      return matchedFunc(p); // continue traversing the tree only if the user wants to.
     }
     return true; // continue traversing the tree to find a possible match.
   }

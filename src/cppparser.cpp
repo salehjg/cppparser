@@ -33,6 +33,7 @@
 #include <set>
 #include <string>
 #include <vector>
+#include <fstream>
 
 // Unfortunately parser is not reentrant and has no way as of now to inject parameters.
 // So, we need globals.
@@ -135,6 +136,19 @@ CppCompoundPtr CppParser::parseFile(const std::string& filename)
     return cppCompound;
   cppCompound->name(filename);
   return cppCompound;
+}
+
+CppCompoundPtr CppParser::parseString(const std::string& filePathToSave, const std::string& content)
+{
+    std::ofstream out(filePathToSave);
+    out << content;
+    out.close();
+    return parseFile(filePathToSave);
+}
+
+CppCompoundPtr CppParser::parseString(const std::string& content)
+{
+    return parseString("/tmp/t.cpp", content);
 }
 
 CppCompoundPtr CppParser::parseStream(char* stm, size_t stmSize)

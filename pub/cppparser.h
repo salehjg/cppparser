@@ -71,6 +71,8 @@ public:
 
 public:
   CppCompoundPtr parseFile(const std::string& filename);
+  CppCompoundPtr parseString(const std::string& filePathToSave, const std::string& content);
+  CppCompoundPtr parseString(const std::string& content);
   CppCompoundPtr parseStream(char* stm, size_t stmSize);
 
   void setErrorHandler(ErrorHandler errorHandler);

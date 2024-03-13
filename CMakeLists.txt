@@ -25,8 +25,8 @@ set(Boost_USE_STATIC_RUNTIME OFF)
 find_package(Boost COMPONENTS filesystem program_options REQUIRED)
 
 # TODO: has to be upgraded soon.
-if (NOT EXISTS "${CMAKE_SOURCE_DIR}/src/catch/catch.hpp")
-  file(DOWNLOAD "https://github.com/catchorg/Catch2/releases/download/v2.13.10/catch.hpp" "${CMAKE_SOURCE_DIR}/src/catch/catch.hpp")
+if (NOT EXISTS "${CMAKE_CURRENT_LIST_DIR}/src/catch/catch.hpp")
+  file(DOWNLOAD "https://github.com/catchorg/Catch2/releases/download/v2.13.10/catch.hpp" "${CMAKE_CURRENT_LIST_DIR}/src/catch/catch.hpp")
 endif()
 
 #############################################
@@ -88,6 +88,7 @@ target_sources(cppparser
 			${CMAKE_CURRENT_LIST_DIR}/pub/cppvisitorbase.h
 			${CMAKE_CURRENT_LIST_DIR}/pub/cppvisitorprinter.h
 			${CMAKE_CURRENT_LIST_DIR}/pub/cppvisitormatcher.h
+			${CMAKE_CURRENT_LIST_DIR}/pub/clone.h
 		PRIVATE
 			${CMAKE_CURRENT_LIST_DIR}/src/cppparser.cpp
 			${CMAKE_CURRENT_LIST_DIR}/src/cppast.cpp
