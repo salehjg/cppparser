@@ -105,28 +105,34 @@ $(document).ready(function(){initNavTree('clone_8h_source.html',''); initResizab
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;sstream&gt;</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="cppparser_8h.html">cppparser.h</a>&quot;</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="cppwriter_8h.html">cppwriter.h</a>&quot;</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="cppast_8h.html">cppast.h</a>&quot;</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="clone_8h.html#a1a2ea90a3c23c007d347d83ff1b17411">   12</a></span><span class="keyword">inline</span> <a class="code hl_struct" href="structCppObj.html">CppObj</a>* <a class="code hl_function" href="clone_8h.html#a1a2ea90a3c23c007d347d83ff1b17411">cloneAny</a>(<span class="keyword">const</span> <a class="code hl_struct" href="structCppObj.html">CppObj</a> *pSrc) {</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <a class="code hl_class" href="classCppWriter.html">CppWriter</a> writer;</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    std::stringstream stm;</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    writer.<a class="code hl_function" href="classCppWriter.html#ae3c18524f30299ea49e53f464976fbda">emit</a>(pSrc, stm);</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    stm.flush();</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <a class="code hl_class" href="classCppParser.html">CppParser</a> parser;</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keywordflow">return</span> parser.<a class="code hl_function" href="classCppParser.html#ac9bcb195f7ff3105e2cab80fa39843e6">parseString</a>(stm.str()).get();</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>}</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;cassert&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;sstream&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="cppparser_8h.html">cppparser.h</a>&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="cppwriter_8h.html">cppwriter.h</a>&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="cppast_8h.html">cppast.h</a>&quot;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="clone_8h.html#abe870b0479360890d5b1e55c372941e3">   13</a></span><span class="keyword">inline</span> <a class="code hl_typedef" href="cpptoken_8h.html#a8a840c70320c7f9fbe5d6cac7fdeae78">CppObjPtr</a> <a class="code hl_function" href="clone_8h.html#abe870b0479360890d5b1e55c372941e3">cloneCppObj</a>(<a class="code hl_struct" href="structCppObj.html">CppObj</a> *pSrc) {</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <a class="code hl_class" href="classCppWriter.html">CppWriter</a> writer;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    std::stringstream stm;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    writer.<a class="code hl_function" href="classCppWriter.html#ae3c18524f30299ea49e53f464976fbda">emit</a>(pSrc, stm);</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    stm.flush();</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <a class="code hl_class" href="classCppParser.html">CppParser</a> parser;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keyword">auto</span> uniquePtr =  parser.<a class="code hl_function" href="classCppParser.html#ac9bcb195f7ff3105e2cab80fa39843e6">parseString</a>(stm.str());</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keyword">auto</span> rawPtr = uniquePtr.release(); <span class="comment">// give up the ownership, BAD IDEA!</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keyword">auto</span> member = std::move(rawPtr-&gt;members()[0]);</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keyword">delete</span> rawPtr; <span class="comment">// avoid m.leak, BAD IDEA!</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keywordflow">return</span> member;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>}</div>
 <div class="ttc" id="aclassCppParser_html"><div class="ttname"><a href="classCppParser.html">CppParser</a></div><div class="ttdoc">Parses C++ source and generates an AST.</div><div class="ttdef"><b>Definition:</b> <a href="cppparser_8h_source.html#l00039">cppparser.h:40</a></div></div>
 <div class="ttc" id="aclassCppParser_html_ac9bcb195f7ff3105e2cab80fa39843e6"><div class="ttname"><a href="classCppParser.html#ac9bcb195f7ff3105e2cab80fa39843e6">CppParser::parseString</a></div><div class="ttdeci">CppCompoundPtr parseString(const std::string &amp;filePathToSave, const std::string &amp;content)</div><div class="ttdef"><b>Definition:</b> <a href="cppparser_8cpp_source.html#l00141">cppparser.cpp:141</a></div></div>
 <div class="ttc" id="aclassCppWriter_html"><div class="ttname"><a href="classCppWriter.html">CppWriter</a></div><div class="ttdoc">Responsible for emitting C/C++ source from CppAst data structure.</div><div class="ttdef"><b>Definition:</b> <a href="cppwriter_8h_source.html#l00039">cppwriter.h:40</a></div></div>
 <div class="ttc" id="aclassCppWriter_html_ae3c18524f30299ea49e53f464976fbda"><div class="ttname"><a href="classCppWriter.html#ae3c18524f30299ea49e53f464976fbda">CppWriter::emit</a></div><div class="ttdeci">virtual void emit(CppObj *cppObj, std::ostream &amp;stm, CppIndent indentation=CppIndent()) const</div><div class="ttdef"><b>Definition:</b> <a href="cppwriter_8cpp_source.html#l00070">cppwriter.cpp:70</a></div></div>
-<div class="ttc" id="aclone_8h_html_a1a2ea90a3c23c007d347d83ff1b17411"><div class="ttname"><a href="clone_8h.html#a1a2ea90a3c23c007d347d83ff1b17411">cloneAny</a></div><div class="ttdeci">CppObj * cloneAny(const CppObj *pSrc)</div><div class="ttdef"><b>Definition:</b> <a href="clone_8h_source.html#l00012">clone.h:12</a></div></div>
+<div class="ttc" id="aclone_8h_html_abe870b0479360890d5b1e55c372941e3"><div class="ttname"><a href="clone_8h.html#abe870b0479360890d5b1e55c372941e3">cloneCppObj</a></div><div class="ttdeci">CppObjPtr cloneCppObj(CppObj *pSrc)</div><div class="ttdef"><b>Definition:</b> <a href="clone_8h_source.html#l00013">clone.h:13</a></div></div>
 <div class="ttc" id="acppast_8h_html"><div class="ttname"><a href="cppast_8h.html">cppast.h</a></div></div>
 <div class="ttc" id="acppparser_8h_html"><div class="ttname"><a href="cppparser_8h.html">cppparser.h</a></div></div>
+<div class="ttc" id="acpptoken_8h_html_a8a840c70320c7f9fbe5d6cac7fdeae78"><div class="ttname"><a href="cpptoken_8h.html#a8a840c70320c7f9fbe5d6cac7fdeae78">CppObjPtr</a></div><div class="ttdeci">std::unique_ptr&lt; CppObj &gt; CppObjPtr</div><div class="ttdef"><b>Definition:</b> <a href="cpptoken_8h_source.html#l00109">cpptoken.h:109</a></div></div>
 <div class="ttc" id="acppwriter_8h_html"><div class="ttname"><a href="cppwriter_8h.html">cppwriter.h</a></div></div>
 <div class="ttc" id="astructCppObj_html"><div class="ttname"><a href="structCppObj.html">CppObj</a></div><div class="ttdoc">An abstract class that is used as base class of all other classes.</div><div class="ttdef"><b>Definition:</b> <a href="cppast_8h_source.html#l00133">cppast.h:134</a></div></div>
 </div><!-- fragment --></div><!-- contents -->

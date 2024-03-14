@@ -16,7 +16,7 @@ var searchData=
   ['addknownapidecors_13',['addKnownApiDecors',['../classCppParser.html#ac0305e1ef184d83880e2d399d1cc2fcf',1,'CppParser']]],
   ['addknownmacro_14',['addKnownMacro',['../classCppParser.html#ace7219e238176aebdf3fdf4971712cbe',1,'CppParser']]],
   ['addknownmacros_15',['addKnownMacros',['../classCppParser.html#a07d35b571bce273d7cb0a76b1475cc06',1,'CppParser']]],
-  ['addmember_16',['addMember',['../structCppCompound.html#ad8dbd0f6fa23620f34c92e8a2ece7207',1,'CppCompound']]],
+  ['addmember_16',['addMember',['../structCppCompound.html#ad8dbd0f6fa23620f34c92e8a2ece7207',1,'CppCompound::addMember(CppObj *mem)'],['../structCppCompound.html#ae4021914d367a09b19285137f8930c43',1,'CppCompound::addMember(CppObjPtr &amp;&amp;mem)']]],
   ['addmemberatfront_17',['addMemberAtFront',['../structCppCompound.html#a0c6c3c98df25142a60babd989c7f481f',1,'CppCompound']]],
   ['addrenamedkeyword_18',['addRenamedKeyword',['../classCppParser.html#ae71f3c5b14c00b7264e27e0aa7d444f8',1,'CppParser']]],
   ['addundefinedname_19',['addUndefinedName',['../classCppParser.html#adf1b23505fc87f33fb5b6d3712bd8771',1,'CppParser']]],

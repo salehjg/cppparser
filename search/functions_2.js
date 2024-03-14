@@ -5,7 +5,7 @@ var searchData=
   ['classnamefromtemplatedidentifier_2',['classNameFromTemplatedIdentifier',['../utils_8cpp.html#a52d996a9a262bc1763ad61c5b7599572',1,'utils.cpp']]],
   ['cleanseidentifier_3',['cleanseIdentifier',['../string-utils_8h.html#a5dc6e2d37d3bc97320a3a806eb41405a',1,'string-utils.h']]],
   ['cleanupscanbuffer_4',['cleanupScanBuffer',['../parser_8l.html#ab2d93e2e0709fe9185f5224b53c45246',1,'parser.l']]],
-  ['cloneany_5',['cloneAny',['../clone_8h.html#a1a2ea90a3c23c007d347d83ff1b17411',1,'clone.h']]],
+  ['clonecppobj_5',['cloneCppObj',['../clone_8h.html#abe870b0479360890d5b1e55c372941e3',1,'clone.h']]],
   ['codesegmentdependsonmacrodefinition_6',['codeSegmentDependsOnMacroDefinition',['../parser_8l.html#acf3f7cfed75502f18c8644ae5de964e1',1,'parser.l']]],
   ['collectfiles_7',['collectFiles',['../cpputil_8h.html#aac014a50189256e9e2d6d19d8bf1b0ee',1,'collectFiles(const std::string &amp;folder, const CppProgFileSelecter &amp;fileSelector):&#160;cpputil.h'],['../cpputil_8h.html#ac2564d128092f00be418299b8604ad30',1,'collectFiles(std::vector&lt; std::string &gt; &amp;files, const fs::path &amp;path, const CppProgFileSelecter &amp;fileSelector):&#160;utils.cpp'],['../utils_8cpp.html#ac2564d128092f00be418299b8604ad30',1,'collectFiles(std::vector&lt; std::string &gt; &amp;files, const fs::path &amp;path, const CppProgFileSelecter &amp;fileSelector):&#160;utils.cpp']]],
   ['compound_8',['compound',['../structCppVarType.html#ad205afc130c1d3999ecba7af0c7a0ed2',1,'CppVarType']]],

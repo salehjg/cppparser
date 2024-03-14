@@ -10,7 +10,7 @@ var searchData=
   ['makeemptycppmeminitlist_7',['makeEmptyCppMemInitList',['../cppast_8h.html#ae3242ff4316455fb4038d4570b0aeb32',1,'cppast.h']]],
   ['matched_8',['matched',['../classCppVisitorMatcher.html#ad31e78b9ed085b01341fe2c234cba5d8',1,'CppVisitorMatcher']]],
   ['matchedfunc_9',['matchedFunc',['../classCppVisitorMatcher.html#ae18c9be78f6efdc4897c620c1bc0bd21',1,'CppVisitorMatcher']]],
-  ['matchedfunctype_10',['MatchedFuncType',['../classCppVisitorMatcher.html#a76fc5ac82ea95d12817ec7d9b40070f2',1,'CppVisitorMatcher']]],
+  ['matchedfunctype_10',['MatchedFuncType',['../classCppVisitorMatcher.html#ae4706cbe997dec8d712510f6bdd390e0',1,'CppVisitorMatcher']]],
   ['mbracketdepthstack_11',['mBracketDepthStack',['../structLexerData.html#a14e36d079efd438c0c3bfe11e8f05294',1,'LexerData']]],
   ['mdeflookslike_12',['mDefLooksLike',['../structLexerData.html#affb61b06b28f6fd8858af834dd1230b9',1,'LexerData']]],
   ['mem_13',['mem',['../structCppNtMemInit.html#a4d7de3851010069b83c88d4b8a03caf6',1,'CppNtMemInit']]],

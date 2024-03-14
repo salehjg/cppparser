@@ -1,5 +1,6 @@
 var NAVTREEINDEX4 =
 {
+"structCppConstructor.html#a4a742f0e43ecd91ed9547ed8b388408a":[2,0,8,5],
 "structCppConstructor.html#a4af653f86049f9fdd3a4cd4e1d436f50":[2,0,8,4],
 "structCppConstructor.html#a7c3787dd45a1353d6f4051d2b79bcc54":[2,0,8,1],
 "structCppConstructor.html#a9c36d5aa92a694274a3add6d87a0117d":[2,0,8,7],
@@ -248,6 +249,5 @@ var NAVTREEINDEX4 =
 "structCppSwitchBlock.html":[2,0,46],
 "structCppSwitchBlock.html#a205953e15b254808c8eba68c652fda55":[2,0,46,2],
 "structCppSwitchBlock.html#a28d107bf9a750eba2a1aef5726305a26":[2,0,46,1],
-"structCppSwitchBlock.html#a3ab1b75cc1d0dba45e33ffc293a80ccf":[2,0,46,4],
-"structCppSwitchBlock.html#a4c5110ff34969f544bed7e8955477739":[2,0,46,3]
+"structCppSwitchBlock.html#a3ab1b75cc1d0dba45e33ffc293a80ccf":[2,0,46,4]
 };

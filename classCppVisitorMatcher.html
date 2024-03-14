@@ -135,7 +135,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a0a6e18a5692a90495975db4f86cdbc58"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCppVisitorMatcher.html#a0a6e18a5692a90495975db4f86cdbc58">CppVisitorMatcher</a> (const std::vector&lt; <a class="el" href="cppconst_8h.html#a88c3f5421bbecd1bc56e234e219e495e">CppObjType</a> &gt; &amp;<a class="el" href="classCppVisitorMatcher.html#a983a539795b11d15a0fdfda38ed65f1d">typesToMatch</a>)</td></tr>
 <tr class="memdesc:a0a6e18a5692a90495975db4f86cdbc58"><td class="mdescLeft">&#160;</td><td class="mdescRight">The only ctor of the class.  <a href="classCppVisitorMatcher.html#a0a6e18a5692a90495975db4f86cdbc58">More...</a><br /></td></tr>
 <tr class="separator:a0a6e18a5692a90495975db4f86cdbc58"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a433257d65fd2781f2e459bd379742a3b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCppVisitorMatcher.html#a433257d65fd2781f2e459bd379742a3b">CppVisitorMatcher</a> (const std::vector&lt; <a class="el" href="cppconst_8h.html#a88c3f5421bbecd1bc56e234e219e495e">CppObjType</a> &gt; &amp;<a class="el" href="classCppVisitorMatcher.html#a983a539795b11d15a0fdfda38ed65f1d">typesToMatch</a>, <a class="el" href="classCppVisitorMatcher.html#a76fc5ac82ea95d12817ec7d9b40070f2">MatchedFuncType</a> &amp;&amp;<a class="el" href="classCppVisitorMatcher.html#ae18c9be78f6efdc4897c620c1bc0bd21">matchedFunc</a>)</td></tr>
+<tr class="memitem:a433257d65fd2781f2e459bd379742a3b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCppVisitorMatcher.html#a433257d65fd2781f2e459bd379742a3b">CppVisitorMatcher</a> (const std::vector&lt; <a class="el" href="cppconst_8h.html#a88c3f5421bbecd1bc56e234e219e495e">CppObjType</a> &gt; &amp;<a class="el" href="classCppVisitorMatcher.html#a983a539795b11d15a0fdfda38ed65f1d">typesToMatch</a>, <a class="el" href="classCppVisitorMatcher.html#ae4706cbe997dec8d712510f6bdd390e0">MatchedFuncType</a> &amp;&amp;<a class="el" href="classCppVisitorMatcher.html#ae18c9be78f6efdc4897c620c1bc0bd21">matchedFunc</a>)</td></tr>
 <tr class="separator:a433257d65fd2781f2e459bd379742a3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad31e78b9ed085b01341fe2c234cba5d8"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCppVisitorMatcher.html#ad31e78b9ed085b01341fe2c234cba5d8">matched</a> (<a class="el" href="structCppObj.html">CppObj</a> *p)</td></tr>
 <tr class="memdesc:ad31e78b9ed085b01341fe2c234cba5d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">The virtual method to be called when a tree node is matched.  <a href="classCppVisitorMatcher.html#ad31e78b9ed085b01341fe2c234cba5d8">More...</a><br /></td></tr>
@@ -309,8 +309,8 @@ Protected Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-types" name="pri-types"></a>
 Private Types</h2></td></tr>
-<tr class="memitem:a76fc5ac82ea95d12817ec7d9b40070f2"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCppVisitorMatcher.html#a76fc5ac82ea95d12817ec7d9b40070f2">MatchedFuncType</a> = std::function&lt; bool(const <a class="el" href="structCppObj.html">CppObj</a> *p)&gt;</td></tr>
-<tr class="separator:a76fc5ac82ea95d12817ec7d9b40070f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4706cbe997dec8d712510f6bdd390e0"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCppVisitorMatcher.html#ae4706cbe997dec8d712510f6bdd390e0">MatchedFuncType</a> = std::function&lt; bool(<a class="el" href="structCppObj.html">CppObj</a> *p)&gt;</td></tr>
+<tr class="separator:ae4706cbe997dec8d712510f6bdd390e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
@@ -322,15 +322,15 @@ Private Member Functions</h2></td></tr>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a983a539795b11d15a0fdfda38ed65f1d"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="cppconst_8h.html#a88c3f5421bbecd1bc56e234e219e495e">CppObjType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCppVisitorMatcher.html#a983a539795b11d15a0fdfda38ed65f1d">typesToMatch</a></td></tr>
 <tr class="separator:a983a539795b11d15a0fdfda38ed65f1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae18c9be78f6efdc4897c620c1bc0bd21"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classCppVisitorMatcher.html#a76fc5ac82ea95d12817ec7d9b40070f2">MatchedFuncType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCppVisitorMatcher.html#ae18c9be78f6efdc4897c620c1bc0bd21">matchedFunc</a></td></tr>
+<tr class="memitem:ae18c9be78f6efdc4897c620c1bc0bd21"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classCppVisitorMatcher.html#ae4706cbe997dec8d712510f6bdd390e0">MatchedFuncType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCppVisitorMatcher.html#ae18c9be78f6efdc4897c620c1bc0bd21">matchedFunc</a></td></tr>
 <tr class="separator:ae18c9be78f6efdc4897c620c1bc0bd21"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
 <p class="definition">Definition at line <a class="el" href="cppvisitormatcher_8h_source.html#l00019">19</a> of file <a class="el" href="cppvisitormatcher_8h_source.html">cppvisitormatcher.h</a>.</p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="a76fc5ac82ea95d12817ec7d9b40070f2" name="a76fc5ac82ea95d12817ec7d9b40070f2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a76fc5ac82ea95d12817ec7d9b40070f2">&#9670;&#160;</a></span>MatchedFuncType</h2>
+<a id="ae4706cbe997dec8d712510f6bdd390e0" name="ae4706cbe997dec8d712510f6bdd390e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4706cbe997dec8d712510f6bdd390e0">&#9670;&#160;</a></span>MatchedFuncType</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -339,7 +339,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="classCppVisitorMatcher.html#a76fc5ac82ea95d12817ec7d9b40070f2">CppVisitorMatcher::MatchedFuncType</a> =  std::function&lt;bool(const <a class="el" href="structCppObj.html">CppObj</a>* p)&gt;</td>
+          <td class="memname">using <a class="el" href="classCppVisitorMatcher.html#ae4706cbe997dec8d712510f6bdd390e0">CppVisitorMatcher::MatchedFuncType</a> =  std::function&lt;bool(<a class="el" href="structCppObj.html">CppObj</a>* p)&gt;</td>
         </tr>
       </table>
   </td>
@@ -419,7 +419,7 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classCppVisitorMatcher.html#a76fc5ac82ea95d12817ec7d9b40070f2">MatchedFuncType</a> &amp;&amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="classCppVisitorMatcher.html#ae4706cbe997dec8d712510f6bdd390e0">MatchedFuncType</a> &amp;&amp;&#160;</td>
           <td class="paramname"><em>matchedFunc</em>&#160;</td>
         </tr>
         <tr>
@@ -2108,7 +2108,7 @@ Here is the call graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classCppVisitorMatcher.html#a76fc5ac82ea95d12817ec7d9b40070f2">MatchedFuncType</a> CppVisitorMatcher::matchedFunc</td>
+          <td class="memname"><a class="el" href="classCppVisitorMatcher.html#ae4706cbe997dec8d712510f6bdd390e0">MatchedFuncType</a> CppVisitorMatcher::matchedFunc</td>
         </tr>
       </table>
   </td>

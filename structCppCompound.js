@@ -8,6 +8,7 @@ var structCppCompound =
     [ "addAttr", "structCppCompound.html#aa16f8fb76a28aa118eb8276e7daf92b6", null ],
     [ "addBaseClass", "structCppCompound.html#a879e04ab37cdeeec757c00ebe7f4cb29", null ],
     [ "addMember", "structCppCompound.html#ad8dbd0f6fa23620f34c92e8a2ece7207", null ],
+    [ "addMember", "structCppCompound.html#ae4021914d367a09b19285137f8930c43", null ],
     [ "addMemberAtFront", "structCppCompound.html#a0c6c3c98df25142a60babd989c7f481f", null ],
     [ "apidecor", "structCppCompound.html#ab1506409b292bb2f96e58d5dea5192e6", null ],
     [ "apidecor", "structCppCompound.html#ab71a66d1f9803425fed0838969b1580e", null ],

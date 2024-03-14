@@ -1,5 +1,6 @@
 var NAVTREEINDEX5 =
 {
+"structCppSwitchBlock.html#a4c5110ff34969f544bed7e8955477739":[2,0,46,3],
 "structCppSwitchBlock.html#ae2c40a6e96f93b236f91c6c39b518868":[2,0,46,0],
 "structCppTemplateParam.html":[2,0,47],
 "structCppTemplateParam.html#a163dd29a1c3c4d252774ced59daa52da":[2,0,47,1],
