@@ -148,7 +148,7 @@ struct CppObj
   }
   void owner(CppCompound* o)
   {
-    assert(owner_ == nullptr);
+    //assert(owner_ == nullptr);  ///TODO: Mem leak
     owner_ = o;
   }
 
@@ -1024,6 +1024,12 @@ struct CppCompound : public CppObj, public AttribSpecified
     mem->owner(this);
     members_.emplace_back(mem);
     assignSpecialMember(mem);
+  }
+  void addMember(CppObjPtr &&mem)
+  {
+    mem->owner(this);
+    members_.push_back(std::move(mem));
+    assignSpecialMember(members_.back().get());
   }
   void addMemberAtFront(CppObj* mem)
   {

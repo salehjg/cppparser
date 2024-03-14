@@ -18,7 +18,7 @@
 
 class CppVisitorMatcher : public CppVisitorBase
 {
-  using MatchedFuncType = std::function<bool(const CppObj* p)>;
+  using MatchedFuncType = std::function<bool(CppObj* p)>;
   const std::vector<CppObjType> typesToMatch;
   MatchedFuncType matchedFunc;
 
@@ -30,8 +30,8 @@ public:
   explicit CppVisitorMatcher(const std::vector<CppObjType>& typesToMatch)
     : typesToMatch(typesToMatch)
   {
-      matchedFunc = [&](const CppObj* p) -> bool {
-          matched(p);
+      matchedFunc = [&](CppObj* p) -> bool {
+          return matched(p);
       };
   }
 

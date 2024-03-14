@@ -4,12 +4,13 @@
 
 #pragma once
 
+#include <cassert>
 #include <sstream>
 #include "cppparser.h"
 #include "cppwriter.h"
 #include "cppast.h"
 
-inline CppObj* cloneAny(const CppObj *pSrc) {
+inline CppObjPtr cloneCppObj(CppObj *pSrc) {
     CppWriter writer;
     std::stringstream stm;
 
@@ -17,5 +18,9 @@ inline CppObj* cloneAny(const CppObj *pSrc) {
     stm.flush();
 
     CppParser parser;
-    return parser.parseString(stm.str()).get();
+    auto uniquePtr =  parser.parseString(stm.str());
+    auto rawPtr = uniquePtr.release(); // give up the ownership, BAD IDEA!
+    auto member = std::move(rawPtr->members()[0]);
+    delete rawPtr; // avoid m.leak, BAD IDEA!
+    return member;
 }
