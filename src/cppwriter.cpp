@@ -499,7 +499,7 @@ void CppWriter::emitCompound(CppCompound* compoundObj, std::ostream& stm, CppInd
     }
     --indentation;
   }
-  if (isNamespaceLike(compoundObj))
+  if (isNamespaceLike(compoundObj) || compoundObj->compoundType() == CppCompoundType::kUnknownCompound)
     stm << '\n' << indentation++.toString() << "{\n";
   else if (compoundObj->compoundType() == CppCompoundType::kExternCBlock)
     stm << indentation++.toString() << "extern \"C\" {\n";
@@ -520,7 +520,7 @@ void CppWriter::emitCompound(CppCompound* compoundObj, std::ostream& stm, CppInd
     return false;
   });
 
-  if (isNamespaceLike(compoundObj))
+  if (isNamespaceLike(compoundObj)|| compoundObj->compoundType() == CppCompoundType::kUnknownCompound)
   {
     stm << --indentation;
     stm << '}';
