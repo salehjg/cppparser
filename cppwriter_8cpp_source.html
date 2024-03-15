@@ -599,7 +599,7 @@ $(document).ready(function(){initNavTree('cppwriter_8cpp_source.html',''); initR
 <div class="line"><a id="l00499" name="l00499"></a><span class="lineno">  499</span>    }</div>
 <div class="line"><a id="l00500" name="l00500"></a><span class="lineno">  500</span>    --indentation;</div>
 <div class="line"><a id="l00501" name="l00501"></a><span class="lineno">  501</span>  }</div>
-<div class="line"><a id="l00502" name="l00502"></a><span class="lineno">  502</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="cppobj-info-accessor_8h.html#affdbf555db7b5a59b9aba63f6b4cdc53">isNamespaceLike</a>(compoundObj))</div>
+<div class="line"><a id="l00502" name="l00502"></a><span class="lineno">  502</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="cppobj-info-accessor_8h.html#affdbf555db7b5a59b9aba63f6b4cdc53">isNamespaceLike</a>(compoundObj) || compoundObj-&gt;<a class="code hl_function" href="structCppCompound.html#ac3cfdc74a57fa1ba4db97fd96d912c0f">compoundType</a>() == CppCompoundType::kUnknownCompound)</div>
 <div class="line"><a id="l00503" name="l00503"></a><span class="lineno">  503</span>    stm &lt;&lt; <span class="charliteral">&#39;\n&#39;</span> &lt;&lt; indentation++.<a class="code hl_function" href="classCppIndent.html#a4e8bc12f87a2bf1eb2d9cb6f8a275a48">toString</a>() &lt;&lt; <span class="stringliteral">&quot;{\n&quot;</span>;</div>
 <div class="line"><a id="l00504" name="l00504"></a><span class="lineno">  504</span>  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (compoundObj-&gt;<a class="code hl_function" href="structCppCompound.html#ac3cfdc74a57fa1ba4db97fd96d912c0f">compoundType</a>() == CppCompoundType::kExternCBlock)</div>
 <div class="line"><a id="l00505" name="l00505"></a><span class="lineno">  505</span>    stm &lt;&lt; indentation++.<a class="code hl_function" href="classCppIndent.html#a4e8bc12f87a2bf1eb2d9cb6f8a275a48">toString</a>() &lt;&lt; <span class="stringliteral">&quot;extern \&quot;C\&quot; {\n&quot;</span>;</div>
@@ -620,7 +620,7 @@ $(document).ready(function(){initNavTree('cppwriter_8cpp_source.html',''); initR
 <div class="line"><a id="l00520" name="l00520"></a><span class="lineno">  520</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00521" name="l00521"></a><span class="lineno">  521</span>  });</div>
 <div class="line"><a id="l00522" name="l00522"></a><span class="lineno">  522</span> </div>
-<div class="line"><a id="l00523" name="l00523"></a><span class="lineno">  523</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="cppobj-info-accessor_8h.html#affdbf555db7b5a59b9aba63f6b4cdc53">isNamespaceLike</a>(compoundObj))</div>
+<div class="line"><a id="l00523" name="l00523"></a><span class="lineno">  523</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="cppobj-info-accessor_8h.html#affdbf555db7b5a59b9aba63f6b4cdc53">isNamespaceLike</a>(compoundObj)|| compoundObj-&gt;<a class="code hl_function" href="structCppCompound.html#ac3cfdc74a57fa1ba4db97fd96d912c0f">compoundType</a>() == CppCompoundType::kUnknownCompound)</div>
 <div class="line"><a id="l00524" name="l00524"></a><span class="lineno">  524</span>  {</div>
 <div class="line"><a id="l00525" name="l00525"></a><span class="lineno">  525</span>    stm &lt;&lt; --indentation;</div>
 <div class="line"><a id="l00526" name="l00526"></a><span class="lineno">  526</span>    stm &lt;&lt; <span class="charliteral">&#39;}&#39;</span>;</div>
