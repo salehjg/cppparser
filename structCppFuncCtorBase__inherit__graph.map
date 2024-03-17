@@ -1,9 +1,9 @@
 <map id="CppFuncCtorBase" name="CppFuncCtorBase">
-<area shape="rect" id="node1" title=" " alt="" coords="86,709,233,808"/>
+<area shape="rect" id="node1" title=" " alt="" coords="113,709,259,808"/>
 <area shape="rect" id="node5" href="$structCppConstructor.html" title=" " alt="" coords="5,856,156,1028"/>
-<area shape="rect" id="node6" href="$structCppFunction.html" title=" " alt="" coords="181,885,298,999"/>
-<area shape="rect" id="node2" href="$structCppFunctionBase.html" title="Base class of constructor, destructor, and functions." alt="" coords="84,401,235,661"/>
-<area shape="rect" id="node3" href="$structCppFuncLikeBase.html" title=" " alt="" coords="86,211,233,353"/>
-<area shape="rect" id="node4" href="$structCppObj.html" title="An abstract class that is used as base class of all other classes." alt="" coords="104,5,215,163"/>
-<area shape="rect" id="node7" href="$structCppFunctionPointer.html" title="Function pointer type definition using typedef, e.g." alt="" coords="160,1076,319,1175"/>
+<area shape="rect" id="node6" href="$structCppFunction.html" title=" " alt="" coords="180,878,403,1006"/>
+<area shape="rect" id="node2" href="$structCppFunctionBase.html" title="Base class of constructor, destructor, and functions." alt="" coords="111,401,261,661"/>
+<area shape="rect" id="node3" href="$structCppFuncLikeBase.html" title=" " alt="" coords="113,211,259,353"/>
+<area shape="rect" id="node4" href="$structCppObj.html" title="An abstract class that is used as base class of all other classes." alt="" coords="131,5,241,163"/>
+<area shape="rect" id="node7" href="$structCppFunctionPointer.html" title="Function pointer type definition using typedef, e.g." alt="" coords="212,1076,371,1175"/>
 </map>

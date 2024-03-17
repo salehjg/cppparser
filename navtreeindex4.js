@@ -1,5 +1,7 @@
 var NAVTREEINDEX4 =
 {
+"structCppConstructor.html#a36112e7d9f23ac31e484ae319b40528f":[2,0,8,2],
+"structCppConstructor.html#a460414a54c74dcf3aa4c36e0c784dbb1":[2,0,8,8],
 "structCppConstructor.html#a4a742f0e43ecd91ed9547ed8b388408a":[2,0,8,5],
 "structCppConstructor.html#a4af653f86049f9fdd3a4cd4e1d436f50":[2,0,8,4],
 "structCppConstructor.html#a7c3787dd45a1353d6f4051d2b79bcc54":[2,0,8,1],
@@ -105,10 +107,11 @@ var NAVTREEINDEX4 =
 "structCppFuncLikeBase.html#ad2a8f6953566a2a9c12aa9d29dc43036":[2,0,19,1],
 "structCppFunction.html":[2,0,20],
 "structCppFunction.html#a2f0f1429a30ab49ebb36f62723b85cd7":[2,0,20,1],
-"structCppFunction.html#a96184ff6de76e8041ab93b3bc493c975":[2,0,20,4],
+"structCppFunction.html#a69ea2d00f6ed30606aafed4f9c7483d8":[2,0,20,3],
+"structCppFunction.html#a96184ff6de76e8041ab93b3bc493c975":[2,0,20,5],
 "structCppFunction.html#a99efcd2666f318a1ed9ed85536c9867d":[2,0,20,0],
 "structCppFunction.html#ab38e30004cf571ab76a531d4fcf3d842":[2,0,20,2],
-"structCppFunction.html#ac791c8bdcbeff7ebc76530e048b0ed81":[2,0,20,3],
+"structCppFunction.html#ac791c8bdcbeff7ebc76530e048b0ed81":[2,0,20,4],
 "structCppFunctionBase.html":[2,0,21],
 "structCppFunctionBase.html#a153b919ff7a80228292ace5b7d0b4a4f":[2,0,21,7],
 "structCppFunctionBase.html#a154c90f1c85fbeba30cd9c8fc415a220":[2,0,21,10],
@@ -246,8 +249,5 @@ var NAVTREEINDEX4 =
 "structCppRangeForBlock.html#adc8aefd5193c897c4230099576e015c7":[2,0,45,3],
 "structCppRangeForBlock.html#ae4e6b23924a75e28ca378a041eaba96f":[2,0,45,5],
 "structCppRangeForBlock.html#afd2b7fc63dca624c5cbc7c4ad6d42aa5":[2,0,45,0],
-"structCppSwitchBlock.html":[2,0,46],
-"structCppSwitchBlock.html#a205953e15b254808c8eba68c652fda55":[2,0,46,2],
-"structCppSwitchBlock.html#a28d107bf9a750eba2a1aef5726305a26":[2,0,46,1],
-"structCppSwitchBlock.html#a3ab1b75cc1d0dba45e33ffc293a80ccf":[2,0,46,4]
+"structCppSwitchBlock.html":[2,0,46]
 };
