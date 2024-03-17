@@ -1031,11 +1031,24 @@ struct CppCompound : public CppObj, public AttribSpecified
     members_.push_back(std::move(mem));
     assignSpecialMember(members_.back().get());
   }
+  void addMemberAt(CppObjPtr &&mem, unsigned index)
+  {
+    assert(members_.begin() + index <= members_.end());
+    mem->owner(this);
+    members_.insert(members_.begin() + index, std::move(mem));
+    assignSpecialMember(members_.back().get());
+  }
   void addMemberAtFront(CppObj* mem)
   {
     mem->owner(this);
     members_.emplace(members_.begin(), mem);
     assignSpecialMember(mem);
+  }
+  void addMemberAtFront(CppObjPtr &&mem)
+  {
+    mem->owner(this);
+    members_.insert(members_.begin(), std::move(mem));
+    assignSpecialMember(members_.front().get());
   }
 
   CppObjPtr deassocMemberAt(size_t idx)
@@ -1284,6 +1297,21 @@ struct CppFunction : public CppFuncCtorBase
     : CppFuncCtorBase(kObjectType, accessType, std::move(name), params, attr)
     , retType_(retType)
   {
+  }
+
+  static unsigned findMainFunctionFromMembers(const CppObjPtrArray &members) {
+      unsigned idx=0;
+      for (auto &m: members) {
+          auto ptr = m.get();
+          if (ptr->objType_ == CppObjType::kFunction) {
+              auto ptrFunc = static_cast<CppFunction*>(ptr);
+              if(ptrFunc->name_ == "main") {
+                  break;
+              }
+          }
+          idx++;
+      }
+      return idx;
   }
 
   void accept(CppVisitorBase* v) override
