@@ -10,7 +10,7 @@
 #include "cppwriter.h"
 #include "cppast.h"
 
-inline CppObjPtr cloneCppObj(CppObj *pSrc) {
+inline CppObjPtr cloneCppObj(CppObj *pSrc, const std::string &tempFileBaseDir="/tmp/") {
     CppWriter writer;
     std::stringstream stm;
 
@@ -18,7 +18,7 @@ inline CppObjPtr cloneCppObj(CppObj *pSrc) {
     stm.flush();
 
     CppParser parser;
-    auto uniquePtr =  parser.parseString(stm.str());
+    auto uniquePtr =  parser.parseString(tempFileBaseDir + "temp.cpp", stm.str());
     auto rawPtr = uniquePtr.release(); // give up the ownership, BAD IDEA!
     auto member = std::move(rawPtr->members()[0]);
     delete rawPtr; // avoid m.leak, BAD IDEA!
