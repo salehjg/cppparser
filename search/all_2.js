@@ -11,7 +11,7 @@ var searchData=
   ['cleanseidentifier_8',['cleanseIdentifier',['../string-utils_8h.html#a5dc6e2d37d3bc97320a3a806eb41405a',1,'string-utils.h']]],
   ['cleanupscanbuffer_9',['cleanupScanBuffer',['../parser_8l.html#ab2d93e2e0709fe9185f5224b53c45246',1,'parser.l']]],
   ['clone_2eh_10',['clone.h',['../clone_8h.html',1,'']]],
-  ['clonecppobj_11',['cloneCppObj',['../clone_8h.html#abe870b0479360890d5b1e55c372941e3',1,'clone.h']]],
+  ['clonecppobj_11',['cloneCppObj',['../clone_8h.html#a01456925c5907635c812723bb7541c1e',1,'clone.h']]],
   ['cmptype_5f_12',['cmpType_',['../structCppFwdClsDecl.html#a011c622fa4cb7c5e06e94f3f9b382915',1,'CppFwdClsDecl']]],
   ['codeenablementinfo_13',['CodeEnablementInfo',['../structCodeEnablementInfo.html',1,'']]],
   ['codeenablementinfostack_14',['codeEnablementInfoStack',['../structLexerData.html#ae09b9f5fd4a8f59db36864bba9b437d3',1,'LexerData']]],
